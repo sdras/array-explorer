@@ -9,7 +9,7 @@
     </select>
     <method-base v-if="selected" :urlPath="selected.name">
       <span slot="title">Array.{{selected.name}}()</span>
-      <span slot="desc">{{selected.desc}}</span>
+      <span slot="desc" v-html="selected.desc"></span>
     </method-base>
   </p>
 </template>
@@ -43,3 +43,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+code {
+  background: #eee;
+  padding: 3px 6px;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #666;
+}
+</style>

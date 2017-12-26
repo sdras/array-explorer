@@ -37,6 +37,6 @@ p.desc {
 }
 
 p.link {
-  margin-top: 0;
+  margin-top: 5px;
 }
 </style>

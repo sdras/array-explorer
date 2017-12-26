@@ -36,14 +36,14 @@ export default {
     selectedUsage() {
       return this.$store.state.selectedMethod
     }
-  },
-  watch: {
-    selectedUsage() {
-      setTimeout(() => {
-        this.typeOut()
-      }, 500)
-    }
   }
+  // watch: {
+  //   selectedUsage() {
+  //     setTimeout(() => {
+  //       this.typeOut()
+  //     }, 500)
+  //   }
+  // }
 }
 </script>
 

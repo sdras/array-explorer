@@ -13,6 +13,9 @@
     <div v-else-if="selectedFilter === 'add items or other arrays'">
       <method-choice :options="addOptions" methodType="add"/>
     </div>
+    <div v-else-if="selectedFilter === 'remove items'">
+      <method-choice :options="removeOptions" methodType="remove"/>
+    </div>
   </div>
 </template>
 
@@ -43,6 +46,9 @@ export default {
   computed: {
     addOptions() {
       return this.$store.state.adding
+    },
+    removeOptions() {
+      return this.$store.state.removing
     }
   }
 }
