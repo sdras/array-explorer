@@ -2,7 +2,7 @@
   <div>
     <label for="firstmethod">I have an array, I would like to</label>
     <select id="firstmethod" name="select" v-model="selectedFilter">
-      <option value="" disabled selected>Select your option</option>
+      <option value="" disabled selected>...</option>
       <option v-for="option in options" :key="option" :value="option">
         {{ option }}
       </option>

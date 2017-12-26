@@ -15,5 +15,11 @@ export default {
 </script>
 
 <style scoped>
-
+code {
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  transition: 0.2s all ease;
+  display: block;
+}
 </style>

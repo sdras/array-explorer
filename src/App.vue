@@ -7,6 +7,7 @@
         <app-method-primary />
       </section>
       <section class="box b">
+        <h3 class="usage">Usage</h3>
         <app-code />
       </section>
       <!-- <section class="box c">C</section>
@@ -149,10 +150,6 @@ main {
 .b {
   grid-column: col3-start;
   grid-row: row1-start / row2-end;
-  background: white;
-  padding: 20px;
-  border: 1px solid #ccc;
-  transition: 0.2s all ease;
 }
 .c {
   grid-column: col1-start;
@@ -161,5 +158,9 @@ main {
 .d {
   grid-column: col2-start;
   grid-row: row2-start;
+}
+
+.usage {
+  margin: 35px 0 20px;
 }
 </style>
