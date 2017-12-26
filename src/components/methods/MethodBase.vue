@@ -25,6 +25,7 @@ div {
   margin-top: 30px;
   padding: 0 20px;
   background: white;
+  border-radius: 5px;
 }
 
 h2 {
