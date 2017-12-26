@@ -1,6 +1,6 @@
 <template>
   <code>
-    let arr = {{ arr1 }}
+    let arr = {{ arr1 }};
   </code>
 </template>
 

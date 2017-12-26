@@ -2,9 +2,23 @@
   <div id="app">
     <main>
       <section class="box a">
-        <h1>Thingie</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum blanditiis repudiandae ex, repellat provident, quia cupiditate dolorum non maiores, molestias sint repellendus! Omnis deleniti, nam quos veniam eligendi rem tempore?</p>
-        <p><em>Thingie</em></p>
+        <h1>Array Explorer</h1>
+        <p><em>Find the array method you need without digging through the docs</em></p>
+          <label for="firstmethod">I have an array, I would like to</label>
+          <select id="firstmethod" name="select">
+            <option value="1">Amsterdam</option>
+            <option value="2">Buenos Aires</option>
+            <option value="3">Delhi</option>
+            <option value="4">Hong Kong</option>
+            <option value="5">London</option>
+            <option value="6">Los Angeles</option>
+            <option value="7">Moscow</option>
+            <option value="8">Mumbai</option>
+            <option value="9">New York</option>
+            <option value="10">Sao Paulo</option>
+            <option value="11">Tokyo</option>
+          </select>
+       </p>
       </section>
       <section class="box b">
         <app-code />
@@ -89,6 +103,13 @@ html {
   letter-spacing: 0.005em;
 }
 
+select,
+option {
+  font-family: 'Gill Sans W04 Book', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 h1,
 h2,
 h3,
@@ -99,6 +120,7 @@ h5 {
 
 em {
   font-family: 'GillSansW01-MediumItali', Helvetica, Arial, sans-serif;
+  letter-spacing: -0.01em;
 }
 
 /* -- grid -- */
