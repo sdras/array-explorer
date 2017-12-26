@@ -4,21 +4,7 @@
       <section class="box a">
         <h1>Array Explorer</h1>
         <p><em>Find the array method you need without digging through the docs</em></p>
-          <label for="firstmethod">I have an array, I would like to</label>
-          <select id="firstmethod" name="select">
-            <option value="1">Amsterdam</option>
-            <option value="2">Buenos Aires</option>
-            <option value="3">Delhi</option>
-            <option value="4">Hong Kong</option>
-            <option value="5">London</option>
-            <option value="6">Los Angeles</option>
-            <option value="7">Moscow</option>
-            <option value="8">Mumbai</option>
-            <option value="9">New York</option>
-            <option value="10">Sao Paulo</option>
-            <option value="11">Tokyo</option>
-          </select>
-       </p>
+        <app-method-primary />
       </section>
       <section class="box b">
         <app-code />
@@ -30,10 +16,12 @@
 </template>
 
 <script>
+import AppMethodPrimary from './components/AppMethodPrimary'
 import AppCode from './components/AppCode'
 
 export default {
   components: {
+    AppMethodPrimary,
     AppCode
   }
 }
@@ -99,7 +87,7 @@ html {
   height: 100vh;
   margin: 0;
   padding: 0;
-  font-size: 20px;
+  font-size: 19px;
   letter-spacing: 0.005em;
 }
 
@@ -120,6 +108,7 @@ h5 {
 
 em {
   font-family: 'GillSansW01-MediumItali', Helvetica, Arial, sans-serif;
+  font-style: normal;
   letter-spacing: -0.01em;
 }
 
