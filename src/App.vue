@@ -3,7 +3,7 @@
     <main>
       <section class="box a">
         <h1>Array Explorer</h1>
-        <p><em>Find the array method you need without digging through the docs</em></p>
+        <p class="subtitle"><em>Find the array method you need without digging through the docs</em></p>
         <app-method-primary />
       </section>
       <section class="box b">
@@ -112,6 +112,22 @@ em {
   letter-spacing: -0.01em;
 }
 
+h1 {
+  margin-bottom: 0;
+}
+
+.subtitle {
+  color: #d86f5a;
+  margin-top: 0;
+}
+
+a,
+a:visited,
+a:active {
+  color: #d86f5a;
+  text-decoration: none;
+}
+
 /* -- grid -- */
 body {
   margin: 40px;
@@ -128,6 +144,7 @@ main {
 .a {
   grid-column: col1-start / col3-start;
   grid-row: row1-start;
+  transition: 0.2s all ease;
 }
 .b {
   grid-column: col3-start;
@@ -135,6 +152,7 @@ main {
   background: white;
   padding: 20px;
   border: 1px solid #ccc;
+  transition: 0.2s all ease;
 }
 .c {
   grid-column: col1-start;

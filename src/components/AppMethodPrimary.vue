@@ -7,11 +7,19 @@
         {{ option }}
       </option>
     </select>
+    <div v-if="selectedFilter === 'find the length of the array'">
+      <method-length />
+    </div>
   </div>
 </template>
 
 <script>
+import MethodLength from './methods/MethodLength.vue'
+
 export default {
+  components: {
+    MethodLength
+  },
   data() {
     return {
       selectedFilter: '',
@@ -22,7 +30,7 @@ export default {
         'walk over items',
         'return a string',
         'order an array',
-        'find the length of an array',
+        'find the length of the array',
         'other'
       ]
     }
