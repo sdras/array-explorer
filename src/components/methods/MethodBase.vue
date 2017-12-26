@@ -2,14 +2,14 @@
   <div>
     <h2><slot name="title" /></h2>
     <p class="desc"><slot name="desc" /></p>
-    <p class="link"><em><a href="`https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/${path}`" target="_blank">see the docs &#8594;</a></em></p>
+    <!-- <p class="link"><em><a href="`https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/${url}`" target="_blank">see the docs &#8594;</a></em></p> -->
   </div>
 </template>
 
 <<script>
 export default {
   props: {
-    path: {
+    url: {
       type: String,
       default: 'length'
     },

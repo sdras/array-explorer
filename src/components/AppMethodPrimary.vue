@@ -10,14 +10,19 @@
     <div v-if="selectedFilter === 'find the length of the array'">
       <method-length />
     </div>
+    <div v-else-if="selectedFilter === 'add items or other arrays'">
+      <options-base :options="addOptions"/>
+    </div>
   </div>
 </template>
 
 <script>
+import OptionsBase from './options/OptionsBase.vue'
 import MethodLength from './methods/MethodLength.vue'
 
 export default {
   components: {
+    OptionsBase,
     MethodLength
   },
   data() {
@@ -32,6 +37,12 @@ export default {
         'order an array',
         'find the length of the array',
         'other'
+      ],
+      addOptions: [
+        'add elements to an array',
+        'add elements to the end of an array.',
+        'add elements to the front of an array.',
+        'add this array to other array(s) and/or value(s)'
       ]
     }
   }
