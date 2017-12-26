@@ -1,9 +1,7 @@
 <template>
-  <pre>
-    <code>
-      let arr = {{ arr1 }}
-    </code>
-  </pre>
+  <code>
+    let arr = {{ arr1 }}
+  </code>
 </template>
 
 <script>
@@ -17,5 +15,14 @@ export default {
 </script>
 
 <style scoped>
-
+code {
+  width: 300px;
+  background: white;
+  padding: 20px;
+  position: absolute;
+  border: 1px solid #ccc;
+  margin: 0;
+  right: 200px;
+  top: 60px;
+}
 </style>
