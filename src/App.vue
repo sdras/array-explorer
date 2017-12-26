@@ -97,6 +97,11 @@ option {
   -moz-osx-font-smoothing: grayscale;
 }
 
+select:focus,
+a:focus {
+  outline: 1px dashed #ccc;
+}
+
 h1,
 h2,
 h3,
@@ -150,6 +155,6 @@ main {
 }
 
 .usage {
-  margin: 35px 0 20px;
+  margin: 35px 0 0;
 }
 </style>

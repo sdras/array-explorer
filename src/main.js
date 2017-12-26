@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import { store } from './../store/index'
+import VuePrism from 'vue-prism'
+
+Vue.use(VuePrism)
 
 Vue.config.productionTip = false
 
