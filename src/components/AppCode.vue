@@ -8,7 +8,7 @@
 export default {
   data() {
     return {
-      arr1: [5, 1, 8, 0, 4]
+      arr1: [5, 1, 8]
     }
   }
 }

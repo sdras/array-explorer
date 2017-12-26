@@ -11,18 +11,18 @@
       <method-length />
     </div>
     <div v-else-if="selectedFilter === 'add items or other arrays'">
-      <options-base :options="addOptions"/>
+      <method-choice :options="addOptions" methodType="add"/>
     </div>
   </div>
 </template>
 
 <script>
-import OptionsBase from './options/OptionsBase.vue'
+import MethodChoice from './methods/MethodChoice.vue'
 import MethodLength from './methods/MethodLength.vue'
 
 export default {
   components: {
-    OptionsBase,
+    MethodChoice,
     MethodLength
   },
   data() {
@@ -37,13 +37,12 @@ export default {
         'order an array',
         'find the length of the array',
         'other'
-      ],
-      addOptions: [
-        'add elements to an array',
-        'add elements to the end of an array.',
-        'add elements to the front of an array.',
-        'add this array to other array(s) and/or value(s)'
       ]
+    }
+  },
+  computed: {
+    addOptions() {
+      return this.$store.state.adding
     }
   }
 }
