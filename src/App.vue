@@ -1,6 +1,17 @@
 <template>
   <div id="app">
-    <app-code />
+    <main>
+      <section class="box a">
+        <h1>Thingie</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum blanditiis repudiandae ex, repellat provident, quia cupiditate dolorum non maiores, molestias sint repellendus! Omnis deleniti, nam quos veniam eligendi rem tempore?</p>
+        <p><em>Thingie</em></p>
+      </section>
+      <section class="box b">
+        <app-code />
+      </section>
+      <!-- <section class="box c">C</section>
+      <section class="box d">D</section> -->
+    </main>
   </div>
 </template>
 
@@ -19,18 +30,107 @@ body,
 html {
   margin: 0;
   padding: 0;
+  color: #2c3e50;
+  background: #f6f7f7;
+}
+
+@font-face {
+  font-family: 'Gill Sans W04 Book';
+  src: url('./assets/Fonts/c4be5717-c19c-43a5-9ad3-b548ddf070d4.eot?#iefix');
+  src: url('./assets/Fonts/c4be5717-c19c-43a5-9ad3-b548ddf070d4.eot?#iefix')
+      format('eot'),
+    url('./assets/Fonts/4bfd13a9-3195-4d8f-87a9-83a212d18b16.woff2')
+      format('woff2'),
+    url('./assets/Fonts/63aa9f40-04be-453a-a672-aa8f9919115d.woff')
+      format('woff'),
+    url('./assets/Fonts/a82a5fb6-ad03-4675-801e-d3182a58ff5f.ttf')
+      format('truetype'),
+    url('./assets/Fonts/beb2cee2-1a51-44ca-848f-4f795394ee5a.svg#beb2cee2-1a51-44ca-848f-4f795394ee5a')
+      format('svg');
+}
+@font-face {
+  font-family: 'GillSansW01-MediumItali';
+  src: url('./assets/Fonts/1f6af904-724d-4f75-b836-51c3d674a37e.eot?#iefix');
+  src: url('./assets/Fonts/1f6af904-724d-4f75-b836-51c3d674a37e.eot?#iefix')
+      format('eot'),
+    url('./assets/Fonts/b01b8a8a-cb45-4c4e-b2bb-e5b8853e6fe6.woff2')
+      format('woff2'),
+    url('./assets/Fonts/3e18b964-7a6f-4828-8e18-5cc698e1051f.woff')
+      format('woff'),
+    url('./assets/Fonts/a7622e06-0cde-414a-a25d-5e5f6f5bfcaa.ttf')
+      format('truetype'),
+    url('./assets/Fonts/ca4569d2-e4c3-4dec-8bfe-52712ef6bc31.svg#ca4569d2-e4c3-4dec-8bfe-52712ef6bc31')
+      format('svg');
+}
+@font-face {
+  font-family: 'Gill Sans W01 Bold';
+  src: url('./assets/Fonts/1a6dec8e-26f9-4243-8495-835709538f92.eot?#iefix');
+  src: url('./assets/Fonts/1a6dec8e-26f9-4243-8495-835709538f92.eot?#iefix')
+      format('eot'),
+    url('./assets/Fonts/2029e71f-067d-46a8-bc44-b5c64a258928.woff2')
+      format('woff2'),
+    url('./assets/Fonts/f05272f9-83e3-4de6-8423-5d57f730c87b.woff')
+      format('woff'),
+    url('./assets/Fonts/33f5d8d9-105f-4a49-9351-74ecae7f4a49.ttf')
+      format('truetype'),
+    url('./assets/Fonts/b56150eb-5caa-4385-b907-373e97ddb2ff.svg#b56150eb-5caa-4385-b907-373e97ddb2ff')
+      format('svg');
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Gill Sans W04 Book', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  background: #f6f7f7;
   width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
+  font-size: 20px;
+  letter-spacing: 0.005em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Gill Sans W01 Bold', Helvetica, Arial, sans-serif;
+}
+
+em {
+  font-family: 'GillSansW01-MediumItali', Helvetica, Arial, sans-serif;
+}
+
+/* -- grid -- */
+body {
+  margin: 40px;
+}
+
+main {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: [col1-start] 25% [col2-start] 25% [col3-start] 40%
+    [col3-end];
+  grid-template-rows: [row1-start] auto [row2-start] auto [row2-end];
+}
+
+.a {
+  grid-column: col1-start / col3-start;
+  grid-row: row1-start;
+}
+.b {
+  grid-column: col3-start;
+  grid-row: row1-start / row2-end;
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+.c {
+  grid-column: col1-start;
+  grid-row: row2-start;
+}
+.d {
+  grid-column: col2-start;
+  grid-row: row2-start;
 }
 </style>
