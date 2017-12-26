@@ -7,7 +7,7 @@
         {{ option.shortDesc }}
       </option>
     </select>
-    <method-base v-if="selected" urlPath="selected.name">
+    <method-base v-if="selected" :urlPath="selected.name">
       <span slot="title">Array.{{selected.name}}()</span>
       <span slot="desc">{{selected.desc}}</span>
     </method-base>

@@ -1,17 +1,15 @@
 <template>
   <div id="app">
     <main>
-      <section class="box a">
+      <section class="a">
         <h1>Array Explorer</h1>
         <p class="subtitle"><em>Find the array method you need without digging through the docs</em></p>
         <app-method-primary />
       </section>
-      <section class="box b">
+      <section class="b">
         <h3 class="usage">Usage</h3>
         <app-code />
       </section>
-      <!-- <section class="box c">C</section>
-      <section class="box d">D</section> -->
     </main>
   </div>
 </template>
@@ -136,28 +134,19 @@ body {
 
 main {
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: [col1-start] 25% [col2-start] 25% [col3-start] 40%
-    [col3-end];
-  grid-template-rows: [row1-start] auto [row2-start] auto [row2-end];
+  grid-gap: 40px;
+  grid-template-columns: [col1-start] 50% [col2-start] 40% [col3-end];
+  grid-template-rows: [row1-start] auto [row1-end];
 }
 
 .a {
-  grid-column: col1-start / col3-start;
-  grid-row: row1-start;
+  grid-column: col1-start / col2-start;
+  grid-row: row1-start / row1-end;
   transition: 0.2s all ease;
 }
 .b {
-  grid-column: col3-start;
-  grid-row: row1-start / row2-end;
-}
-.c {
-  grid-column: col1-start;
-  grid-row: row2-start;
-}
-.d {
   grid-column: col2-start;
-  grid-row: row2-start;
+  grid-row: row1-start / row1-end;
 }
 
 .usage {

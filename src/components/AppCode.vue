@@ -16,9 +16,10 @@ export default {
 
 <style scoped>
 code {
-  background: white;
+  background: #333;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid white;
+  color: white;
   transition: 0.2s all ease;
   display: block;
 }

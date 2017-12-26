@@ -20,6 +20,13 @@ export default {
 
 
 <style scoped>
+div {
+  border: 1px solid #ccc;
+  margin-top: 30px;
+  padding: 0 20px;
+  background: white;
+}
+
 h2 {
   color: #ce371a;
 }
