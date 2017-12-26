@@ -35,6 +35,11 @@ export default {
     return {
       selected: ''
     }
+  },
+  watch: {
+    selected() {
+      this.$store.commit('selectionMethod', this.selected)
+    }
   }
 }
 </script>
