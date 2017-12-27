@@ -88,16 +88,15 @@ export const store = new Vuex.Store({
       {
         name: 'join',
         shortDesc: 'joins all elements of the array into a string',
-        desc:
-          'Joins all elements of an array into a string. You can join it together as is or with something in between, <code>elements.join(' -
-          ')</code> gives you <code>foo-bar</code>',
+        desc: `Joins all elements of an array into a string. You can join it together as is or with something in between, <code>elements.join(' -
+          ')</code> gives you <code>foo-bar</code>`,
         example: `arr.join();
         console.log(arr);`,
         output: `"5,1,8"`
       },
       {
         name: 'toString',
-        shortDesc: 'returns a string representing the array. ',
+        shortDesc: 'returns a string representing the array.',
         desc: 'Returns a string representing the array and its elements.',
         example: `arr.toString();
         console.log(arr);`,
