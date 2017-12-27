@@ -38,7 +38,7 @@ export const store = new Vuex.Store({
         shortDesc: 'this array to other array(s) and/or value(s)',
         desc:
           'Returns a new array comprised of this array joined with other array(s) and/or value(s).',
-        example: `let arr2 = ['a', 'b', 'c'];
+        example: `let arr2 = ['a', 'b', 'c'];<br>
         let arr3 = arr.concat(arr2);<br>
         console.log(arr);`,
         output: `[5, 1, 8, 'a', 'b', 'c']`
@@ -58,7 +58,7 @@ export const store = new Vuex.Store({
         shortDesc: 'the last element of the array',
         desc:
           'Removes the last element from an array and returns that element.',
-        example: `arr.pop();
+        example: `arr.pop();<br>
         console.log(arr);`,
         output: `[5, 1]`
       },
@@ -67,7 +67,7 @@ export const store = new Vuex.Store({
         shortDesc: 'the first element of the array',
         desc:
           'Removes the first element from an array and returns that element.',
-        example: `arr.shift();
+        example: `arr.shift();<br>
         console.log(arr);`,
         output: `[1, 8]`
       },
@@ -77,10 +77,10 @@ export const store = new Vuex.Store({
           'one or more elements in order for use, leaving the array as is',
         desc:
           'The <code>slice()</code> method returns a shallow copy of a portion of an array into a new array object. You can specify either just the ending element (where begin will default to zero) or both the beginning and the end, comma-separated. The original array will not be modified.',
-        example: `let slicedArr = arr.slice(1);
-        console.log(arr);
+        example: `let slicedArr = arr.slice(1);<br>
+        console.log(arr);<br>
         console.log(slicedArr);`,
-        output: `[5, 1, 8]
+        output: `[5, 1, 8]<br>
         [1, 8]`
       }
     ],
@@ -88,17 +88,18 @@ export const store = new Vuex.Store({
       {
         name: 'join',
         shortDesc: 'joins all elements of the array into a string',
-        desc: `Joins all elements of an array into a string. You can join it together as is or with something in between, <code>elements.join(' -
-          ')</code> gives you <code>foo-bar</code>`,
-        example: `arr.join();
+        desc:
+          'Joins all elements of an array into a string. You can join it together as is or with something in between, <code>elements.join(' -
+          ')</code> gives you <code>foo-bar</code>',
+        example: `arr.join();<br>
         console.log(arr);`,
         output: `"5,1,8"`
       },
       {
         name: 'toString',
-        shortDesc: 'returns a string representing the array.',
+        shortDesc: 'returns a string representing the array. ',
         desc: 'Returns a string representing the array and its elements.',
-        example: `arr.toString();
+        example: `arr.toString();<br>
         console.log(arr);`,
         output: `"5,1,8"`
       },
@@ -106,10 +107,10 @@ export const store = new Vuex.Store({
         name: 'toLocaleString',
         shortDesc: 'returns a localized string representing the array.',
         desc:
-          'Returns a localized string representing the array and its elements. This is very useful for dates and currency and has some strange native abstractions, so best to consult the docs when using it',
-        example: `let date = [new Date()];
-        arr.toLocaleString();
-        date.toLocaleString();
+          'This one is a bit wacko. Returns a localized string representing the array and its elements. This is very useful for dates and currency and has some strange native abstractions, so best to consult the docs when using it',
+        example: `let date = [new Date()];<br>
+        arr.toLocaleString();<br>
+        date.toLocaleString();<br>
         console.log(arr, date);`,
         output: `"5,1,8 12/26/2017, 6:54:49 PM"`
       }
@@ -117,18 +118,18 @@ export const store = new Vuex.Store({
     ordering: [
       {
         name: 'reverse',
-        shortDesc: 'reverses the order of the array',
+        shortDesc: 'reverse the order of the array',
         desc:
           'Reverses the order of the elements of an array in place — the first becomes the last, and the last becomes the first.',
-        example: `arr.reverse();
+        example: `arr.reverse();<br>
         console.log(arr);`,
         output: `[8, 1, 5]`
       },
       {
         name: 'sort',
-        shortDesc: 'sorts the items of the array',
+        shortDesc: 'sort the items of the array',
         desc: 'Sorts the elements of an array in place and returns the array.',
-        example: `arr.sort();
+        example: `arr.sort();<br>
         console.log(arr);`,
         output: `[1, 5, 8]`
       }
@@ -139,7 +140,7 @@ export const store = new Vuex.Store({
         shortDesc: 'fills all the elements of the array with a static value',
         desc:
           'Fills all the elements of an array from a start index to an end index with a static value.',
-        example: `arr.fill(2);
+        example: `arr.fill(2);<br>
         console.log(arr);`,
         output: `[2, 2, 2]`
       },
@@ -148,9 +149,42 @@ export const store = new Vuex.Store({
         shortDesc: 'copies a sequence of array elements within the array.',
         desc:
           'Copies a sequence of array elements within the array. You can specify either just the ending element (where begin will default to zero) or both the beginning and the end, comma-separated.',
-        example: `arr.copyWithin(1);
+        example: `arr.copyWithin(1);<br>
         console.log(arr);`,
         output: `[5, 5, 8]`
+      }
+    ],
+    iterate: [
+      {
+        name: 'forEach',
+        shortDesc: 'executing a function you create for each element',
+        desc:
+          'The forEach() method executes a provided function once for each array element.',
+        example: `arr.forEach((item) => {<br>
+        &nbsp;&nbsp;console.log(item)<br> 
+        });`,
+        output: `5<br>
+        1<br>
+        8`
+      },
+      {
+        name: 'map',
+        shortDesc:
+          'creating a new array from each element with a function you create',
+        desc:
+          'Creates a new array with the results of calling a provided function on every element in this array.',
+        example: `let map = arr.map(x => x + 1);<br>
+        console.log(map)`,
+        output: `[6, 2, 9]`
+      },
+      {
+        name: 'entries',
+        shortDesc: 'creating an iterator object',
+        desc:
+          'Returns a new Array Iterator object that contains the key/value pairs for each index in the array. There are a lot of uses for iterators, as well as other methods used with it in conjuction, like <code>values</code> and <code>keys</code>',
+        example: `let iterator = arr.entries();<br>
+        console.log(iterator.next().value);`,
+        output: `[0, 5] <span class="comment">// the 0 is the index, the 5 is the first number</span>`
       }
     ]
   },

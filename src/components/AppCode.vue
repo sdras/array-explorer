@@ -1,6 +1,6 @@
 <template>
   <aside>
-    <div class="usage-code">
+    <div class="usage-code usage1">
       <p>
         <code>let arr = [5, 1, 8];</code><br>
         <code v-if="selectedUsage" 
@@ -10,7 +10,7 @@
         </code>
       </p>
     </div>
-    <div v-if="selectedUsage">
+    <div v-if="selectedUsage" class="usage2">
       <h3 style="margin-top: 50px">Output</h3>
       <div class="usage-code">
         <p>
@@ -112,18 +112,24 @@ export default {
   margin: 20px 0;
   background: #333;
   border: 2px solid #f55e41;
-  color: #aeded4;
   transition: 0.2s all ease;
   display: block;
   border-radius: 5px;
   line-height: 1.8em;
 }
 
+.usage1 {
+  color: #aeded4;
+}
+
+.usage2 code {
+  color: #ecc2a4;
+}
+
 .exampleoutput,
 .exampleoutput2 {
   display: inline-block;
   opacity: 0;
-  color: #ecc2a4;
 }
 
 .exampleoutput div,

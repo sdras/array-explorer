@@ -16,11 +16,14 @@
     <div v-else-if="selectedFilter === 'remove items'">
       <method-choice :options="removing" methodType="remove"/>
     </div>
-    <div v-else-if="selectedFilter === 'return a string'">
-      <method-choice :options="string"/>
+    <div v-else-if="selectedFilter === 'walk over items'">
+      <method-choice :options="iterate" methodType="iterate by"/>
     </div>
     <div v-else-if="selectedFilter === 'order an array'">
       <method-choice :options="ordering"/>
+    </div>
+    <div v-else-if="selectedFilter === 'return a string'">
+      <method-choice :options="string"/>
     </div>
     <div v-else-if="selectedFilter === 'something else'">
       <method-choice :options="other"/>
@@ -54,7 +57,14 @@ export default {
     }
   },
   computed: {
-    ...mapState(['adding', 'removing', 'string', 'ordering', 'other'])
+    ...mapState([
+      'adding',
+      'removing',
+      'iterate',
+      'string',
+      'ordering',
+      'other'
+    ])
   },
   watch: {
     selectedFilter() {
