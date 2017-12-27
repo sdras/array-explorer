@@ -16,7 +16,7 @@ html {
       format('woff'),
     url(../../static/fonts/a82a5fb6-ad03-4675-801e-d3182a58ff5f.623b22d.ttf)
       format('truetype'),
-    url(/static/img/beb2cee2-1a51-44ca-848f-4f795394ee5a.b8d79de.svg#beb2cee2-1a51-44ca-848f-4f795394ee5a)
+    url(../../static/img/beb2cee2-1a51-44ca-848f-4f795394ee5a.b8d79de.svg#beb2cee2-1a51-44ca-848f-4f795394ee5a)
       format('svg');
 }
 @font-face {
@@ -30,7 +30,7 @@ html {
       format('woff'),
     url(../../static/fonts/a7622e06-0cde-414a-a25d-5e5f6f5bfcaa.6885c19.ttf)
       format('truetype'),
-    url(/static/img/ca4569d2-e4c3-4dec-8bfe-52712ef6bc31.52c259e.svg#ca4569d2-e4c3-4dec-8bfe-52712ef6bc31)
+    url(../../static/img/ca4569d2-e4c3-4dec-8bfe-52712ef6bc31.52c259e.svg#ca4569d2-e4c3-4dec-8bfe-52712ef6bc31)
       format('svg');
 }
 @font-face {
@@ -44,7 +44,7 @@ html {
       format('woff'),
     url(../../static/fonts/33f5d8d9-105f-4a49-9351-74ecae7f4a49.32044ed.ttf)
       format('truetype'),
-    url(/static/img/b56150eb-5caa-4385-b907-373e97ddb2ff.8286231.svg#b56150eb-5caa-4385-b907-373e97ddb2ff)
+    url(../../static/img/b56150eb-5caa-4385-b907-373e97ddb2ff.8286231.svg#b56150eb-5caa-4385-b907-373e97ddb2ff)
       format('svg');
 }
 #app {
