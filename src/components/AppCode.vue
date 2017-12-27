@@ -112,12 +112,14 @@ export default {
   },
   watch: {
     selectedUsage() {
-      TweenMax.set([this.$refs.ex, this.$refs.ex2], {
-        opacity: 0
-      })
-      setTimeout(() => {
-        this.typeOut()
-      }, 500)
+      if (this.selectedUsage) {
+        TweenMax.set([this.$refs.ex, this.$refs.ex2], {
+          opacity: 0
+        })
+        setTimeout(() => {
+          this.typeOut()
+        }, 500)
+      }
     }
   }
 }

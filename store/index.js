@@ -226,8 +226,8 @@ export const store = new Vuex.Store({
           shortDesc: 'the first element that satisfies a condition',
           desc:
             'Returns the found value in the array, if an element in the array satisfies the provided testing function or undefined if not found. Similar to <code>findIndex()</code>, but it returns the item instead of the index.',
-          example: `let isSmall = (el) => el < 2;<br>
-          console.log(arr.find(isSmall));`,
+          example: `let isTiny = (el) => el < 2;<br>
+          console.log(arr.find(isTiny));`,
           output: `1`
         },
         {
@@ -235,8 +235,8 @@ export const store = new Vuex.Store({
           shortDesc: 'the first index of an item that satisfies a condition',
           desc:
             'Returns the index of the first element in the array that satisfies the provided testing function. Otherwise -1 is returned. Similar to <code>find()</code>, but it returns the index instead of the item.',
-          example: `let isLarge = (el) => el > 6;<br>
-          console.log(arr.findIndex(isLarge));`,
+          example: `let isBig = (el) => el > 6;<br>
+          console.log(arr.findIndex(isBig));`,
           output: `2`
         },
         {
