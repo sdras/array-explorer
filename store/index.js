@@ -161,7 +161,7 @@ export const store = new Vuex.Store({
     iterate: [
       {
         name: 'forEach',
-        shortDesc: 'executing a function you create for each element',
+        shortDesc: 'executing a function I will create for each element',
         desc:
           'The forEach() method executes a provided function once for each array element.',
         example: `arr.forEach((element) => {<br>
@@ -174,7 +174,7 @@ export const store = new Vuex.Store({
       {
         name: 'map',
         shortDesc:
-          'creating a new array from each element with a function you create',
+          'creating a new array from each element with a function I create',
         desc:
           'Creates a new array with the results of calling a provided function on every element in this array.',
         example: `let map = arr.map(x => x + 1);<br>
@@ -260,7 +260,7 @@ export const store = new Vuex.Store({
       many: [
         {
           name: 'filter',
-          shortDesc: 'values based on a condition you create',
+          shortDesc: 'values based on a condition I create',
           desc:
             'Creates a new array with all of the elements of this array for which the provided filtering function returns true.',
           example: `let filtered = arr.filter(el => el > 4);<br>
