@@ -11,7 +11,7 @@ export const store = new Vuex.Store({
         name: 'splice',
         shortDesc: 'elements to an array.',
         desc: 'Adds and/or removes elements from an array.',
-        example: `arr.splice(2, 0, 'tacos');
+        example: `arr.splice(2, 0, 'tacos');<br>
         console.log(arr);`,
         output: `[5, 1, 'tacos', 8]`
       },
@@ -20,7 +20,7 @@ export const store = new Vuex.Store({
         shortDesc: 'elements to the end of an array.',
         desc:
           'Adds one or more elements to the end of an array and returns the new length of the array.',
-        example: `arr.push(2);
+        example: `arr.push(2);<br>
         console.log(arr);`,
         output: '[5, 1, 8, 2]'
       },
@@ -29,7 +29,7 @@ export const store = new Vuex.Store({
         shortDesc: 'elements to the front of an array.',
         desc:
           'Adds one or more elements to the front of an array and returns the new length of the array.',
-        example: `arr.unshift(2, 7);
+        example: `arr.unshift(2, 7);<br>
         console.log(arr);`,
         output: '[2, 7, 5, 1, 8]'
       },
@@ -39,7 +39,7 @@ export const store = new Vuex.Store({
         desc:
           'Returns a new array comprised of this array joined with other array(s) and/or value(s).',
         example: `let arr2 = ['a', 'b', 'c'];
-        let arr3 = arr.concat(arr2);
+        let arr3 = arr.concat(arr2);<br>
         console.log(arr);`,
         output: `[5, 1, 8, 'a', 'b', 'c']`
       }
@@ -49,7 +49,7 @@ export const store = new Vuex.Store({
         name: 'splice',
         shortDesc: 'elements from an array.',
         desc: 'Adds and/or removes elements from an array.',
-        example: `arr.splice(2, 1);;
+        example: `arr.splice(2, 1);<br>
         console.log(arr);`,
         output: `[5, 1]`
       },
