@@ -91,6 +91,9 @@ export default {
   watch: {
     selectedFilter() {
       this.$store.commit('resetSelection')
+    },
+    selectedFind() {
+      this.$store.commit('resetSelection')
     }
   }
 }

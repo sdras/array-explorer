@@ -4,7 +4,7 @@
       <label for="methodoptions">I need to {{ methodType }}</label>
       <select id="methodoptions" name="select" v-model="selected">
         <option value="" disabled selected>...</option>
-        <option v-for="option in options" :key="option.name" :value="option">
+        <option v-for="option in options" :key="option.desc" :value="option">
           {{ option.shortDesc }}
         </option>
       </select>
