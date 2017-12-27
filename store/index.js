@@ -167,7 +167,7 @@ export const store = new Vuex.Store({
         desc:
           'The forEach() method executes a provided function once for each array element.',
         example: `arr.forEach((element) => {<br>
-        &nbsp;&nbsp;console.log(element)<br> 
+        <span>&nbsp;&nbsp;</span>console.log(element)<br> 
         });`,
         output: `5<br>
         1<br>
@@ -245,7 +245,7 @@ export const store = new Vuex.Store({
           desc:
             'Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value.',
           example: `let reducer = (a, b) => a + b;<br>
-          &#9;console.log(arr.reduce(reducer));`,
+          <span>&nbsp;&nbsp;</span>console.log(arr.reduce(reducer));`,
           output: `14`
         },
         {
@@ -254,7 +254,7 @@ export const store = new Vuex.Store({
           desc:
             'Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.',
           example: `[arr, [0, 1]].reduceRight((a, b) => {<br>
-          &#9;return a.concat(b)<br>
+          <span>&nbsp;&nbsp;</span>return a.concat(b)<br>
           }, [])`,
           output: `[0, 1, 5, 1, 8]`
         }
