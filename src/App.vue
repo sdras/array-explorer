@@ -141,20 +141,17 @@ body {
 }
 
 main {
+  width: 90%;
   display: grid;
   grid-gap: 40px;
-  grid-template-columns: [col1-start] 50% [col2-start] 40% [col3-end];
-  grid-template-rows: [row1-start] auto [row1-end];
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: minmax(500px, auto);
 }
 
-.a {
-  grid-column: col1-start / col2-start;
-  grid-row: row1-start / row1-end;
-  transition: 0.2s all ease;
-}
-.b {
-  grid-column: col2-start;
-  grid-row: row1-start / row1-end;
+@media screen and (max-width: 850px) {
+  main {
+    grid-template-columns: 1fr;
+  }
 }
 
 .usage {
