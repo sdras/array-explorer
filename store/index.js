@@ -40,7 +40,7 @@ export const store = new Vuex.Store({
           'Returns a new array comprised of this array joined with other array(s) and/or value(s).',
         example: `let arr2 = ['a', 'b', 'c'];<br>
         let arr3 = arr.concat(arr2);<br>
-        console.log(arr);`,
+        console.log(arr3);`,
         output: `[5, 1, 8, 'a', 'b', 'c']`
       }
     ],
