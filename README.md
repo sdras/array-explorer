@@ -9,9 +9,6 @@ I realize that there are about a million ways that this resource can be set up, 
 
 I based most of the examples and longer descriptions off of the MDN documentation, altering it slightly where I felt the description was not as beginner-friendly as it could be.
 
-<iframe height='534' scrolling='no' title='Array Explorer' src='//codepen.io/sdras/embed/gogVRX/?height=534&theme-id=22041&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sdras/pen/gogVRX/'>Array Explorer</a> by Sarah Drasner (<a href='https://codepen.io/sdras'>@sdras</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-
 **Enjoy!**
 
 ## Build Setup
