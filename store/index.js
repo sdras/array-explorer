@@ -80,7 +80,7 @@ export const store = new Vuex.Store({
         example: `let slicedArr = arr.slice(1);<br>
         console.log(arr);<br>
         console.log(slicedArr);`,
-        output: `[5, 1, 8]
+        output: `[5, 1, 8]<br>
         [1, 8]`
       }
     ],
@@ -251,7 +251,7 @@ export const store = new Vuex.Store({
           output: `[0, 1, 5, 1, 8]`
         }
       ],
-      oneOrMore: [
+      many: [
         {
           name: 'filter',
           shortDesc: 'values based on a condition you create',

@@ -20,7 +20,24 @@
       <method-choice :options="iterate" methodType="iterate by"/>
     </div>
     <div v-else-if="selectedFilter === 'find items'">
-      <method-choice :options="find" methodType="find"/>
+
+      <p>
+        <label for="findmethod">I'm trying to find</label>
+        <select id="findMethod" name="select" v-model="selectedFind">
+          <option value="" disabled selected>...</option>
+          <option value="single">One Item</option>
+          <option value="many">One or Many Items</option>
+        </select>
+      </p>
+      
+      <div v-if="selectedFind === 'single'">
+        <method-choice :options="find.single" methodType="find"/>
+      </div>
+
+      <div v-else-if="selectedFind === 'many'">
+        <method-choice :options="find.many" methodType="find"/>
+      </div>
+
     </div>
     <div v-else-if="selectedFilter === 'order an array'">
       <method-choice :options="ordering"/>
@@ -47,6 +64,7 @@ export default {
   data() {
     return {
       selectedFilter: '',
+      selectedFind: '',
       options: [
         'add items or other arrays',
         'remove items',
