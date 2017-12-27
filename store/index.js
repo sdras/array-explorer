@@ -87,7 +87,7 @@ export const store = new Vuex.Store({
     string: [
       {
         name: 'join',
-        shortDesc: 'joins all elements of the array into a string',
+        shortDesc: 'join all elements of the array into a string',
         desc: `Joins all elements of an array into a string. You can join it together as is or with something in between, <code>elements.join(' -
           ')</code> gives you <code>foo-bar</code>`,
         example: `arr.join();<br>
@@ -96,7 +96,7 @@ export const store = new Vuex.Store({
       },
       {
         name: 'toString',
-        shortDesc: 'returns a string representing the array. ',
+        shortDesc: 'return a string representing the array.',
         desc: 'Returns a string representing the array and its elements.',
         example: `arr.toString();<br>
         console.log(arr);`,
@@ -104,7 +104,7 @@ export const store = new Vuex.Store({
       },
       {
         name: 'toLocaleString',
-        shortDesc: 'returns a localized string representing the array.',
+        shortDesc: 'return a localized string representing the array.',
         desc:
           'This one is a bit wacko. Returns a localized string representing the array and its elements. This is very useful for dates and currency and has some strange native abstractions, so best to consult the docs when using it',
         example: `let date = [new Date()];<br>
@@ -135,8 +135,15 @@ export const store = new Vuex.Store({
     ],
     other: [
       {
+        name: 'length',
+        shortDesc: 'find the length of the array',
+        desc: 'Returns the number of elements in that array.',
+        example: `console.log(arr.length);`,
+        output: `3`
+      },
+      {
         name: 'fill',
-        shortDesc: 'fills all the elements of the array with a static value',
+        shortDesc: 'fill all the elements of the array with a static value',
         desc:
           'Fills all the elements of an array from a start index to an end index with a static value.',
         example: `arr.fill(2);<br>
@@ -145,7 +152,7 @@ export const store = new Vuex.Store({
       },
       {
         name: 'copyWithin',
-        shortDesc: 'copies a sequence of array elements within the array.',
+        shortDesc: 'copy a sequence of array elements within the array.',
         desc:
           'Copies a sequence of array elements within the array. You can specify either just the ending element (where begin will default to zero) or both the beginning and the end, comma-separated.',
         example: `arr.copyWithin(1);<br>

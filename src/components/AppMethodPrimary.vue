@@ -7,10 +7,7 @@
         {{ option }}
       </option>
     </select>
-    <div v-if="selectedFilter === 'find the length of the array'">
-      <method-length />
-    </div>
-    <div v-else-if="selectedFilter === 'add items or other arrays'">
+    <div v-if="selectedFilter === 'add items or other arrays'">
       <method-choice :options="adding" methodType="add"/>
     </div>
     <div v-else-if="selectedFilter === 'remove items'">
@@ -54,12 +51,10 @@
 <script>
 import { mapState } from 'vuex'
 import MethodChoice from './methods/MethodChoice.vue'
-import MethodLength from './methods/MethodLength.vue'
 
 export default {
   components: {
-    MethodChoice,
-    MethodLength
+    MethodChoice
   },
   data() {
     return {
@@ -72,7 +67,6 @@ export default {
         'walk over items',
         'return a string',
         'order an array',
-        'find the length of the array',
         'something else'
       ]
     }
