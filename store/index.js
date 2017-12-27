@@ -9,7 +9,7 @@ export const store = new Vuex.Store({
     adding: [
       {
         name: 'splice',
-        shortDesc: 'elements to an array.',
+        shortDesc: 'element/s to an array',
         desc: 'Adds and/or removes elements from an array.',
         example: `arr.splice(2, 0, 'tacos');<br>
         console.log(arr);`,
@@ -17,7 +17,7 @@ export const store = new Vuex.Store({
       },
       {
         name: 'push',
-        shortDesc: 'elements to the end of an array.',
+        shortDesc: 'elements to the end of an array',
         desc:
           'Adds one or more elements to the end of an array and returns the new length of the array.',
         example: `arr.push(2);<br>
@@ -26,7 +26,7 @@ export const store = new Vuex.Store({
       },
       {
         name: 'unshift',
-        shortDesc: 'elements to the front of an array.',
+        shortDesc: 'elements to the front of an array',
         desc:
           'Adds one or more elements to the front of an array and returns the new length of the array.',
         example: `arr.unshift(2, 7);<br>
@@ -47,7 +47,7 @@ export const store = new Vuex.Store({
     removing: [
       {
         name: 'splice',
-        shortDesc: 'elements from an array.',
+        shortDesc: 'element/s from an array',
         desc: 'Adds and/or removes elements from an array.',
         example: `arr.splice(2, 1);<br>
         console.log(arr);`,
@@ -80,7 +80,7 @@ export const store = new Vuex.Store({
         example: `let slicedArr = arr.slice(1);<br>
         console.log(arr);<br>
         console.log(slicedArr);`,
-        output: `[5, 1, 8]<br>
+        output: `[5, 1, 8]
         [1, 8]`
       }
     ],
@@ -160,8 +160,8 @@ export const store = new Vuex.Store({
         shortDesc: 'executing a function you create for each element',
         desc:
           'The forEach() method executes a provided function once for each array element.',
-        example: `arr.forEach((item) => {<br>
-        &nbsp;&nbsp;console.log(item)<br> 
+        example: `arr.forEach((element) => {<br>
+        &nbsp;&nbsp;console.log(element)<br> 
         });`,
         output: `5<br>
         1<br>
@@ -174,7 +174,7 @@ export const store = new Vuex.Store({
         desc:
           'Creates a new array with the results of calling a provided function on every element in this array.',
         example: `let map = arr.map(x => x + 1);<br>
-        console.log(map)`,
+        console.log(map);`,
         output: `[6, 2, 9]`
       },
       {
@@ -186,7 +186,101 @@ export const store = new Vuex.Store({
         console.log(iterator.next().value);`,
         output: `[0, 5] <span class="comment">// the 0 is the index, the 5 is the first number</span>`
       }
-    ]
+    ],
+    find: {
+      single: [
+        {
+          name: 'includes',
+          shortDesc: 'out if a certain element exists',
+          desc:
+            'Determines whether an array contains a certain element, returning true or false as appropriate.',
+          example: `console.log(arr.includes(1));`,
+          output: `true`
+        },
+        {
+          name: 'indexOf',
+          shortDesc: 'the first index of a particular item',
+          desc:
+            'Returns the first index at which a given element can be found in the array, or -1 if it is not present.',
+          example: `console.log(arr.indexOf(5));`,
+          output: `0`
+        },
+        {
+          name: 'lastIndexOf',
+          shortDesc: 'the last index of a particular item',
+          desc:
+            'Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found.',
+          example: `console.log(arr.indexOf(5));`,
+          output: `0`
+        },
+        {
+          name: 'find',
+          shortDesc: 'the first element that satisfies a condition',
+          desc:
+            'Returns the found value in the array, if an element in the array satisfies the provided testing function or undefined if not found. Similar to <code>findIndex()</code>, but it returns the item instead of the index.',
+          example: `let isSmall = (el) => el < 2;<br>
+          console.log(arr.find(isSmall));`,
+          output: `1`
+        },
+        {
+          name: 'findIndex',
+          shortDesc: 'the first index of an item that satisfies a condition',
+          desc:
+            'Returns the index of the first element in the array that satisfies the provided testing function. Otherwise -1 is returned. Similar to <code>find()</code>, but it returns the index instead of the item.',
+          example: `let isLarge = (el) => el > 6;<br>
+          console.log(arr.findIndex(isLarge));`,
+          output: `2`
+        },
+        {
+          name: 'reduce',
+          shortDesc: 'a value by reducing the Array, start to finish',
+          desc:
+            'Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value.',
+          example: `let reducer = (accumulator, val) => accumulator + val;<br>
+          &#9;console.log(arr.reduce(reducer));`,
+          output: `14`
+        },
+        {
+          name: 'reduceRight',
+          shortDesc: 'a value by reducing the Array, finish to start',
+          desc:
+            'Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.',
+          example: `[arr, [0, 1]].reduceRight((a, b) => {<br>
+          &#9;return a.concat(b)<br>
+          }, [])`,
+          output: `[0, 1, 5, 1, 8]`
+        }
+      ],
+      oneOrMore: [
+        {
+          name: 'filter',
+          shortDesc: 'values based on a condition you create',
+          desc:
+            'Creates a new array with all of the elements of this array for which the provided filtering function returns true.',
+          example: `let filtered = arr.filter(el => el > 4);<br>
+          console.log(filtered)`,
+          output: `[5, 8]`
+        },
+        {
+          name: 'every',
+          shortDesc: 'whether or not every item satisfies a condition',
+          desc:
+            'Returns true if every element in this array satisfies the provided testing function.',
+          example: `let isSmall = (el) => el < 10;<br>
+          console.log(arr.every(isSmall));`,
+          output: `true`
+        },
+        {
+          name: 'some',
+          shortDesc: 'whether or not at least one item satisfies a condition',
+          desc:
+            'Returns true if at least one element in this array satisfies the provided testing function.',
+          example: `let biggerThan4 = (el) => el > 4;<br>
+          console.log(arr.some(biggerThan4));`,
+          output: `true`
+        }
+      ]
+    }
   },
   mutations: {
     selectionMethod(state, selected) {

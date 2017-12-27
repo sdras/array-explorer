@@ -19,6 +19,9 @@
     <div v-else-if="selectedFilter === 'walk over items'">
       <method-choice :options="iterate" methodType="iterate by"/>
     </div>
+    <div v-else-if="selectedFilter === 'find items'">
+      <method-choice :options="find" methodType="find"/>
+    </div>
     <div v-else-if="selectedFilter === 'order an array'">
       <method-choice :options="ordering"/>
     </div>
@@ -63,7 +66,8 @@ export default {
       'iterate',
       'string',
       'ordering',
-      'other'
+      'other',
+      'find'
     ])
   },
   watch: {

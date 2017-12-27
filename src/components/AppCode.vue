@@ -2,23 +2,23 @@
   <aside>
     <div class="usage-code usage1">
       <p>
-        <code>let arr = [5, 1, 8];</code><br>
-        <code v-if="selectedUsage" 
+        <span>let arr = [5, 1, 8];</span><br>
+        <span v-if="selectedUsage" 
           class="exampleoutput" 
           ref="ex" 
           v-html="selectedUsage.example">
-        </code>
+        </span>
       </p>
     </div>
     <div v-if="selectedUsage" class="usage2">
       <h3 style="margin-top: 50px">Output</h3>
       <div class="usage-code">
         <p>
-          <code
+          <span
             class="exampleoutput2" 
             ref="ex2" 
             v-html="selectedUsage.output">
-          </code>
+          </span>
         </p>
       </div><!--usage-code-->
     </div>
@@ -116,13 +116,14 @@ export default {
   display: block;
   border-radius: 5px;
   line-height: 1.8em;
+  font-family: monospace;
 }
 
 .usage1 {
   color: #aeded4;
 }
 
-.usage2 code {
+.usage2 span {
   color: #ecc2a4;
 }
 
