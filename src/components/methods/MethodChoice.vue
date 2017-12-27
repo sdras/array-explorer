@@ -10,7 +10,8 @@
       </select>
     </p>
     <method-base v-show="isSelected" :urlPath="selected.name">
-      <span slot="title">Array.{{selected.name}}()</span>
+      <span v-if="selected.name === 'length'" slot="title">Array.{{selected.name}}</span>
+      <span v-else slot="title">Array.{{selected.name}}()</span>
       <span slot="desc" v-html="selected.desc"></span>
     </method-base>
   </div>
