@@ -40,7 +40,7 @@ export const store = new Vuex.Store({
           'Returns a new array comprised of this array joined with other array(s) and/or value(s).',
         example: `let arr2 = ['a', 'b', 'c'];<br>
         let arr3 = arr.concat(arr2);<br>
-        console.log(arr);`,
+        console.log(arr3);`,
         output: `[5, 1, 8, 'a', 'b', 'c']`
       }
     ],
@@ -90,16 +90,14 @@ export const store = new Vuex.Store({
         shortDesc: 'join all elements of the array into a string',
         desc: `Joins all elements of an array into a string. You can join it together as is or with something in between, <code>elements.join(' -
           ')</code> gives you <code>foo-bar</code>`,
-        example: `arr.join();<br>
-        console.log(arr);`,
+        example: `console.log(arr.join());`,
         output: `"5,1,8"`
       },
       {
         name: 'toString',
         shortDesc: 'return a string representing the array.',
         desc: 'Returns a string representing the array and its elements.',
-        example: `arr.toString();<br>
-        console.log(arr);`,
+        example: `console.log(arr.toString());`,
         output: `"5,1,8"`
       },
       {
