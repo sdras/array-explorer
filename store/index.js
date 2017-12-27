@@ -216,7 +216,7 @@ export const store = new Vuex.Store({
           shortDesc: 'the last index of a particular item',
           desc:
             'Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found.',
-          example: `console.log(arr.indexOf(5));`,
+          example: `console.log(arr.lastIndexOf(5));`,
           output: `0`
         },
         {
