@@ -83,11 +83,84 @@ export const store = new Vuex.Store({
         output: `[5, 1, 8]
         [1, 8]`
       }
+    ],
+    string: [
+      {
+        name: 'join',
+        shortDesc: 'joins all elements of the array into a string',
+        desc:
+          'Joins all elements of an array into a string. You can join it together as is or with something in between, <code>elements.join(' -
+          ')</code> gives you <code>foo-bar</code>',
+        example: `arr.join();
+        console.log(arr);`,
+        output: `"5,1,8"`
+      },
+      {
+        name: 'toString',
+        shortDesc: 'returns a string representing the array. ',
+        desc: 'Returns a string representing the array and its elements.',
+        example: `arr.toString();
+        console.log(arr);`,
+        output: `"5,1,8"`
+      },
+      {
+        name: 'toLocaleString',
+        shortDesc: 'returns a localized string representing the array.',
+        desc:
+          'Returns a localized string representing the array and its elements. This is very useful for dates and currency and has some strange native abstractions, so best to consult the docs when using it',
+        example: `let date = [new Date()];
+        arr.toLocaleString();
+        date.toLocaleString();
+        console.log(arr, date);`,
+        output: `"5,1,8 12/26/2017, 6:54:49 PM"`
+      }
+    ],
+    ordering: [
+      {
+        name: 'reverse',
+        shortDesc: 'reverses the order of the array',
+        desc:
+          'Reverses the order of the elements of an array in place — the first becomes the last, and the last becomes the first.',
+        example: `arr.reverse();
+        console.log(arr);`,
+        output: `[8, 1, 5]`
+      },
+      {
+        name: 'sort',
+        shortDesc: 'sorts the items of the array',
+        desc: 'Sorts the elements of an array in place and returns the array.',
+        example: `arr.sort();
+        console.log(arr);`,
+        output: `[1, 5, 8]`
+      }
+    ],
+    other: [
+      {
+        name: 'fill',
+        shortDesc: 'fills all the elements of the array with a static value',
+        desc:
+          'Fills all the elements of an array from a start index to an end index with a static value.',
+        example: `arr.fill(2);
+        console.log(arr);`,
+        output: `[2, 2, 2]`
+      },
+      {
+        name: 'copyWithin',
+        shortDesc: 'copies a sequence of array elements within the array.',
+        desc:
+          'Copies a sequence of array elements within the array. You can specify either just the ending element (where begin will default to zero) or both the beginning and the end, comma-separated.',
+        example: `arr.copyWithin(1);
+        console.log(arr);`,
+        output: `[5, 5, 8]`
+      }
     ]
   },
   mutations: {
     selectionMethod(state, selected) {
       state.selectedMethod = selected
+    },
+    resetSelection(state) {
+      state.selectedMethod = ''
     }
   }
 })

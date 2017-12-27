@@ -1,17 +1,19 @@
 <template>
-  <p>
-    <label for="methodoptions">I need to {{ methodType }}</label>
-    <select id="methodoptions" name="select" v-model="selected">
-      <option value="" disabled selected>...</option>
-      <option v-for="option in options" :key="option.name" :value="option">
-        {{ option.shortDesc }}
-      </option>
-    </select>
-    <method-base v-if="selected" :urlPath="selected.name">
+  <div>
+    <p>
+      <label for="methodoptions">I need to {{ methodType }}</label>
+      <select id="methodoptions" name="select" v-model="selected">
+        <option value="" disabled selected>...</option>
+        <option v-for="option in options" :key="option.name" :value="option">
+          {{ option.shortDesc }}
+        </option>
+      </select>
+    </p>
+    <method-base v-show="isSelected" :urlPath="selected.name">
       <span slot="title">Array.{{selected.name}}()</span>
       <span slot="desc" v-html="selected.desc"></span>
     </method-base>
-  </p>
+  </div>
 </template>
 
 <script>
@@ -34,6 +36,11 @@ export default {
   data() {
     return {
       selected: ''
+    }
+  },
+  computed: {
+    isSelected() {
+      return this.$store.state.selectedMethod
     }
   },
   watch: {

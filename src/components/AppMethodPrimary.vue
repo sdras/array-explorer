@@ -50,6 +50,11 @@ export default {
     removeOptions() {
       return this.$store.state.removing
     }
+  },
+  watch: {
+    selectedFilter() {
+      this.$store.commit('resetSelection')
+    }
   }
 }
 </script>
