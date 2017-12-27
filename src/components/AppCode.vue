@@ -155,29 +155,4 @@ export default {
   opacity: 0;
   scale: 0;
 }
-
-/* custom syntax highlighting */
-.keyword {
-  color: #fa927d;
-}
-
-.punctuation {
-  color: #f8ecb8;
-}
-
-.number {
-  color: #a3f5bc;
-}
-
-.string {
-  color: #ffce25;
-}
-
-.function {
-  color: #7bb764;
-}
-
-.comment {
-  color: #888;
-}
 </style>

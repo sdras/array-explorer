@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <app-github-corner />
     <main>
       <section class="a">
         <h1>Array Explorer</h1>
@@ -16,11 +17,13 @@
 
 <script>
 import AppMethodPrimary from './components/AppMethodPrimary'
+import AppGithubCorner from './components/AppGithubCorner'
 import AppCode from './components/AppCode'
 
 export default {
   components: {
     AppMethodPrimary,
+    AppGithubCorner,
     AppCode
   }
 }

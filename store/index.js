@@ -184,7 +184,8 @@ export const store = new Vuex.Store({
         example: `let iterator = arr.entries();<br>
         console.log(iterator.next().value);`,
         output: `[0, 5]<br>
-        <span class="comment">// the 0 is the index, the 5 is the first number</span>`
+        <span class="comment">// the 0 is the index,</span><br>
+        <span class="comment">// the 5 is the first number</span>`
       }
     ],
     find: {
@@ -236,7 +237,7 @@ export const store = new Vuex.Store({
           shortDesc: 'a value by reducing the Array, start to finish',
           desc:
             'Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value.',
-          example: `let reducer = (accumulator, val) => accumulator + val;<br>
+          example: `let reducer = (a, b) => a + b;<br>
           &#9;console.log(arr.reduce(reducer));`,
           output: `14`
         },
