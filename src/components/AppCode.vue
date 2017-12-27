@@ -4,7 +4,7 @@
       <p>
         <span>let arr = [5, 1, 8];</span><br>
         <span v-if="selectedUsage" 
-          class="exampleoutput" 
+          class="exampleoutput"
           ref="ex" 
           v-html="selectedUsage.example">
         </span>
@@ -15,7 +15,7 @@
       <div class="usage-code">
         <p>
           <span
-            class="exampleoutput2" 
+            class="exampleoutput2"
             ref="ex2" 
             v-html="selectedUsage.output">
           </span>
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { TweenLite, TimelineMax, Back } from 'gsap'
+import { TweenLite, TimelineMax, Back, Power4 } from 'gsap'
 
 export default {
   methods: {
@@ -36,12 +36,19 @@ export default {
         tl = new TimelineMax()
 
       tl.add('start')
-      tl.to('.exampleoutput', 0.1, {
+      tl.to(this.$refs.ex, 0.1, {
         opacity: 1
       })
-      tl.staggerTo(
+      tl.staggerFromTo(
         split.chars,
         0.1,
+        {
+          opacity: 0,
+          scale: 0,
+          color: '#aeded4',
+          transformOrigin: '50% 50%',
+          ease: Power4.easeOut
+        },
         {
           opacity: 1,
           scale: 1,
@@ -63,12 +70,19 @@ export default {
         'start+=0.1'
       )
 
-      tl.to('.exampleoutput2', 0.1, {
+      tl.to(this.$refs.ex2, 0.1, {
         opacity: 1
       })
-      tl.staggerTo(
+      tl.staggerFromTo(
         split2.chars,
         0.1,
+        {
+          opacity: 0,
+          scale: 0,
+          color: '#aeded4',
+          transformOrigin: '50% 50%',
+          ease: Power4.easeOut
+        },
         {
           opacity: 1,
           scale: 1,
@@ -98,6 +112,9 @@ export default {
   },
   watch: {
     selectedUsage() {
+      TweenMax.set([this.$refs.ex, this.$refs.ex2], {
+        opacity: 0
+      })
       setTimeout(() => {
         this.typeOut()
       }, 500)

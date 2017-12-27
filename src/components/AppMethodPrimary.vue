@@ -25,8 +25,8 @@
         <label for="findmethod">I'm trying to find</label>
         <select id="findMethod" name="select" v-model="selectedFind">
           <option value="" disabled selected>...</option>
-          <option value="single">One Item</option>
-          <option value="many">One or Many Items</option>
+          <option value="single">one item</option>
+          <option value="many">one or many items</option>
         </select>
       </p>
       

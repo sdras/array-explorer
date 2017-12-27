@@ -183,7 +183,8 @@ export const store = new Vuex.Store({
           'Returns a new Array Iterator object that contains the key/value pairs for each index in the array. There are a lot of uses for iterators, as well as other methods used with it in conjuction, like <code>values</code> and <code>keys</code>',
         example: `let iterator = arr.entries();<br>
         console.log(iterator.next().value);`,
-        output: `[0, 5] <span class="comment">// the 0 is the index, the 5 is the first number</span>`
+        output: `[0, 5]<br>
+        <span class="comment">// the 0 is the index, the 5 is the first number</span>`
       }
     ],
     find: {
