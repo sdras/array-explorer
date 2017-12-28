@@ -96,9 +96,9 @@ export const store = new Vuex.Store({
                 shortDesc: 'devolver la representación del array como una cadena utilizando la configuración regional.',
                 desc: 'Este es un poco loco. Devuelve la representación del array como una cadena utilizando la configuración regional. Esto es muy útil para fechas y moneda y tiene algunas extrañas abstracciones nativas, por lo que es mejor consultar los documentos al utilizarlo.',
                 example: `let date = [new Date()];<br>
-        arr.toLocaleString();<br>
-        date.toLocaleString();<br>
-        console.log(arr, date);`,
+        const arrString = arr.toLocaleString();<br>
+        const dateString = date.toLocaleString();<br>
+        console.log(arrString, dateString);`,
                 output: `"5,1,8 12/26/2017, 6:54:49 PM"`
             }
         ],
