@@ -1,0 +1,299 @@
+import Vue from 'vue'
+import Vuex from 'vuex'
+
+Vue.use(Vuex)
+
+export const store = new Vuex.Store({
+  state: {
+    selectedMethod: '',
+    adding: [
+      {
+        name: 'splice',
+        shortDesc: 'Elemente in einen Array',
+        desc: 'Fügt Elemente zu einem Array hinzu oder entfernt welche.',
+        example: `arr.splice(2, 0, 'tacos');<br>
+        console.log(arr);`,
+        output: `[5, 1, 'tacos', 8]`
+      },
+      {
+        name: 'push',
+        shortDesc: 'Elemente an das Ende eines Arrays',
+        desc:
+          'Hängt ein oder mehrere Elemente an einen Array an und gibt die neue Länge des Arrays zurück.',
+        example: `arr.push(2);<br>
+        console.log(arr);`,
+        output: '[5, 1, 8, 2]'
+      },
+      {
+        name: 'unshift',
+        shortDesc: 'Elemente an den Anfang eines Arrays',
+        desc:
+          'Fügt ein oder mehrere Elemente an den Anfang eines Arrays an und gibt die neue Länge des Arrays zurück.',
+        example: `arr.unshift(2, 7);<br>
+        console.log(arr);`,
+        output: '[2, 7, 5, 1, 8]'
+      },
+      {
+        name: 'concat',
+        shortDesc: 'diesen Array zu anderen Arrays und/oder Werten.',
+        desc:
+          'Gibt einen neuen Array bestehend aus diesem Array zusammen mit anderen Array(s) und/oder Werten zurück.',
+        example: `let arr2 = ['a', 'b', 'c'];<br>
+        let arr3 = arr.concat(arr2);<br>
+        console.log(arr3);`,
+        output: `[5, 1, 8, 'a', 'b', 'c']`
+      }
+    ],
+    removing: [
+      {
+        name: 'splice',
+        shortDesc: 'Elemente aus einem Array',
+        desc: 'Fügt Elemente einem Array hinzu und/oder entfernt welche.',
+        example: `arr.splice(2, 1);<br>
+        console.log(arr);`,
+        output: `[5, 1]`
+      },
+      {
+        name: 'pop',
+        shortDesc: 'das letzte Element eines Arrays',
+        desc:
+          'Entfernt das letzte Element eines Arrays und gibt es zurück.',
+        example: `arr.pop();<br>
+        console.log(arr);`,
+        output: `[5, 1]`
+      },
+      {
+        name: 'shift',
+        shortDesc: 'das erste Element eines Arrays',
+        desc:
+          'Entfernt das erste Element eines Arrays und gibt es zurück.',
+        example: `arr.shift();<br>
+        console.log(arr);`,
+        output: `[1, 8]`
+      },
+      {
+        name: 'slice',
+        shortDesc: // fehlt noch 
+          'mindestens ein Element für eine Aufgabe, ohne den eigentlichen Array zu verändern',
+        desc:
+          'Die <code>slice()</code>-Methode schreibt eine flache Kopie eines Teils des Arrays in ein neues Array-Objekt. Man kann entweder nur den Index für das letzte Elemente (dann wird der Index für das erste Element auf 0 gesetzt) oder sowohl den Index für das erste und das letzte Element kommagetrennt angeben. Der Original-Array wird nicht verändert.',
+        example: `let slicedArr = arr.slice(1);<br>
+        console.log(arr);<br>
+        console.log(slicedArr);`,
+        output: `[5, 1, 8]<br>
+        [1, 8]`
+      }
+    ],
+    string: [
+      {
+        name: 'join',
+        shortDesc: 'alle Elemente eines Arrays in einen String zusammenführen.',
+        desc: `Führt alle Elemente eines Arrays in einem String zusammen. Man kann die Elemente entweder mit oder ohne Trennzeichen zusammenführen. <code>elements.join(' -
+          ')</code> gibt <code>foo-bar</code>`,
+        example: `console.log(arr.join());`,
+        output: `"5,1,8"`
+      },
+      {
+        name: 'toString',
+        shortDesc: 'einen String, der den Array repräsentiert, zurückgegeben.',
+        desc: 'Gibt einen String, der den Array und alle darin enthaltenen Elemente beinhaltet, zurück.',
+        example: `console.log(arr.toString());`,
+        output: `"5,1,8"`
+      },
+      {
+        name: 'toLocaleString',
+        shortDesc: 'einen an die Sprache angepassten String, der den Array repräsentiert, zurückgeben.',
+        desc:
+          'Diese Methode ist ein bisschen komisch. Sie gibt einen an die Sprache angepassten String, der den Array und alle seine Elemente beinhaltet, zurück. Dies ist sehr nützlich für Datumsangaben und Währungen, hat aber einige seltsame Verhaltensweisen, so dass du am besten die genaue Dokumentation durchlesen solltest.',
+        example: `let date = [new Date()];<br>
+        const arrString = arr.toLocaleString();<br>
+        const dateString = date.toLocaleString();<br>
+        console.log(arrString, dateString);`,
+        output: `"5,1,8 12/26/2017, 6:54:49 PM"`
+      }
+    ],
+    ordering: [
+      {
+        name: 'reverse',
+        shortDesc: 'die Reihenfolge eines Arrays umkehren',
+        desc:
+          'Kehrt die Reihenfolge der Elemente in einem Array um, das erste wird zum letzten Element, das letzte zum ersten.',
+        example: `arr.reverse();<br>
+        console.log(arr);`,
+        output: `[8, 1, 5]`
+      },
+      {
+        name: 'sort',
+        shortDesc: 'die Elemente in einem Array sortieren',
+        desc: 'Sortiert die Elemente eines Arrays in aufsteigender Reihenfolge.',
+        example: `arr.sort();<br>
+        console.log(arr);`,
+        output: `[1, 5, 8]`
+      }
+    ],
+    other: [
+      {
+        name: 'length',
+        shortDesc: 'die Länge eines Arrays herausfinden',
+        desc: 'Gibt die Zahl aller Elemente in einem Array zurück.',
+        example: `console.log(arr.length);`,
+        output: `3`
+      },
+      {
+        name: 'fill',
+        shortDesc: 'allen Elementen eines Arrays einen bestimmten Wert zuweisen',
+        desc:
+          'Weist alle Elementen in einem Array vom Start- bis zum Endindex einen bestimmten Wert zu.',
+        example: `arr.fill(2);<br>
+        console.log(arr);`,
+        output: `[2, 2, 2]`
+      },
+      {
+        name: 'copyWithin',
+        shortDesc: 'einen Folge von Elementen des Arrays innerhalb des Arrays kopieren.',
+        desc:
+          'Kopiert eine Reihe von Elementen des Arrays innerhalb des Arrays. Du kannst entweder nur das letzte Element (dann wird der Startindex auf 0 gesetzt) oder sowohl das erste als auch das letzte kommagetrennt festlegen.',
+        example: `arr.copyWithin(1);<br>
+        console.log(arr);`,
+        output: `[5, 5, 8]`
+      }
+    ],
+    iterate: [
+      {
+        name: 'forEach',
+        shortDesc: 'wobei ich eine selbstdefinierte Funktion auf jedes Elemente anwende',
+        desc:
+          'Die <code>forEach()</code>-Methode wendet eine gegebene Funktion auf jedes Element im Array an.',
+        example: `arr.forEach((element) => {<br>
+        <span>&nbsp;&nbsp;</span>console.log(element)<br> 
+        });`,
+        output: `5<br>
+        1<br>
+        8`
+      },
+      {
+        name: 'map',
+        shortDesc:
+          'einen neuen Array basierend auf einer auf alle Elemente angewendeten Funktion',
+        desc:
+          'Erstellt einen neuen Array, dessen Elemente auf dem gegebenem Array, auf die eine gegebene Funktion angewendet wurde, basieren.',
+        example: `let map = arr.map(x => x + 1);<br>
+        console.log(map);`,
+        output: `[6, 2, 9]`
+      },
+      {
+        name: 'entries',
+        shortDesc: 'ein Iterator-Objekt erstellen',
+        desc:
+          'Gibt ein Iterator-Objekt zurück, das zu jedem Index den Wert des Elements beinhaltet. Es gibt eine Vielzahl an Anwendungen für Iteratoren und andere Methoden, die in Verbindung mit Iteratoren genutzt werden, wie <code>key</code> oder <code>value</code>.',
+        example: `let iterator = arr.entries();<br>
+        console.log(iterator.next().value);`,
+        output: `[0, 5]<br>
+        <span class="comment">// the 0 is the index,</span><br>
+        <span class="comment">// the 5 is the first number</span>`
+      }
+    ],
+    find: {
+      single: [
+        {
+          name: 'includes',
+          shortDesc: ', ob ein bestimmtes Element im Array vorkommt',
+          desc:
+            'Existiert ein bestimmtes Element im Array, wird true, ansonsten false, zurückgegeben.',
+          example: `console.log(arr.includes(1));`,
+          output: `true`
+        },
+        {
+          name: 'indexOf',
+          shortDesc: ', was der erste Index eines Elements ist',
+          desc:
+            'Gibt den ersten Index, an dem das Element gefunden werden kann, zurück, oder -1, falls es nicht vorkommt.',
+          example: `console.log(arr.indexOf(5));`,
+          output: `0`
+        },
+        {
+          name: 'lastIndexOf',
+          shortDesc: 'den letzten Index eines Elements',
+          desc:
+            'Gibt den letzten (größten) Index zurück, an dem ein Element gefunden werden kann, oder -1, falls es nicht im Array vorkommt.',
+          example: `console.log(arr.lastIndexOf(5));`,
+          output: `0`
+        },
+        {
+          name: 'find',
+          shortDesc: 'das erste Element, das eine Bedingung erfüllt',
+          desc:
+            'Gibt das erste gefundene Element aus dem Array zurück, das die gegebene Bedingung erfüllt, wenn mindestens ein Element die gegebene Bedingung erfüllt, sonst wird undefined zurückgegeben. Ähnlich zu <code>findIndex()</code>, aber <code>find()</code> gibt das Element und nicht den Index zurück.',
+          example: `let isTiny = (el) => el < 2;<br>
+          console.log(arr.find(isTiny));`,
+          output: `1`
+        },
+        {
+          name: 'findIndex',
+          shortDesc: 'den ersten Index eines Elements, das eine Bedingung erfüllt',
+          desc:
+            'Gibt den Index des ersten Elements im Array, das die gegebene Bedingung erfüllt, zurück. Erfüllt kein Element die Bedingung, wird -1 zurückgegeben. Ähnlich zu <code>find()</code>, aber <code>findIndex()</code> gibt den Index statt des Elements zurück.',
+          example: `let isBig = (el) => el > 6;<br>
+          console.log(arr.findIndex(isBig));`,
+          output: `2`
+        },
+        {
+          name: 'reduce',
+          shortDesc: 'den Array auf einen einzigen Wert reduzieren, von links nach rechts',
+          desc:
+            'Reduziert das Array auf einen einzigen Wert, indem es jeweils zwei Elemente (von links nach rechts) durch eine angegebene Funktion reduziert.',
+          example: `let reducer = (a, b) => a + b;<br>
+          <span>&nbsp;&nbsp;</span>console.log(arr.reduce(reducer));`,
+          output: `14`
+        },
+        {
+          name: 'reduceRight',
+          shortDesc: 'den Array auf einen einzigen Wert reduzieren, von rechts nach links',
+          desc:
+            'Wendet eine Funktion gegen einen Akkumulator auf jeden Wert des Arrays (von rechts nach links) an und reduziert es um einen einzelnen Wert.',
+          example: `[arr, [0, 1]].reduceRight((a, b) => {<br>
+          <span>&nbsp;&nbsp;</span>return a.concat(b)<br>
+          }, [])`,
+          output: `[0, 1, 5, 1, 8]`
+        }
+      ],
+      many: [
+        {
+          name: 'filter',
+          shortDesc: 'Werte basierend auf einer selbsterstellten Bedingung finden.',
+          desc:
+            'Erstellt einen neuen Array mit allen Elementen des Strings, die eine gegebene Bedingung erfüllen.',
+          example: `let filtered = arr.filter(el => el > 4);<br>
+          console.log(filtered)`,
+          output: `[5, 8]`
+        },
+        {
+          name: 'every',
+          shortDesc: 'herausfinden, ob alle Elemente des Arrays eine Bedingung erfüllen.',
+          desc:
+            'Gibt true zurück, wenn alle Elemente des Arrays eine gegebene Bedingung erfüllen.',
+          example: `let isSmall = (el) => el < 10;<br>
+          console.log(arr.every(isSmall));`,
+          output: `true`
+        },
+        {
+          name: 'some',
+          shortDesc: 'herausfinden, ob mindestens ein Element des Arrays eine Bedingung erfüllt',
+          desc:
+            'Gibt true zurück, wenn zumindest ein Element des Arrays eine gegebene Bedingung erfüllt.',
+          example: `let biggerThan4 = (el) => el > 4;<br>
+          console.log(arr.some(biggerThan4));`,
+          output: `true`
+        }
+      ]
+    }
+  },
+  mutations: {
+    selectionMethod(state, selected) {
+      state.selectedMethod = selected
+    },
+    resetSelection(state) {
+      state.selectedMethod = ''
+    }
+  }
+})
