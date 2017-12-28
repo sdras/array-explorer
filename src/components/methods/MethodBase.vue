@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<<script>
+<script>
 export default {
   name: 'method-base',
   props: {
