@@ -106,9 +106,9 @@ export const store = new Vuex.Store({
         desc:
           'This one is a bit wacko. Returns a localized string representing the array and its elements. This is very useful for dates and currency and has some strange native abstractions, so best to consult the docs when using it',
         example: `let date = [new Date()];<br>
-        arr.toLocaleString();<br>
-        date.toLocaleString();<br>
-        console.log(arr, date);`,
+        const arrString = arr.toLocaleString();<br>
+        const dateString = date.toLocaleString();<br>
+        console.log(arrString, dateString);`,
         output: `"5,1,8 12/26/2017, 6:54:49 PM"`
       }
     ],
