@@ -85,7 +85,6 @@ html {
   font-family: 'Gill Sans W04 Book', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
