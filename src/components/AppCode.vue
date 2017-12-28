@@ -2,7 +2,7 @@
   <aside>
     <div class="usage-code usage1">
       <p>
-        <span>let arr = [5, 1, 8];</span><br>
+        <span>const arr = [5, 1, 8];</span><br>
         <span v-if="selectedUsage" 
           class="exampleoutput"
           ref="ex" 
