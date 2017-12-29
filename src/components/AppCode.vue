@@ -3,9 +3,9 @@
     <div class="usage-code usage1">
       <p>
         <span>let arr = [5, 1, 8];</span><br>
-        <span v-if="selectedUsage" 
+        <span v-if="selectedUsage"
           class="exampleoutput"
-          ref="ex" 
+          ref="ex"
           v-html="selectedUsage.example">
         </span>
       </p>
@@ -16,7 +16,7 @@
         <p>
           <span
             class="exampleoutput2"
-            ref="ex2" 
+            ref="ex2"
             v-html="selectedUsage.output">
           </span>
         </p>
@@ -155,6 +155,6 @@ export default {
 .exampleoutput div,
 .exampleoutput2 div {
   opacity: 0;
-  scale: 0;
+  transform: scale(0);
 }
 </style>
