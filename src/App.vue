@@ -143,7 +143,7 @@ body {
 }
 
 main {
-  width: 90%;
+  width: 95%;
   display: grid;
   grid-gap: 40px;
   grid-template-columns: 1fr 1fr;

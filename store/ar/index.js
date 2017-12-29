@@ -51,8 +51,7 @@ export default {
       {
         name: 'pop',
         shortDesc: 'العنصر الأخير في المصفوفة',
-        desc:
-          'تحذف العنصر الأخير في المصفوفة وتعيد هذا العنصر.',
+        desc: 'تحذف العنصر الأخير في المصفوفة وتعيد هذا العنصر.',
         example: `arr.pop();<br>
         console.log(arr);`,
         output: `[5, 1]`
@@ -60,8 +59,7 @@ export default {
       {
         name: 'shift',
         shortDesc: 'العنصر الأول من المصفوفة',
-        desc:
-          'تحذف العنصر الأول من المصفوفة وتعيد هذا العنصر.',
+        desc: 'تحذف العنصر الأول من المصفوفة وتعيد هذا العنصر.',
         example: `arr.shift();<br>
         console.log(arr);`,
         output: `[1, 8]`
@@ -265,8 +263,7 @@ export default {
         {
           name: 'every',
           shortDesc: 'فيما إذا  كانت جميع العناصر تطابق شرط معين أو لا',
-          desc:
-            'تعيد (true) إذا كانت جميع القيم تطابق دالة الفحص.',
+          desc: 'تعيد (true) إذا كانت جميع القيم تطابق دالة الفحص.',
           example: `let isSmall = (el) => el < 10;<br>
           console.log(arr.every(isSmall));`,
           output: `true`

@@ -1,5 +1,6 @@
 <template>
   <div class="localization-dropdown">
+    Language: 
     <select v-model="selectedLanguage">
       <option v-for="(val, key) in languages" :value="key">{{val.long}}</option>
     </select>
@@ -12,17 +13,20 @@ export default {
     return {
       selectedLanguage: this.$store.state.curLanguage,
       languages: this.$store.state.languages
-    };
+    }
   },
   watch: {
     selectedLanguage(newLang) {
       console.log('new lang', newLang)
-        this.$store.commit('changeLanguage', newLang);
+      this.$store.commit('changeLanguage', newLang)
     }
   }
 }
 </script>
 
 <style scoped>
-
+.localization-dropdown {
+  float: right;
+  margin-right: 5%;
+}
 </style>

@@ -51,8 +51,7 @@ export default {
       {
         name: 'pop',
         shortDesc: 'das letzte Element eines Arrays',
-        desc:
-          'Entfernt das letzte Element eines Arrays und gibt es zurück.',
+        desc: 'Entfernt das letzte Element eines Arrays und gibt es zurück.',
         example: `arr.pop();<br>
         console.log(arr);`,
         output: `[5, 1]`
@@ -60,15 +59,15 @@ export default {
       {
         name: 'shift',
         shortDesc: 'das erste Element eines Arrays',
-        desc:
-          'Entfernt das erste Element eines Arrays und gibt es zurück.',
+        desc: 'Entfernt das erste Element eines Arrays und gibt es zurück.',
         example: `arr.shift();<br>
         console.log(arr);`,
         output: `[1, 8]`
       },
       {
         name: 'slice',
-        shortDesc: // fehlt noch
+        // fehlt noch
+        shortDesc:
           'mindestens ein Element für eine Aufgabe, ohne den eigentlichen Array zu verändern',
         desc:
           'Die <code>slice()</code>-Methode schreibt eine flache Kopie eines Teils des Arrays in ein neues Array-Objekt. Man kann entweder nur den Index für das letzte Elemente (dann wird der Index für das erste Element auf 0 gesetzt) oder sowohl den Index für das erste und das letzte Element kommagetrennt angeben. Der Original-Array wird nicht verändert.',
@@ -91,13 +90,15 @@ export default {
       {
         name: 'toString',
         shortDesc: 'einen String, der den Array repräsentiert, zurückgegeben.',
-        desc: 'Gibt einen String, der den Array und alle darin enthaltenen Elemente beinhaltet, zurück.',
+        desc:
+          'Gibt einen String, der den Array und alle darin enthaltenen Elemente beinhaltet, zurück.',
         example: `console.log(arr.toString());`,
         output: `"5,1,8"`
       },
       {
         name: 'toLocaleString',
-        shortDesc: 'einen an die Sprache angepassten String, der den Array repräsentiert, zurückgeben.',
+        shortDesc:
+          'einen an die Sprache angepassten String, der den Array repräsentiert, zurückgeben.',
         desc:
           'Diese Methode ist ein bisschen komisch. Sie gibt einen an die Sprache angepassten String, der den Array und alle seine Elemente beinhaltet, zurück. Dies ist sehr nützlich für Datumsangaben und Währungen, hat aber einige seltsame Verhaltensweisen, so dass du am besten die genaue Dokumentation durchlesen solltest.',
         example: `let date = [new Date()];<br>
@@ -120,7 +121,8 @@ export default {
       {
         name: 'sort',
         shortDesc: 'die Elemente in einem Array sortieren',
-        desc: 'Sortiert die Elemente eines Arrays in aufsteigender Reihenfolge.',
+        desc:
+          'Sortiert die Elemente eines Arrays in aufsteigender Reihenfolge.',
         example: `arr.sort();<br>
         console.log(arr);`,
         output: `[1, 5, 8]`
@@ -136,7 +138,8 @@ export default {
       },
       {
         name: 'fill',
-        shortDesc: 'allen Elementen eines Arrays einen bestimmten Wert zuweisen',
+        shortDesc:
+          'allen Elementen eines Arrays einen bestimmten Wert zuweisen',
         desc:
           'Weist alle Elementen in einem Array vom Start- bis zum Endindex einen bestimmten Wert zu.',
         example: `arr.fill(2);<br>
@@ -145,7 +148,8 @@ export default {
       },
       {
         name: 'copyWithin',
-        shortDesc: 'einen Folge von Elementen des Arrays innerhalb des Arrays kopieren.',
+        shortDesc:
+          'einen Folge von Elementen des Arrays innerhalb des Arrays kopieren.',
         desc:
           'Kopiert eine Reihe von Elementen des Arrays innerhalb des Arrays. Du kannst entweder nur das letzte Element (dann wird der Startindex auf 0 gesetzt) oder sowohl das erste als auch das letzte kommagetrennt festlegen.',
         example: `arr.copyWithin(1);<br>
@@ -156,7 +160,8 @@ export default {
     iterate: [
       {
         name: 'forEach',
-        shortDesc: 'wobei ich eine selbstdefinierte Funktion auf jedes Elemente anwende',
+        shortDesc:
+          'wobei ich eine selbstdefinierte Funktion auf jedes Elemente anwende',
         desc:
           'Die <code>forEach()</code>-Methode wendet eine gegebene Funktion auf jedes Element im Array an.',
         example: `arr.forEach((element) => {<br>
@@ -225,7 +230,8 @@ export default {
         },
         {
           name: 'findIndex',
-          shortDesc: 'den ersten Index eines Elements, das eine Bedingung erfüllt',
+          shortDesc:
+            'den ersten Index eines Elements, das eine Bedingung erfüllt',
           desc:
             'Gibt den Index des ersten Elements im Array, das die gegebene Bedingung erfüllt, zurück. Erfüllt kein Element die Bedingung, wird -1 zurückgegeben. Ähnlich zu <code>find()</code>, aber <code>findIndex()</code> gibt den Index statt des Elements zurück.',
           example: `let isBig = (el) => el > 6;<br>
@@ -234,7 +240,8 @@ export default {
         },
         {
           name: 'reduce',
-          shortDesc: 'den Array auf einen einzigen Wert reduzieren, von links nach rechts',
+          shortDesc:
+            'den Array auf einen einzigen Wert reduzieren, von links nach rechts',
           desc:
             'Reduziert das Array auf einen einzigen Wert, indem es jeweils zwei Elemente (von links nach rechts) durch eine angegebene Funktion reduziert.',
           example: `let reducer = (a, b) => a + b;<br>
@@ -243,7 +250,8 @@ export default {
         },
         {
           name: 'reduceRight',
-          shortDesc: 'den Array auf einen einzigen Wert reduzieren, von rechts nach links',
+          shortDesc:
+            'den Array auf einen einzigen Wert reduzieren, von rechts nach links',
           desc:
             'Wendet eine Funktion gegen einen Akkumulator auf jeden Wert des Arrays (von rechts nach links) an und reduziert es um einen einzelnen Wert.',
           example: `[arr, [0, 1]].reduceRight((a, b) => {<br>
@@ -255,7 +263,8 @@ export default {
       many: [
         {
           name: 'filter',
-          shortDesc: 'Werte basierend auf einer selbsterstellten Bedingung finden.',
+          shortDesc:
+            'Werte basierend auf einer selbsterstellten Bedingung finden.',
           desc:
             'Erstellt einen neuen Array mit allen Elementen des Strings, die eine gegebene Bedingung erfüllen.',
           example: `let filtered = arr.filter(el => el > 4);<br>
@@ -264,7 +273,8 @@ export default {
         },
         {
           name: 'every',
-          shortDesc: 'herausfinden, ob alle Elemente des Arrays eine Bedingung erfüllen.',
+          shortDesc:
+            'herausfinden, ob alle Elemente des Arrays eine Bedingung erfüllen.',
           desc:
             'Gibt true zurück, wenn alle Elemente des Arrays eine gegebene Bedingung erfüllen.',
           example: `let isSmall = (el) => el < 10;<br>
@@ -273,7 +283,8 @@ export default {
         },
         {
           name: 'some',
-          shortDesc: 'herausfinden, ob mindestens ein Element des Arrays eine Bedingung erfüllt',
+          shortDesc:
+            'herausfinden, ob mindestens ein Element des Arrays eine Bedingung erfüllt',
           desc:
             'Gibt true zurück, wenn zumindest ein Element des Arrays eine gegebene Bedingung erfüllt.',
           example: `let biggerThan4 = (el) => el > 4;<br>

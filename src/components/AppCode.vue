@@ -46,8 +46,7 @@ export default {
           opacity: 0,
           scale: 0,
           color: '#aeded4',
-          transformOrigin: '50% 50%',
-          ease: Power4.easeOut
+          transformOrigin: '50% 50%'
         },
         {
           opacity: 1,
@@ -80,8 +79,7 @@ export default {
           opacity: 0,
           scale: 0,
           color: '#aeded4',
-          transformOrigin: '50% 50%',
-          ease: Power4.easeOut
+          transformOrigin: '50% 50%'
         },
         {
           opacity: 1,

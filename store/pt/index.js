@@ -51,8 +51,7 @@ export default {
       {
         name: 'pop',
         shortDesc: 'o último elemento do array',
-        desc:
-          'Remove o último elemento do array e retorna o elemento.',
+        desc: 'Remove o último elemento do array e retorna o elemento.',
         example: `arr.pop();<br>
         console.log(arr);`,
         output: `[5, 1]`
@@ -60,8 +59,7 @@ export default {
       {
         name: 'shift',
         shortDesc: 'o primeiro elemento do array',
-        desc:
-          'Remove o primeiro elemento do array e retorna o elemento.',
+        desc: 'Remove o primeiro elemento do array e retorna o elemento.',
         example: `arr.shift();<br>
         console.log(arr);`,
         output: `[1, 8]`
@@ -120,7 +118,8 @@ export default {
       {
         name: 'sort',
         shortDesc: 'ordenar os itens do array',
-        desc: 'Orderna os itens do array modificando o array e retorna o próprio array.',
+        desc:
+          'Orderna os itens do array modificando o array e retorna o próprio array.',
         example: `arr.sort();<br>
         console.log(arr);`,
         output: `[1, 5, 8]`
@@ -136,7 +135,8 @@ export default {
       },
       {
         name: 'fill',
-        shortDesc: 'preencher todos os elementos do array com um valor estático',
+        shortDesc:
+          'preencher todos os elementos do array com um valor estático',
         desc:
           'Preenche todos os elementos do array de um índice inicial até um índice final com valores estáticos.',
         example: `arr.fill(2);<br>
