@@ -1,24 +1,24 @@
 export default {
-  firstMethod: 'I have an array, I would like to',
-  findMethod: "I'm trying to find",
-  methodOptions: 'I need to',
-  methodTypes: {
-    add: 'add',
-    remove: 'remove',
-    find: 'find',
-    'iterate by': 'iterate by',
-    'string': 'string'
-  },
-  singleItem: 'one item',
-  manyItems: 'one or many items',
-  primaryOptions: [
-    'add items or other arrays',
-    'remove items',
-    'find items',
-    'walk over items',
-    'return a string',
-    'order an array',
-    'something else'
-  ]
-  // other text can be added here
+    firstMethod: 'Tengo un array, me gustaría',
+    findMethod: "Estoy intentando encontrar",
+    methodOptions: 'Necesito que',
+    methodTypes: {
+        add: 'agregar',
+        remove: 'eliminar',
+        find: 'buscar',
+        'iterate by': 'iterar con',
+        'string': 'Cadena de caracteres'
+    },
+    singleItem: 'un elemento',
+    manyItems: 'uno o mas elementos',
+    primaryOptions: [
+            'agregar elementos u otros arrays',
+            'eliminar elementos',
+            'buscar elementos',
+            'pasar entre elementos',
+            'devolver una cadena de caracteres',
+            'ordenar un array',
+            'cualquier otra cosa'
+        ]
+        // other text can be added here
 }
