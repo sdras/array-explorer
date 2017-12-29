@@ -1,9 +1,4 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-
-Vue.use(Vuex)
-
-export const store = new Vuex.Store({
+export default {
     state: {
         selectedMethod: '',
         adding: [{
@@ -148,7 +143,7 @@ export const store = new Vuex.Store({
                 shortDesc: 'ejecutar una función creada para cada elemento',
                 desc: 'El método forEach() ejecuta una función determinada para cada elemento del array.',
                 example: `arr.forEach((element) => {<br>
-        &nbsp;&nbsp;console.log(element)<br> 
+        &nbsp;&nbsp;console.log(element)<br>
         });`,
                 output: `5<br>
         1<br>
@@ -255,13 +250,5 @@ export const store = new Vuex.Store({
                 }
             ]
         }
-    },
-    mutations: {
-        selectionMethod(state, selected) {
-            state.selectedMethod = selected
-        },
-        resetSelection(state) {
-            state.selectedMethod = ''
-        }
     }
-})
+}

@@ -1,9 +1,4 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-
-Vue.use(Vuex)
-
-export const store = new Vuex.Store({
+export default {
   state: {
     selectedMethod: '',
     adding: [
@@ -165,7 +160,7 @@ export const store = new Vuex.Store({
         desc:
           'دالة الـ forEach() تقوم بتنفيذ دالة معينة مرة واحد لكل من عناصر المصفوفة.',
         example: `arr.forEach((element) => {<br>
-        <span>&nbsp;&nbsp;</span>console.log(element)<br> 
+        <span>&nbsp;&nbsp;</span>console.log(element)<br>
         });`,
         output: `5<br>
         1<br>
@@ -287,13 +282,5 @@ export const store = new Vuex.Store({
         }
       ]
     }
-  },
-  mutations: {
-    selectionMethod(state, selected) {
-      state.selectedMethod = selected
-    },
-    resetSelection(state) {
-      state.selectedMethod = ''
-    }
   }
-})
+}
