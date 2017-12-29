@@ -4,7 +4,7 @@ export default {
     adding: [
       {
         name: 'splice',
-        shortDesc: 'élément(s) à un tableau',
+        shortDesc: 'un ou des éléments à un tableau',
         desc:
           "Modifie le contenu d'un tableau en retirant des éléments et/ou en ajoutant de nouveaux éléments.",
         example: `arr.splice(2, 0, 'tacos');<br>
@@ -13,7 +13,7 @@ export default {
       },
       {
         name: 'push',
-        shortDesc: "élément(s) à la fin d'un tableau",
+        shortDesc: "un ou des éléments à la fin d'un tableau",
         desc:
           "Ajoute un ou plusieurs éléments à la fin d'un tableau et retourne la nouvelle taille du tableau.",
         example: `arr.push(2);<br>
@@ -22,7 +22,7 @@ export default {
       },
       {
         name: 'unshift',
-        shortDesc: "élément(s) au début d'un tableau",
+        shortDesc: "un ou des éléments au début d'un tableau",
         desc:
           "Ajoute un ou plusieurs éléments au début d'un tableau et renvoie la nouvelle longueur du tableau.",
         example: `arr.unshift(2, 7);<br>
@@ -43,7 +43,7 @@ export default {
     removing: [
       {
         name: 'splice',
-        shortDesc: 'élément(s) à un tableau',
+        shortDesc: 'un ou des éléments à un tableau',
         desc:
           "Modifie le contenu d'un tableau en retirant des éléments et/ou en ajoutant de nouveaux éléments.",
         example: `arr.splice(2, 1);<br>
@@ -71,7 +71,7 @@ export default {
       {
         name: 'slice',
         shortDesc:
-          "un ou plusieurs éléments successif, sans modifier le tableau d'origine",
+          "un ou plusieurs éléments successifs, sans modifier le tableau d'origine",
         desc:
           "Renvoie un objet tableau, contenant une copie superficielle (shallow copy) d'une portion du tableau d'origine, la portion est définie par un indice de début et un indice de fin (exclus). Le tableau original ne sera pas modifié.",
         example: `let slicedArr = arr.slice(1);<br>
@@ -85,7 +85,7 @@ export default {
       {
         name: 'join',
         shortDesc:
-          "concaténer tous les éléments d'un tableau dans une chaine de caractères",
+          "de concaténer tous les éléments d'un tableau dans une chaine de caractères",
         desc: `Concaténe tous les éléments d'un tableau dans une chaine de caractères et renvoie cette nouvelle chaîne de caractères. Il est possible de concaténer tel quel ou avec un séparateur, <code>elements.join(' - ')</code> renvoie <code>foo - bar</code>`,
         example: `console.log(arr.join());`,
         output: `"5,1,8"`
@@ -93,7 +93,7 @@ export default {
       {
         name: 'toString',
         shortDesc:
-          'retourner une chaine de caractères représantant le tableau.',
+          'de retourner une chaine de caractères représantant le tableau',
         desc:
           'Renvoie une chaine de caractères représentant le tableau spécifié et ses éléments.',
         example: `console.log(arr.toString());`,
@@ -102,7 +102,7 @@ export default {
       {
         name: 'toLocaleString',
         shortDesc:
-          'retourner une chaine de caractères localisée représantant le tableau.',
+          'de retourner une chaine de caractères localisée représantant le tableau',
         desc:
           "Cette méthode est un peu touchy. Renvoie une chaine de caractères localisée représentant le tableau spécifié et ses éléments. C'est vraiment utile pour les dates et les devises ! Le mieux est de consulter la documentation quand on souhaite l'utiliser car certains comportements sont étranges.",
         example: `let date = [new Date()];<br>
@@ -115,7 +115,7 @@ export default {
     ordering: [
       {
         name: 'reverse',
-        shortDesc: "inverser l'ordre d'un tableau",
+        shortDesc: "d'inverser l'ordre d'un tableau",
         desc:
           "Inverse l'ordre d'un tableau : le premier élément devient le dernier et le dernier devient le premier et ainsi de suite.",
         example: `arr.reverse();<br>
@@ -124,7 +124,7 @@ export default {
       },
       {
         name: 'sort',
-        shortDesc: "trier les éléments d'un tableau",
+        shortDesc: "de trier les éléments d'un tableau",
         desc:
           "Trie les éléments d'un tableau, dans ce même tableau, et renvoie le tableau.",
         example: `arr.sort();<br>
@@ -135,7 +135,7 @@ export default {
     other: [
       {
         name: 'length',
-        shortDesc: "trouver la taille d'un tableau",
+        shortDesc: "de trouver la taille d'un tableau",
         desc: "Retourne le nombre d'éléments présents dans le tableau.",
         example: `console.log(arr.length);`,
         output: `3`
@@ -143,7 +143,7 @@ export default {
       {
         name: 'fill',
         shortDesc:
-          "remplir tous les éléments d'un tableau avec une valeur statique.",
+          "de remplir tous les éléments d'un tableau avec une valeur statique",
         desc:
           "Remplit tous les éléments d'un tableau entre deux indices avec une valeur statique.",
         example: `arr.fill(2);<br>
@@ -152,7 +152,7 @@ export default {
       },
       {
         name: 'copyWithin',
-        shortDesc: "copier une partie d'un tableau",
+        shortDesc: "de copier une partie d'un tableau",
         desc:
           "Effectue une copie superficielle (shallow copy) d'une partie d'un tableau sur ce même tableau et le renvoie, sans modifier sa taille.",
         example: `arr.copyWithin(1);<br>
@@ -163,7 +163,7 @@ export default {
     iterate: [
       {
         name: 'forEach',
-        shortDesc: 'exécuter une fonction sur chaque élément',
+        shortDesc: 'exécutant une fonction sur chaque élément',
         desc: 'Exécute une fonction donnée sur chaque élément du tableau.',
         example: `arr.forEach((element) => {<br>
         <span>&nbsp;&nbsp;</span>console.log(element)<br>
@@ -175,7 +175,7 @@ export default {
       {
         name: 'map',
         shortDesc:
-          'créer un nouveau tableau depuis chaque élément avec une fonction',
+          'créant un nouveau tableau depuis chaque élément via une fonction',
         desc:
           "Crée un nouveau tableau composé des résultats d'une fonction donnée en argument sur chaque élément du tableau.",
         example: `let map = arr.map(x => x + 1);<br>
@@ -184,7 +184,7 @@ export default {
       },
       {
         name: 'entries',
-        shortDesc: 'créer un objet Array Iterator',
+        shortDesc: 'créant un objet Array Iterator',
         desc:
           "Renvoie un nouvel objet de type Array Iterator qui contient le couple clef/valeur pour chaque élément du tableau. Il y a beaucoup de cas d'utilisation des iterators, mais aussi les autres méthodes à utiliser comme <code>values</code> et <code>keys</code>",
         example: `let iterator = arr.entries();<br>
