@@ -19,6 +19,7 @@ export default {
     selectedLanguage(newLang) {
       console.log('new lang', newLang)
       this.$store.commit('changeLanguage', newLang)
+      this.$store.commit('resetSelection')
     }
   }
 }
