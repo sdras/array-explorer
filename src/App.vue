@@ -19,15 +19,15 @@
 <script>
 import AppMethodPrimary from './components/AppMethodPrimary'
 import AppGithubCorner from './components/AppGithubCorner'
-import AppCode from './components/AppCode'
 import LocaleSwitcher from './components/LocaleSwitcher'
+import AppCode from './components/AppCode'
 
 export default {
   components: {
     AppMethodPrimary,
     AppGithubCorner,
-    AppCode,
-    LocaleSwitcher
+    LocaleSwitcher,
+    AppCode
   }
 }
 </script>

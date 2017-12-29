@@ -1,9 +1,4 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-
-Vue.use(Vuex)
-
-export const store = new Vuex.Store({
+export default {
   state: {
     selectedMethod: '',
     adding: [
@@ -56,8 +51,7 @@ export const store = new Vuex.Store({
       {
         name: 'pop',
         shortDesc: 'последният елемент на масива',
-        desc:
-          'Премахва последния елемент от масив и връща този елемент.',
+        desc: 'Премахва последния елемент от масив и връща този елемент.',
         example: `arr.pop();<br>
         console.log(arr);`,
         output: `[5, 1]`
@@ -65,8 +59,7 @@ export const store = new Vuex.Store({
       {
         name: 'shift',
         shortDesc: 'първият елемент на масива',
-        desc:
-          'Премахва първия елемент от масив и връща този елемент.',
+        desc: 'Премахва първия елемент от масив и връща този елемент.',
         example: `arr.shift();<br>
         console.log(arr);`,
         output: `[1, 8]`
@@ -229,7 +222,8 @@ export const store = new Vuex.Store({
         },
         {
           name: 'findIndex',
-          shortDesc: 'първият индекс на елемент, който отговаря на дадено условие',
+          shortDesc:
+            'първият индекс на елемент, който отговаря на дадено условие',
           desc:
             'Връща индекса на първия елемент в масива, който удовлетворява предоставената функция за тестване. В противен случай -1 се връща. Подобно на <code>find()</code>, но връща индекса вместо елемента.',
           example: `let isBig = (el) => el > 6;<br>
@@ -238,7 +232,8 @@ export const store = new Vuex.Store({
         },
         {
           name: 'reduce',
-          shortDesc: 'стойност чрез намаляване на масива, започни за да свършиш',
+          shortDesc:
+            'стойност чрез намаляване на масива, започни за да свършиш',
           desc:
             'Прилагайте функция срещу акумулатор и всяка стойност на масива (от ляво на дясно), за да го намалите до единична стойност.',
           example: `let reducer = (a, b) => a + b;<br>
@@ -247,7 +242,8 @@ export const store = new Vuex.Store({
         },
         {
           name: 'reduceRight',
-          shortDesc: 'стойност чрез намаляване на масива, завърши за да започнеш',
+          shortDesc:
+            'стойност чрез намаляване на масива, завърши за да започнеш',
           desc:
             'Прилагайте функция срещу акумулатор и всяка стойност на масива (от дясно на ляво), за да го намалите до единична стойност.',
           example: `[arr, [0, 1]].reduceRight((a, b) => {<br>
@@ -268,7 +264,8 @@ export const store = new Vuex.Store({
         },
         {
           name: 'every',
-          shortDesc: 'независимо от това дали всеки елемент отговаря на дадено условие',
+          shortDesc:
+            'независимо от това дали всеки елемент отговаря на дадено условие',
           desc:
             'Връща true, ако всеки елемент в този масив удовлетворява предоставената функция за тестване.',
           example: `let isSmall = (el) => el < 10;<br>
@@ -277,7 +274,8 @@ export const store = new Vuex.Store({
         },
         {
           name: 'some',
-          shortDesc: 'независимо дали поне един елемент отговаря на дадено условие',
+          shortDesc:
+            'независимо дали поне един елемент отговаря на дадено условие',
           desc:
             'Връща true, ако поне един елемент в този масив отговаря на предоставената функция за тестване.',
           example: `let biggerThan4 = (el) => el > 4;<br>
@@ -286,13 +284,5 @@ export const store = new Vuex.Store({
         }
       ]
     }
-  },
-  mutations: {
-    selectionMethod(state, selected) {
-      state.selectedMethod = selected
-    },
-    resetSelection(state) {
-      state.selectedMethod = ''
-    }
   }
-})
+}

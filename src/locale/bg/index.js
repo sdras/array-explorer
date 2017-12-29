@@ -1,13 +1,13 @@
 export default {
   firstMethod: 'Имам масив, бих искал', // I have an array, I would like to
-  findMethod: "Опитвам се да намеря", // I'm trying to find
+  findMethod: 'Опитвам се да намеря', // I'm trying to find
   methodOptions: 'Tрябва да',
   methodTypes: {
     add: 'добави',
     remove: 'премахване',
     find: 'намери',
     'iterate by': 'обхождане',
-    'string': 'низ'
+    string: 'низ'
   },
   singleItem: 'един елемент', // one item
   manyItems: 'един или много елементи', // one or many items
