@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <app-github-corner />
+    <LocaleSwitcher/>
     <main>
       <section class="a">
         <h1>Array Explorer</h1>
@@ -19,12 +20,14 @@
 import AppMethodPrimary from './components/AppMethodPrimary'
 import AppGithubCorner from './components/AppGithubCorner'
 import AppCode from './components/AppCode'
+import LocaleSwitcher from './components/LocaleSwitcher'
 
 export default {
   components: {
     AppMethodPrimary,
     AppGithubCorner,
-    AppCode
+    AppCode,
+    LocaleSwitcher
   }
 }
 </script>

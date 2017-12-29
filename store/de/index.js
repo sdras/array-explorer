@@ -1,9 +1,4 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-
-Vue.use(Vuex)
-
-export const store = new Vuex.Store({
+export default {
   state: {
     selectedMethod: '',
     adding: [
@@ -73,7 +68,7 @@ export const store = new Vuex.Store({
       },
       {
         name: 'slice',
-        shortDesc: // fehlt noch 
+        shortDesc: // fehlt noch
           'mindestens ein Element für eine Aufgabe, ohne den eigentlichen Array zu verändern',
         desc:
           'Die <code>slice()</code>-Methode schreibt eine flache Kopie eines Teils des Arrays in ein neues Array-Objekt. Man kann entweder nur den Index für das letzte Elemente (dann wird der Index für das erste Element auf 0 gesetzt) oder sowohl den Index für das erste und das letzte Element kommagetrennt angeben. Der Original-Array wird nicht verändert.',
@@ -165,7 +160,7 @@ export const store = new Vuex.Store({
         desc:
           'Die <code>forEach()</code>-Methode wendet eine gegebene Funktion auf jedes Element im Array an.',
         example: `arr.forEach((element) => {<br>
-        <span>&nbsp;&nbsp;</span>console.log(element)<br> 
+        <span>&nbsp;&nbsp;</span>console.log(element)<br>
         });`,
         output: `5<br>
         1<br>
@@ -287,13 +282,5 @@ export const store = new Vuex.Store({
         }
       ]
     }
-  },
-  mutations: {
-    selectionMethod(state, selected) {
-      state.selectedMethod = selected
-    },
-    resetSelection(state) {
-      state.selectedMethod = ''
-    }
   }
-})
+}
