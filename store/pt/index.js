@@ -150,7 +150,7 @@ export default {
           'Copia parte do array para outra localização dentro deste mesmo array e o retorna, sem alterar seu tamanho. Você pode especificar o índice final (deixando o índice inicial assumir o valor padrão zero), ou ambos, o índice inicial e o índice final separados por vírgula',
         example: `arr.copyWithin(1);<br>
         console.log(arr);`,
-        output: `[5, 5, 8]`
+        output: `[5, 5, 1]`
       }
     ],
     iterate: [

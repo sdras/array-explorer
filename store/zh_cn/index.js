@@ -149,7 +149,7 @@ export default {
           '复制数组中的一系列数组元素。可以只传入<code> end </code>结束位置参数（<code> begin </code>开始位置将默认为 0），或者都传入<code> copyWithin(begin, end) </code>',
         example: `arr.copyWithin(1);<br>
         console.log(arr);`,
-        output: `[5, 5, 8]`
+        output: `[5, 5, 1]`
       }
     ],
     iterate: [

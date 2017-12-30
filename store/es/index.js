@@ -152,7 +152,7 @@ export default {
           'Copia una secuencia de elementos del array dentro del array. Puede especificar sólo el elemento final (donde el inicio será cero) o el principio y el final separados por comas.',
         example: `arr.copyWithin(1);<br>
                 console.log(arr);`,
-        output: `[5, 5, 8]`
+        output: `[5, 5, 1]`
       }
     ],
     iterate: [
