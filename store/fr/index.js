@@ -157,7 +157,7 @@ export default {
           "Effectue une copie superficielle (shallow copy) d'une partie d'un tableau sur ce même tableau et le renvoie, sans modifier sa taille.",
         example: `arr.copyWithin(1);<br>
         console.log(arr);`,
-        output: `[5, 5, 8]`
+        output: `[5, 5, 1]`
       }
     ],
     iterate: [

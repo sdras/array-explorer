@@ -154,7 +154,7 @@ export default {
           'Kopiert eine Reihe von Elementen des Arrays innerhalb des Arrays. Du kannst entweder nur das letzte Element (dann wird der Startindex auf 0 gesetzt) oder sowohl das erste als auch das letzte kommagetrennt festlegen.',
         example: `arr.copyWithin(1);<br>
         console.log(arr);`,
-        output: `[5, 5, 8]`
+        output: `[5, 5, 1]`
       }
     ],
     iterate: [
