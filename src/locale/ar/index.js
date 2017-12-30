@@ -1,24 +1,24 @@
 export default {
-  firstMethod: 'I have an array, I would like to',
-  findMethod: "I'm trying to find",
-  methodOptions: 'I need to',
+  firstMethod: 'لدي مجموعة، أود',
+  findMethod: 'أحاول أن أجد',
+  methodOptions: 'أنا بحاجة لــ',
   methodTypes: {
-    add: 'add',
-    remove: 'remove',
-    find: 'find',
-    'iterate by': 'iterate by',
-    'string': 'string'
+    add: 'إضافة',
+    remove: 'إزالة',
+    find: 'تجد',
+    'iterate by': 'يتكرر من قبل',
+    string: 'خيط'
   },
-  singleItem: 'one item',
-  manyItems: 'one or many items',
+  singleItem: 'شيء واحد',
+  manyItems: 'واحد أو العديد من البنود',
   primaryOptions: [
-    'add items or other arrays',
-    'remove items',
-    'find items',
-    'walk over items',
-    'return a string',
-    'order an array',
-    'something else'
+    'إضافة عناصر أو صفائف أخرى',
+    'إزالة العناصر',
+    'العثور على البنود',
+    'المشي على البنود',
+    'إرجاع سلسلة',
+    'ترتيب صفيف',
+    'شيء آخر'
   ]
   // other text can be added here
 }
