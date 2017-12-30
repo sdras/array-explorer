@@ -48,7 +48,6 @@ html {
       format('svg');
 }
 #app {
-  width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -95,7 +94,7 @@ body {
   margin: 40px;
 }
 main {
-  width: 90%;
+  width: 95%;
   display: grid;
   grid-gap: 40px;
   grid-template-columns: 1fr 1fr;
@@ -109,27 +108,27 @@ main {
 .usage {
   margin: 35px 0 0;
 }
-code[data-v-55177a1a] {
+code[data-v-c134480e] {
   background: #eee;
   padding: 3px 6px;
   font-size: 16px;
   border-radius: 5px;
   color: #666;
 }
-div[data-v-f67b1968] {
+div[data-v-03de1116] {
   border: 1px solid #ccc;
   margin-top: 30px;
   padding: 0 20px;
   background: #fff;
   border-radius: 5px;
 }
-h2[data-v-f67b1968] {
+h2[data-v-03de1116] {
   color: #ce371a;
 }
-p.desc[data-v-f67b1968] {
+p.desc[data-v-03de1116] {
   margin-bottom: 0;
 }
-p.link[data-v-f67b1968] {
+p.link[data-v-03de1116] {
   margin-top: 5px;
 }
 .github-corner:hover .octo-arm[data-v-ba6985fe] {
@@ -180,6 +179,10 @@ p.link[data-v-f67b1968] {
     animation: octocat-wave-data-v-ba6985fe 0.56s ease-in-out;
   }
 }
+.localization-dropdown[data-v-bc478c74] {
+  float: right;
+  margin-right: 5%;
+}
 .usage-code {
   padding: 0 20px;
   margin: 20px 0;
@@ -205,6 +208,7 @@ p.link[data-v-f67b1968] {
 .exampleoutput2 div,
 .exampleoutput div {
   opacity: 0;
-  scale: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
 }
-/*# sourceMappingURL=app.b9d90eb0c9feb07cbad70eb503db37c1.css.map */
+/*# sourceMappingURL=app.f519b51738fff26acfd8f4e231d557aa.css.map */
