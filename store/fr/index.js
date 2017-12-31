@@ -73,7 +73,7 @@ export default {
         shortDesc:
           "un ou plusieurs éléments successifs, sans modifier le tableau d'origine",
         desc:
-          "Renvoie un objet tableau, contenant une copie superficielle (shallow copy) d'une portion du tableau d'origine, la portion est définie par un indice de début et un indice de fin (exclus). Le tableau original ne sera pas modifié.",
+          "Renvoie un objet tableau, contenant une copie superficielle (shallow copy) d'une portion du tableau d'origine, la portion étant définie par un indice de début et un indice de fin (exclus). Le tableau original ne sera pas modifié.",
         example: `let slicedArr = arr.slice(1);<br>
         console.log(arr);<br>
         console.log(slicedArr);`,
@@ -85,26 +85,26 @@ export default {
       {
         name: 'join',
         shortDesc:
-          "de concaténer tous les éléments d'un tableau dans une chaine de caractères",
-        desc: `Concaténe tous les éléments d'un tableau dans une chaine de caractères et renvoie cette nouvelle chaîne de caractères. Il est possible de concaténer tel quel ou avec un séparateur, <code>elements.join(' - ')</code> renvoie <code>foo - bar</code>`,
+          "de concaténer tous les éléments d'un tableau dans une chaîne de caractères",
+        desc: `Concaténe tous les éléments d'un tableau dans une chaîne de caractères et renvoie cette nouvelle chaîne de caractères. Il est possible de concaténer tel quel ou avec un séparateur, <code>elements.join(' - ')</code> renvoie <code>foo - bar</code>`,
         example: `console.log(arr.join());`,
         output: `"5,1,8"`
       },
       {
         name: 'toString',
         shortDesc:
-          'de retourner une chaine de caractères représantant le tableau',
+          'de retourner une chaîne de caractères représentant le tableau',
         desc:
-          'Renvoie une chaine de caractères représentant le tableau spécifié et ses éléments.',
+          'Renvoie une chaîne de caractères représentant le tableau spécifié et ses éléments.',
         example: `console.log(arr.toString());`,
         output: `"5,1,8"`
       },
       {
         name: 'toLocaleString',
         shortDesc:
-          'de retourner une chaine de caractères localisée représantant le tableau',
+          'de retourner une chaîne de caractères localisée représentant le tableau',
         desc:
-          "Cette méthode est un peu touchy. Renvoie une chaine de caractères localisée représentant le tableau spécifié et ses éléments. C'est vraiment utile pour les dates et les devises ! Le mieux est de consulter la documentation quand on souhaite l'utiliser car certains comportements sont étranges.",
+          "Cette méthode est un peu touchy. Renvoie une chaîne de caractères localisée représentant le tableau spécifié et ses éléments. C'est vraiment utile pour les dates et les devises ! Le mieux est de consulter la documentation quand on souhaite l'utiliser car certains comportements sont étranges.",
         example: `let date = [new Date()];<br>
         arr.toLocaleString();<br>
         date.toLocaleString();<br>
@@ -200,7 +200,7 @@ export default {
           name: 'includes',
           shortDesc: 'si un élément existe',
           desc:
-            "Permet de déterminer si un tableau contient un élément et renvoie true si c'est le cas, false sinon.",
+            "Permet de déterminer si un tableau contient un élément et renvoie <code>true</code> si c'est le cas, <code>false</code> sinon.",
           example: `console.log(arr.includes(1));`,
           output: `true`
         },
@@ -224,7 +224,7 @@ export default {
           name: 'find',
           shortDesc: 'le premier élément qui respecte une condition',
           desc:
-            "Renvoie la valeur du premier élément trouvé dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur undefined est renvoyée. Similaire à <code>findIndex()</code>, mais retourne l'élément au lieu de l'indice.",
+            "Renvoie la valeur du premier élément trouvé dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur <code>undefined</code> est renvoyée. Similaire à <code>findIndex()</code>, mais retourne l'élément au lieu de l'indice.",
           example: `let isTiny = (el) => el < 2;<br>
           console.log(arr.find(isTiny));`,
           output: `1`
@@ -233,7 +233,7 @@ export default {
           name: 'findIndex',
           shortDesc: 'le premier indice qui respecte une condition',
           desc:
-            "Renvoie l'indice du premier élément du tableau qui satisfait une condition donnée par une fonction. Si la fonction renvoie faux pour tous les éléments du tableau, le résultat vaut -1. Similaire à <code>find()</code>, mais retourne l'indice au lieu de l'élément",
+            "Renvoie l'indice du premier élément du tableau qui satisfait une condition donnée par une fonction. Si la fonction renvoie <code>false</code> pour tous les éléments du tableau, le résultat vaut -1. Similaire à <code>find()</code>, mais retourne l'indice au lieu de l'élément.",
           example: `let isBig = (el) => el > 6;<br>
           console.log(arr.findIndex(isBig));`,
           output: `2`
