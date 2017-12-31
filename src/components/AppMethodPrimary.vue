@@ -49,34 +49,21 @@
 </template>
 
 <script>
-import {store} from '../../store/index'
+import { store } from '../../store/index'
 import { mapState } from 'vuex'
 import MethodChoice from './methods/MethodChoice.vue'
 
-/*function localizedState({$store}, prop) {
-  const curLang = $store.state.curLanguage
-  console.log('state', curLang);
-  return $store.state[curLang][prop];
-}*/
-
 function mapLocalizedState(props) {
-  let res = {};
-  props.forEach(prop => res[prop] = (state) => {
-    const {curLanguage} = state.$store.state;
-    return state.$store.state[curLanguage][prop];
-  });
-  return res;
+  let res = {}
+  props.forEach(
+    prop =>
+      (res[prop] = state => {
+        const { curLanguage } = state.$store.state
+        return state.$store.state[curLanguage][prop]
+      })
+  )
+  return res
 }
-
-// const primaryOptionsDefault = [ // default fallback
-//   'add items or other arrays',
-//   'remove items',
-//   'find items',
-//   'walk over items',
-//   'return a string',
-//   'order an array',
-//   'something else'
-// ];
 
 export default {
   components: {
@@ -85,7 +72,7 @@ export default {
   data() {
     return {
       selectedFilter: '',
-      selectedFind: '',
+      selectedFind: ''
     }
   },
   computed: {
@@ -99,18 +86,9 @@ export default {
       'find'
     ]),
     options: function() {
-      return this.$t('primaryOptions');
+      return this.$t('primaryOptions')
     }
   },
-    /*...mapState([
-      'adding',
-      'removing',
-      'iterate',
-      'string',
-      'ordering',
-      'other',
-      'find'
-    ].map(prop => `${store.getters.curLanguage}.${prop}`))*/
   // },
   watch: {
     selectedFilter() {
