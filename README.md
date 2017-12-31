@@ -14,6 +14,8 @@ I based most of the examples and longer descriptions off of the MDN documentatio
 
 I'm going to start working on one for Object now, but I've heard people say they want to fork this project for other languages and data types (ruby, etc), please feel free to! If you let me know about it, I'll link it up here.
 
+Many thanks to everyone who helped with the translations! @AWolf81, @Gonzalo2310, @welll, @julienmartin, @g-plane, @imbyurhan, @bahe007, @salahaa1, @proYang
+
 ## Build Setup
 
 ```bash

@@ -13,8 +13,8 @@ export default {
     urlPath: {
       type: String,
       default: 'length'
-    },
-  },
+    }
+  }
 }
 </script>
 
