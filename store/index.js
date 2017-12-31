@@ -11,6 +11,7 @@ import de from './de/index'
 import fr from './fr/index'
 import pt from './pt/index'
 import zh_cn from './zh_cn/index'
+import cz from './cz/index'
 
 // import translations of labels
 import translationsAr from '../src/locale/ar/index'
@@ -21,6 +22,7 @@ import translationsDe from '../src/locale/de/index'
 import translationsFr from '../src/locale/fr/index'
 import translationsPt from '../src/locale/pt/index'
 import translationsZhCn from '../src/locale/zh_cn/index'
+import translationsCz from '../src/locale/cz/index'
 
 // create info about langauges
 const languages = (ctx => {
@@ -63,7 +65,8 @@ export const store = new Vuex.Store({
     de,
     fr,
     pt,
-    zh_cn
+    zh_cn,
+    cz
   },
   state: {
     selectedMethod: undefined,
@@ -84,6 +87,7 @@ Vue.i18n.add('de', translationsDe)
 Vue.i18n.add('fr', translationsFr)
 Vue.i18n.add('pt', translationsPt)
 Vue.i18n.add('zh_cn', translationsZhCn)
+Vue.i18n.add('cz', translationsCz)
 
 Vue.i18n.set(store.state.curLanguage)
 
