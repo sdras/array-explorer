@@ -7,7 +7,7 @@ export default {
     remove: 'de supprimer',
     find: 'de chercher',
     'iterate by': 'd\'itérer en',
-    'string': 'chaine de caractères'
+    'string': 'chaîne de caractères'
   },
   singleItem: 'un élément',
   manyItems: 'un ou plusieurs éléments',
@@ -16,9 +16,9 @@ export default {
     'supprimer des éléments',
     'chercher des éléments',
     'parcourir les éléments',
-    'retourner une chaine de caractères',
+    'retourner une chaîne de caractères',
     'trier les éléments',
-    'de faire autre chose'
+    'faire autre chose'
   ]
   // other text can be added here
 }
