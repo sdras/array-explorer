@@ -232,7 +232,7 @@ export default {
         },
         {
           name: 'reduce',
-          shortDesc: 'een waarde door het verkleinen van de Array, van begin tot eind',
+          shortDesc: 'een waarde door het verkleinen van de array, van begin tot eind',
           desc:
             'Pas een functie toe op een verzameling en elke waarde in de array (van links naar rechts) aan door het te verkleinen in een enkele waarde.',
           example: `let reducer = (a, b) => a + b;<br>
@@ -241,7 +241,7 @@ export default {
         },
         {
           name: 'reduceRight',
-          shortDesc: 'een waarde door het verkleinen van de Array, van eind tot begin',
+          shortDesc: 'een waarde door het verkleinen van de array, van eind tot begin',
           desc:
             'Pas een functie toe op een verzameling en elke waarde in de array (van rechts naar links) door het te verkleinen in een enkele waarde.',
           example: `[arr, [0, 1]].reduceRight((a, b) => {<br>

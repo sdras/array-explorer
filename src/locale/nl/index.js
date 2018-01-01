@@ -9,8 +9,8 @@ export default {
     'iterate by': 'itereren door',
     'string': 'string'
   },
-  singleItem: 'een item',
-  manyItems: 'een of meerdere items',
+  singleItem: 'een enkel element',
+  manyItems: 'een of meerdere elementen',
   primaryOptions: [
     'een element of een andere array toevoegen',
     'elementen verwijderen',
