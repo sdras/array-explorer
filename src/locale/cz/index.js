@@ -5,8 +5,8 @@ export default {
   methodTypes: {
     add: 'přidat',
     remove: 'odebrat',
-    find: 'najít',
-    'iterate by': 'projít přes',
+    find: 'nalézt',
+    'iterate by': 'projít pomocí',
     'string': 'řetězec'
   },
   singleItem: 'jeden prvek',

@@ -71,7 +71,7 @@ export default {
         shortDesc:
           'jeden nebo více prvků pro práci beze změny pole',
         desc:
-          '<code>slice()</code> metoda vrací mělkou kopii části pole do nového pole. Lze specifikovat buď pouze koncový prvek, kde výchozí hodnota je nula, anebo konec i začátek oddělené čárkou. Původní pole zůstává beze změny.',
+          '<code>slice()</code> metoda vrací mělkou kopii části pole do nového pole. Lze specifikovat buď pouze koncový prvek, kde počáteční pozice je nula, anebo konec i začátek oddělené čárkou. Původní pole zůstává beze změny.',
         example: `let slicedArr = arr.slice(1);<br>
         console.log(arr);<br>
         console.log(slicedArr);`,
@@ -129,25 +129,25 @@ export default {
     other: [
       {
         name: 'length',
-        shortDesc: 'find the length of the array',
-        desc: 'Returns the number of elements in that array.',
+        shortDesc: 'zjistit délku pole',
+        desc: 'Vrátí počet prvků v poli.',
         example: `console.log(arr.length);`,
         output: `3`
       },
       {
         name: 'fill',
-        shortDesc: 'fill all the elements of the array with a static value',
+        shortDesc: 'přiřadit všem prvkům pole statickou hodnotu',
         desc:
-          'Fills all the elements of an array from a start index to an end index with a static value.',
+          'Přiřadí všem prvkům pole statickou hodnotu.',
         example: `arr.fill(2);<br>
         console.log(arr);`,
         output: `[2, 2, 2]`
       },
       {
         name: 'copyWithin',
-        shortDesc: 'copy a sequence of array elements within the array.',
+        shortDesc: 'zkopírovat řadu prvků v poli uvnitř pole',
         desc:
-          'Copies a sequence of array elements within the array. You can specify either just the ending element (where begin will default to zero) or both the beginning and the end, comma-separated.',
+          'Zkopíruje řadu prvků pole uvnitř pole. Lze specifikovat buď koncový prvek, kde počáteční pozice je nula, anebo počateční i koncový prvek, oddělené čárkou.',
         example: `arr.copyWithin(1);<br>
         console.log(arr);`,
         output: `[5, 5, 1]`
@@ -156,9 +156,9 @@ export default {
     iterate: [
       {
         name: 'forEach',
-        shortDesc: 'executing a function I will create for each element',
+        shortDesc: 'spuštění funkce nad každým prvkem',
         desc:
-          'The forEach() method executes a provided function once for each array element.',
+          'forEach() metoda spustí předdefinovanou funkci jednou nad každým prvkem pole.',
         example: `arr.forEach((element) => {<br>
         <span>&nbsp;&nbsp;</span>console.log(element)<br>
         });`,
@@ -169,18 +169,18 @@ export default {
       {
         name: 'map',
         shortDesc:
-          'creating a new array from each element with a function I create',
+          'funkce, která vytvoří nové pole ze všech prvků',
         desc:
-          'Creates a new array with the results of calling a provided function on every element in this array.',
+          'Vytvoří nové pole, které je výsledkem volání definované funkce nad každým prvkem.',
         example: `let map = arr.map(x => x + 1);<br>
         console.log(map);`,
         output: `[6, 2, 9]`
       },
       {
         name: 'entries',
-        shortDesc: 'creating an iterator object',
+        shortDesc: 'iteračního objektu',
         desc:
-          'Returns a new Array Iterator object that contains the key/value pairs for each index in the array. There are a lot of uses for iterators, as well as other methods used with it in conjuction, like <code>values</code> and <code>keys</code>',
+          'Vrátí nový iterátor pole, který obsahuje klíč-hodnota pár pro každou pozici v poli. Iterátor má mnoho případů užití jak samostatně, tak ve spojení s jinými metodami jako <code>values</code> nebo <code>keys</code>',
         example: `let iterator = arr.entries();<br>
         console.log(iterator.next().value);`,
         output: `[0, 5]<br>
@@ -192,60 +192,60 @@ export default {
       single: [
         {
           name: 'includes',
-          shortDesc: 'out if a certain element exists',
+          shortDesc: 'prvek pokud existuje',
           desc:
-            'Determines whether an array contains a certain element, returning true or false as appropriate.',
+            'Zjistí jestli existuje daný prvek v poli a podle toho vrátí true nebo false.',
           example: `console.log(arr.includes(1));`,
           output: `true`
         },
         {
           name: 'indexOf',
-          shortDesc: 'the first index of a particular item',
+          shortDesc: 'první výskyt daného prvku',
           desc:
-            'Returns the first index at which a given element can be found in the array, or -1 if it is not present.',
+            'Vrátí první výskyt daného prvku nebo -1 pokud prvek nenalezne.',
           example: `console.log(arr.indexOf(5));`,
           output: `0`
         },
         {
           name: 'lastIndexOf',
-          shortDesc: 'the last index of a particular item',
+          shortDesc: 'poslední výskyt daného prvku',
           desc:
-            'Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found.',
+            'Vrátí poslední výskyt daného prvku nebo -1 pokud prvek nenalezne.',
           example: `console.log(arr.lastIndexOf(5));`,
           output: `0`
         },
         {
           name: 'find',
-          shortDesc: 'the first element that satisfies a condition',
+          shortDesc: 'první prvek, který splňuje podmínku',
           desc:
-            'Returns the found value in the array, if an element in the array satisfies the provided testing function or undefined if not found. Similar to <code>findIndex()</code>, but it returns the item instead of the index.',
+            'Vrátí nalezenou hodnotu v poli, pokud prvek v poli odpovídá definované testovací funkci nebo undefined pokud nenalezne. Podobné jako <code>findIndex()</code>, ale vrací prvek místo pozice.',
           example: `let isTiny = (el) => el < 2;<br>
           console.log(arr.find(isTiny));`,
           output: `1`
         },
         {
           name: 'findIndex',
-          shortDesc: 'the first index of an item that satisfies a condition',
+          shortDesc: 'první výskyt prvku, který splňuje podmínku',
           desc:
-            'Returns the index of the first element in the array that satisfies the provided testing function. Otherwise -1 is returned. Similar to <code>find()</code>, but it returns the index instead of the item.',
+            'Vrátí pozici prvního prvku v poli, který splňuje definovanou testovací funkci. V ostatních případech vrací -1. Podobné jako <code>find()</code>, ale vrací pozici místo prvku.',
           example: `let isBig = (el) => el > 6;<br>
           console.log(arr.findIndex(isBig));`,
           output: `2`
         },
         {
           name: 'reduce',
-          shortDesc: 'a value by reducing the Array, start to finish',
+          shortDesc: 'hodnotu po redukci pole z leva do prava',
           desc:
-            'Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value.',
+            'Použije funkci na střadač (accumulator) a každou hodnotu pole (z leva do prava) redukuje do jedné hodnoty.',
           example: `let reducer = (a, b) => a + b;<br>
           <span>&nbsp;&nbsp;</span>console.log(arr.reduce(reducer));`,
           output: `14`
         },
         {
           name: 'reduceRight',
-          shortDesc: 'a value by reducing the Array, finish to start',
+          shortDesc: 'hodnotu po redukci pole z prava do leva',
           desc:
-            'Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.',
+            'Použije funkci na střadač (accumulator) a každou hodnotu pole (z prava do leva) redukuje do jedné hodnoty.',
           example: `[arr, [0, 1]].reduceRight((a, b) => {<br>
           <span>&nbsp;&nbsp;</span>return a.concat(b)<br>
           }, [])`,
@@ -255,27 +255,27 @@ export default {
       many: [
         {
           name: 'filter',
-          shortDesc: 'values based on a condition I create',
+          shortDesc: 'hodnoty, které splňují mnou vytvořenou podmínku',
           desc:
-            'Creates a new array with all of the elements of this array for which the provided filtering function returns true.',
+            'Vytvoří nové pole se všemi prvky pole, pro které definovaná filtrovací funkce vrátí hodnotu true.',
           example: `let filtered = arr.filter(el => el > 4);<br>
           console.log(filtered)`,
           output: `[5, 8]`
         },
         {
           name: 'every',
-          shortDesc: 'whether or not every item satisfies a condition',
+          shortDesc: 'jestli všechny prvky splňují podmínku',
           desc:
-            'Returns true if every element in this array satisfies the provided testing function.',
+            'Vrací true pokud každý prvek odpovídá definované testovací funkci.',
           example: `let isSmall = (el) => el < 10;<br>
           console.log(arr.every(isSmall));`,
           output: `true`
         },
         {
           name: 'some',
-          shortDesc: 'whether or not at least one item satisfies a condition',
+          shortDesc: 'jestli alespoň jeden prvek splňuje podmínku',
           desc:
-            'Returns true if at least one element in this array satisfies the provided testing function.',
+            'Vrací true pokud alespoň jeden prvek odpovídá definované testovací funkci.',
           example: `let biggerThan4 = (el) => el > 4;<br>
           console.log(arr.some(biggerThan4));`,
           output: `true`
