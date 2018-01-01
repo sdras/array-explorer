@@ -17,7 +17,7 @@ export default {
     'elementen zoeken',
     'door elementen heen loopen',
     'een string teruggeven',
-    'een array orderen',
+    'een array ordenen',
     'iets anders'
   ]
   // other text can be added here
