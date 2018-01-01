@@ -13,7 +13,7 @@ export default {
       {
         name: 'push',
         shortDesc: 'element aan het einde van een array',
-        desc: 'Voegt een of meerdere elementen toe aan het eind van een array en geeft de nieuwe lengte van de array terug.',
+        desc: 'Voegt een of meerdere elementen toe aan het einde van een array en geeft de nieuwe lengte van de array terug.',
         example: `arr.push(2);<br>
         console.log(arr);`,
         output: '[5, 1, 8, 2]'
@@ -66,8 +66,7 @@ export default {
       },
       {
         name: 'slice',
-        shortDesc:
-          'een of meerdere elementen in de huidige volgorde, zonder dat de array wordt aangepast,',
+        shortDesc: 'een of meerdere elementen in de huidige volgorde, zonder dat de array wordt aangepast,',
         desc:
           'De <code>slice()</code> methode geeft een kopie van een gedeelte van de array terug in een nieuwe array. Je kan kiezen  voor het laatste element (standaard is 0) opgeven of zowel het begin als einde opgeven, gescheiden met een komma. De orginele array wordt niet aangepast.',
         example: `let slicedArr = arr.slice(1);<br>
@@ -81,8 +80,8 @@ export default {
       {
         name: 'join',
         shortDesc: 'alle elementen van een array samenvoegen als string',
-        desc: `Voeg alle elementen van een array samen tot een string. Je kan het samenvoegen zoals het is of met iets er tussen, <code>elements.join(' -
-          ')</code> gives you <code>foo-bar</code>.`,
+        desc: 
+        `Voegt alle elementen van een array samen tot een string. Je kan het samenvoegen zoals het is of met iets er tussen, <code>elements.join(' - ')</code> gives you <code>foo-bar</code>.`,
         example: `console.log(arr.join());`,
         output: `"5,1,8"`
       },
@@ -111,7 +110,7 @@ export default {
         name: 'reverse',
         shortDesc: 'de volgorde van een array omkeren',
         desc:
-          'Keert de volgorde om van de elementen in een array waar het eerste element het laatste element wordt en vice versa.',
+          'Keert de volgorde van de elementen in een array om waar het eerste element het laatste element wordt en vice versa.',
         example: `arr.reverse();<br>
         console.log(arr);`,
         output: `[8, 1, 5]`
@@ -155,8 +154,7 @@ export default {
     iterate: [
       {
         name: 'forEach',
-        shortDesc: 'executing a function I will create for each element',
-        shortDesc: 'Een functie uit te voeren voor elk element',
+        shortDesc: 'een functie uit te voeren voor elk element',
         desc:
           'De forEach() methode voert eenmalig een functie uit voor elk element in de array.',
         example: `arr.forEach((element) => {<br>
