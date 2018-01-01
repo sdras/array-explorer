@@ -9,6 +9,7 @@ import es from './es/index'
 import en from './en/index'
 import de from './de/index'
 import fr from './fr/index'
+import nl from './nl/index'
 import pt from './pt/index'
 import zh_cn from './zh_cn/index'
 import id from './id/index'
@@ -24,12 +25,14 @@ import translationsEn from '../src/locale/en/index'
 import translationsEs from '../src/locale/es/index'
 import translationsDe from '../src/locale/de/index'
 import translationsFr from '../src/locale/fr/index'
+import translationsNl from '../src/locale/nl/index'
 import translationsPt from '../src/locale/pt/index'
 import translationsZhCn from '../src/locale/zh_cn/index'
 import translationsCz from '../src/locale/cz/index'
 import translationsRu from '../src/locale/ru/index'
 import translationsId from '../src/locale/id/index'
 import translationsSr from '../src/locale/sr/index'
+
 
 // create info about langauges
 const languages = (ctx => {
@@ -71,6 +74,7 @@ export const store = new Vuex.Store({
     en,
     de,
     fr,
+    nl,
     pt,
     zh_cn,
     id,
@@ -96,6 +100,7 @@ Vue.i18n.add('en', translationsEn)
 Vue.i18n.add('es', translationsEs)
 Vue.i18n.add('de', translationsDe)
 Vue.i18n.add('fr', translationsFr)
+Vue.i18n.add('nl', translationsNl)
 Vue.i18n.add('pt', translationsPt)
 Vue.i18n.add('zh_cn', translationsZhCn)
 Vue.i18n.add('cz', translationsCz)
