@@ -18,6 +18,8 @@ I have an Object Explorer as well: [https://sdras.github.io/object-explorer/](ht
 
 I've heard people say they want to fork this project for other languages and data types (ruby, etc), please feel free to! If you let me know about it, I'll link it up here.
 
+[Ruby Array Explorer](https://contrepoint.github.io/ruby-array-explorer/). Code [here](https://github.com/contrepoint/ruby-array-explorer)
+
 ## Thank you!
 
 Many thanks to everyone who helped with the translations! @AWolf81, @Gonzalo2310, @welll, @julienmartin, @g-plane, @imbyurhan, @bahe007, @salahaa1, @proYang, @bdimitrovski, @TheElderMindseeker, @glenngijsberts, @galuhsahid, @xgebi
