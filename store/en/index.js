@@ -71,7 +71,7 @@ export default {
         shortDesc:
           'one or more elements in order for use, leaving the array as is',
         desc:
-          'The <code>slice()</code> method returns a shallow copy of a portion of an array into a new array object. You can specify either just the ending element (where begin will default to zero) or both the beginning and the end, comma-separated. The original array will not be modified.',
+          'The <code>slice()</code> method returns a shallow copy of a portion of an array into a new array object. You can specify either just the beginning element (where end will default to the arrays length) or both the beginning and the end, comma-separated. The original array will not be modified.',
         example: `let slicedArr = arr.slice(1);<br>
         console.log(arr);<br>
         console.log(slicedArr);`,
