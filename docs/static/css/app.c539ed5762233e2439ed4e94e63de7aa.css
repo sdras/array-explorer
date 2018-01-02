@@ -179,9 +179,14 @@ p.link[data-v-0dd77848] {
     animation: octocat-wave-data-v-ba6985fe 0.56s ease-in-out;
   }
 }
-.localization-dropdown[data-v-bc478c74] {
-  float: right;
-  margin-right: 5%;
+select[data-v-83802682] {
+  margin-top: 8px;
+}
+.localization-dropdown[data-v-83802682] {
+  position: absolute;
+  right: 8%;
+  top: 35px;
+  text-align: right;
 }
 .usage-code {
   padding: 0 20px;
@@ -211,4 +216,4 @@ p.link[data-v-0dd77848] {
   -webkit-transform: scale(0);
   transform: scale(0);
 }
-/*# sourceMappingURL=app.493a1610e4ef0c99f631cfc8db60028e.css.map */
+/*# sourceMappingURL=app.c539ed5762233e2439ed4e94e63de7aa.css.map */
