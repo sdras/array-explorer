@@ -71,7 +71,7 @@ export default {
         shortDesc:
           'jeden nebo více prvků pro práci beze změny pole',
         desc:
-          '<code>slice()</code> metoda vrací mělkou kopii části pole do nového pole. Lze specifikovat buď pouze počáteční prvek s tím, že konec se nastavií na délku pole, anebo konec i začátek oddělené čárkou. Původní pole zůstává beze změny.',
+          '<code>slice()</code> metoda vrací mělkou kopii části pole do nového pole. Lze specifikovat buď pouze počáteční prvek s tím, že konec se nastaví na délku pole, anebo konec i začátek oddělené čárkou. Původní pole zůstává beze změny.',
         example: `let slicedArr = arr.slice(1);<br>
         console.log(arr);<br>
         console.log(slicedArr);`,
