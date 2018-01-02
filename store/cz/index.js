@@ -71,7 +71,7 @@ export default {
         shortDesc:
           'jeden nebo více prvků pro práci beze změny pole',
         desc:
-          '<code>slice()</code> metoda vrací mělkou kopii části pole do nového pole. Lze specifikovat buď pouze koncový prvek, kde počáteční pozice je nula, anebo konec i začátek oddělené čárkou. Původní pole zůstává beze změny.',
+          '<code>slice()</code> metoda vrací mělkou kopii části pole do nového pole. Lze specifikovat buď pouze počáteční prvek s tím, že konec se nastavií na délku pole, anebo konec i začátek oddělené čárkou. Původní pole zůstává beze změny.',
         example: `let slicedArr = arr.slice(1);<br>
         console.log(arr);<br>
         console.log(slicedArr);`,
@@ -120,7 +120,9 @@ export default {
       {
         name: 'sort',
         shortDesc: 'seřadit prvky pole',
-        desc: 'Seřadí prvky pole a vrátí seřazené pole.',
+        desc: `Seřadí prvky pole a vrátí seřazené pole.<br>
+                <br>
+                <strong>Důležitá poznámka:</strong> Pokud není porovnávací funkce dodána, compareFunction, tak jsou prvky převedeny na řetězce a ty se porovnávají podle pořadí v Unicode. Např. "Malina" bude před "jahodou". U čísel, 9 je před 80, ale protože jsou čísla převedena na řetězce, tak "80" je před "9" podle Unicode pořadí. Dokumentace obsahuje další objasňující informace.`,
         example: `arr.sort();<br>
         console.log(arr);`,
         output: `[1, 5, 8]`
