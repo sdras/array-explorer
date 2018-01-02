@@ -143,6 +143,7 @@ body {
 }
 
 main {
+  margin-top: 60px;
   width: 95%;
   display: grid;
   grid-gap: 40px;
