@@ -68,7 +68,7 @@ export default {
         name: 'slice',
         shortDesc: 'een of meerdere elementen in de huidige volgorde, zonder dat de array wordt aangepast,',
         desc:
-          'De <code>slice()</code> methode geeft een kopie van een gedeelte van de array terug in een nieuwe array. Je kan kiezen  voor het laatste element (standaard is 0) opgeven of zowel het begin als einde opgeven, gescheiden met een komma. De orginele array wordt niet aangepast.',
+          'De <code>slice()</code> methode geeft een kopie van een gedeelte van de array terug in een nieuwe array. Je kan kiezen  voor het beginnende element (waar het einde standaard gelijk is aan de lengte van de array) opgeven of zowel het begin als einde opgeven, gescheiden met een komma. De orginele array wordt niet aangepast.',
         example: `let slicedArr = arr.slice(1);<br>
         console.log(arr);<br>
         console.log(slicedArr);`,
@@ -119,6 +119,9 @@ export default {
         name: 'sort',
         shortDesc: 'elementen van een array sorteren',
         desc: 'Sorteert de elementen van een array en geeft de array vervolgens terug.',
+        desc: `Sorts the elements of an array in place and returns the array.<br>
+        <br>
+        <strong>Belangrijke opmerking:</strong> Als de compareFunction niet is toegepast, dan worden elementen gesorteerd door middel van conversie naar strings en worden deze vergeleken in Unicode code point volgorde. Bijvoorbeeld, "Banaan" komt voor "kers". In nummeriek volgorde, komt 9 voor 80, maar omdat nummers geconverteerd worden naar strings, komt "80" voor "9" in Unicode order. De documentatie heeft meer informatie om het te verduidelijken.`,
         example: `arr.sort();<br>
         console.log(arr);`,
         output: `[1, 5, 8]`
