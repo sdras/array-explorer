@@ -94,6 +94,7 @@ body {
   margin: 40px;
 }
 main {
+  margin-top: 60px;
   width: 95%;
   display: grid;
   grid-gap: 40px;
@@ -216,4 +217,4 @@ select[data-v-83802682] {
   -webkit-transform: scale(0);
   transform: scale(0);
 }
-/*# sourceMappingURL=app.c539ed5762233e2439ed4e94e63de7aa.css.map */
+/*# sourceMappingURL=app.da4edb0940c93b0ccf15ba7f997689b5.css.map */
