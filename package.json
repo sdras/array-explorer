@@ -13,7 +13,8 @@
     "gsap": "^1.20.3",
     "vue": "^2.5.2",
     "vue-prism": "^1.0.5",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "vuex-i18n": "^1.8.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>
-      <label for="methodoptions">I need to {{ methodType }}</label>
+      <label for="methodoptions">{{$t('methodOptions', 'I need to')}} {{ methodType && $t(`methodTypes.${methodType}`) }}</label>
       <select id="methodoptions" name="select" v-model="selected">
         <option value="" disabled selected>...</option>
         <option v-for="option in options" :key="option.desc" :value="option">
@@ -19,6 +19,7 @@
 
 <script>
 import MethodBase from './MethodBase.vue'
+import {mapState} from 'vuex'
 
 export default {
   components: {

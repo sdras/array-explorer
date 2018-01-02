@@ -1,9 +1,10 @@
 <template>
   <div id="app">
     <app-github-corner />
+    <LocaleSwitcher/>
     <main>
       <section class="a">
-        <h1>Array Explorer</h1>
+        <h1>JavaScript Array Explorer</h1>
         <p class="subtitle"><em>Find the array method you need without digging through the docs</em></p>
         <app-method-primary />
       </section>
@@ -18,12 +19,14 @@
 <script>
 import AppMethodPrimary from './components/AppMethodPrimary'
 import AppGithubCorner from './components/AppGithubCorner'
+import LocaleSwitcher from './components/LocaleSwitcher'
 import AppCode from './components/AppCode'
 
 export default {
   components: {
     AppMethodPrimary,
     AppGithubCorner,
+    LocaleSwitcher,
     AppCode
   }
 }
@@ -140,7 +143,7 @@ body {
 }
 
 main {
-  width: 90%;
+  width: 95%;
   display: grid;
   grid-gap: 40px;
   grid-template-columns: 1fr 1fr;
