@@ -119,7 +119,9 @@ export default {
       {
         name: 'sort',
         shortDesc: '对数组中元素进行排序。',
-        desc: '对数组中的元素进行排序并返回数组。',
+        desc: `对数组中的元素进行排序并返回数组。<br>
+        <br>
+        <strong>注意：</strong>如果没有给出用于比较的函数，数组中的元素会被转换成字符串后再比较，然后以 Unicode 的顺序进行排序。在对数字进行排序的时候，9 本来应该排在 80 前面，但因为数字会被转换成字符串，而按照 Unicode 的顺序，“80”会排在“9”前面。详细信息可查看文档。`,
         example: `arr.sort();<br>
         console.log(arr);`,
         output: `[1, 5, 8]`
