@@ -120,7 +120,9 @@ export default {
       {
         name: 'sort',
         shortDesc: 'sort the items of the array',
-        desc: 'Sorts the elements of an array in place and returns the array.',
+        desc: `Sorts the elements of an array in place and returns the array.<br>
+        <br>
+        <strong>Important note:</strong> If compareFunction is not supplied, elements are sorted by converting them to strings and comparing strings in Unicode code point order. For example, "Banana" comes before "cherry". In a numeric sort, 9 comes before 80, but because numbers are converted to strings, "80" comes before "9" in Unicode order. The docs have more information to clarify.`,
         example: `arr.sort();<br>
         console.log(arr);`,
         output: `[1, 5, 8]`
