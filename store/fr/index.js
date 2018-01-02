@@ -244,7 +244,7 @@ export default {
           desc:
             "Applique une fonction qui est un accumulateur et qui traite chaque valeur d'une liste (de la gauche vers la droite) afin de la réduire à une seule valeur.",
           example: `let reducer = (a, b) => a + b;<br>
-          <span>&nbsp;&nbsp;</span>console.log(arr.reduce(reducer));`,
+          console.log(arr.reduce(reducer));`,
           output: `14`
         },
         {

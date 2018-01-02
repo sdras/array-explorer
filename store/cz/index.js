@@ -240,7 +240,7 @@ export default {
           desc:
             'Použije funkci na střadač (accumulator) a každou hodnotu pole (z leva do prava) redukuje do jedné hodnoty.',
           example: `let reducer = (a, b) => a + b;<br>
-          <span>&nbsp;&nbsp;</span>console.log(arr.reduce(reducer));`,
+          console.log(arr.reduce(reducer));`,
           output: `14`
         },
         {

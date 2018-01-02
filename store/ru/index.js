@@ -236,7 +236,7 @@ export default {
           desc:
             'Применить функцию к аккумулятору с каждым значением массива (слева направо), чтобы сократить его до единственного значения.',
           example: `let reducer = (a, b) => a + b;<br>
-          <span>&nbsp;&nbsp;</span>console.log(arr.reduce(reducer));`,
+          console.log(arr.reduce(reducer));`,
           output: `14`
         },
         {

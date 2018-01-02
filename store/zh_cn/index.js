@@ -239,7 +239,7 @@ export default {
           desc:
             '接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值。',
           example: `let reducer = (a, b) => a + b;<br>
-          <span>&nbsp;&nbsp;</span>console.log(arr.reduce(reducer));`,
+          console.log(arr.reduce(reducer));`,
           output: `14`
         },
         {

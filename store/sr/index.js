@@ -240,7 +240,7 @@ export default {
           desc:
             'Primenjuje funkciju na akumulator i svaku vrednost niza (sa leva na desno) kako bi je smanjio na jednu vrednost.',
           example: `let reducer = (a, b) => a + b;<br>
-          <span>&nbsp;&nbsp;</span>console.log(arr.reduce(reducer));`,
+          console.log(arr.reduce(reducer));`,
           output: `14`
         },
         {
