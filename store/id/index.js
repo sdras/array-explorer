@@ -120,7 +120,9 @@ export default {
       {
         name: 'sort',
         shortDesc: 'mengurutkan item-item pada array',
-        desc: 'Mengurutkan elemen-elemen dari sebuah array di tempat dan mengembalikan array tersebut.',
+        desc: `Mengurutkan elemen-elemen dari sebuah array di tempat dan mengembalikan array tersebut.<br>
+        <br>
+        <strong>Catatan penting:</strong> Apabila compareFunction tidak diberikan, maka elemen-elemen akan diurutkan dengan cara mengubah elemen-elemen tersebut menjadi string, dan membandingkan string-string tersebut dengan mengacu pada urutan Unicode code point. Sebagai contoh, "Banana" ditempatkan sebelum "cherry". Dalam urutan numerik, 9 ditempatkan sebelum 80, namun karena angka-angka diubah menjadi string, maka "80" ditempatkan sebelum "9" sesuai dengan urutan Unicode. Dokumentasi metode ini mempunyai lebih banyak informasi untuk memperjelas.`,
         example: `arr.sort();<br>
         console.log(arr);`,
         output: `[1, 5, 8]`
