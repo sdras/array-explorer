@@ -33,7 +33,6 @@ import translationsRu from '../src/locale/ru/index'
 import translationsId from '../src/locale/id/index'
 import translationsSr from '../src/locale/sr/index'
 
-
 // create info about langauges
 const languages = (ctx => {
   let keys = ctx.keys()
