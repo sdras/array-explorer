@@ -71,7 +71,7 @@ export default {
         shortDesc:
           'satu atau lebih elemen secara berurutan untuk digunakan, tanpa memodifikasi array asli',
         desc:
-          'Metode <code>slice()</code> mengembalikan shallow copy dari suatu bagian array ke sebuah objek array baru. Anda dapat memberi spesifikasi elemen akhirnya saja (di mana posisi awal akan dimulai dari nol) atau kedua posisi awal dan akhir, dengan koma sebagai pemisahnya. Array yang asli tidak akan dimodifikasi.',
+          'Metode <code>slice()</code> mengembalikan shallow copy dari suatu bagian array ke sebuah objek array baru. Anda dapat memberi spesifikasi elemen awalnya saja (di mana nilai posisi akhir akan sesuai dengan panjang array) atau kedua posisi awal dan akhir, dengan koma sebagai pemisahnya. Array yang asli tidak akan dimodifikasi.',
         example: `let slicedArr = arr.slice(1);<br>
         console.log(arr);<br>
         console.log(slicedArr);`,
@@ -120,7 +120,9 @@ export default {
       {
         name: 'sort',
         shortDesc: 'mengurutkan item-item pada array',
-        desc: 'Mengurutkan elemen-elemen dari sebuah array di tempat dan mengembalikan array tersebut.',
+        desc: `Mengurutkan elemen-elemen dari sebuah array di tempat dan mengembalikan array tersebut.<br>
+        <br>
+        <strong>Catatan penting:</strong> Apabila compareFunction tidak diberikan, maka elemen-elemen akan diurutkan dengan cara mengubah elemen-elemen tersebut menjadi string, dan membandingkan string-string tersebut dengan mengacu pada urutan Unicode code point. Sebagai contoh, "Banana" ditempatkan sebelum "cherry". Dalam urutan numerik, 9 ditempatkan sebelum 80, namun karena angka-angka diubah menjadi string, maka "80" ditempatkan sebelum "9" sesuai dengan urutan Unicode. Dokumentasi metode ini mempunyai lebih banyak informasi untuk memperjelas.`,
         example: `arr.sort();<br>
         console.log(arr);`,
         output: `[1, 5, 8]`
