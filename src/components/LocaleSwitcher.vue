@@ -1,5 +1,7 @@
 <template>
   <div class="localization-dropdown">
+    <a href="https://sdras.github.io/object-explorer/"><em>Object Explorer</em></a>
+    <br>
     Language: 
     <select v-model="selectedLanguage">
       <option v-for="(val, key) in languages" :value="key">{{val.long}}</option>
@@ -26,8 +28,14 @@ export default {
 </script>
 
 <style scoped>
+select {
+  margin-top: 8px;
+}
+
 .localization-dropdown {
-  float: right;
-  margin-right: 5%;
+  position: absolute;
+  right: 8%;
+  top: 35px;
+  text-align: right;
 }
 </style>
