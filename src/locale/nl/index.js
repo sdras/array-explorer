@@ -3,7 +3,7 @@ export default {
   findMethod: "Ik ben op zoek naar",
   methodOptions: 'Ik moet',
   methodTypes: {
-    add: 'toevegen',
+    add: 'toevoegen',
     remove: 'verwijderen',
     find: 'zoeken',
     'iterate by': 'itereren door',
