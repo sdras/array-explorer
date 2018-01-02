@@ -71,7 +71,7 @@ export default {
         shortDesc:
           'satu atau lebih elemen secara berurutan untuk digunakan, tanpa memodifikasi array asli',
         desc:
-          'Metode <code>slice()</code> mengembalikan shallow copy dari suatu bagian array ke sebuah objek array baru. Anda dapat memberi spesifikasi elemen akhirnya saja (di mana posisi awal akan dimulai dari nol) atau kedua posisi awal dan akhir, dengan koma sebagai pemisahnya. Array yang asli tidak akan dimodifikasi.',
+          'Metode <code>slice()</code> mengembalikan shallow copy dari suatu bagian array ke sebuah objek array baru. Anda dapat memberi spesifikasi elemen awalnya saja (di mana nilai posisi akhir akan sesuai dengan panjang array) atau kedua posisi awal dan akhir, dengan koma sebagai pemisahnya. Array yang asli tidak akan dimodifikasi.',
         example: `let slicedArr = arr.slice(1);<br>
         console.log(arr);<br>
         console.log(slicedArr);`,
