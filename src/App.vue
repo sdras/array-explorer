@@ -4,7 +4,7 @@
     <LocaleSwitcher/>
     <main>
       <section class="a">
-        <h1>Array Explorer</h1>
+        <h1>JavaScript Array Explorer</h1>
         <p class="subtitle"><em>Find the array method you need without digging through the docs</em></p>
         <app-method-primary />
       </section>
