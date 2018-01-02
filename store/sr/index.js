@@ -71,7 +71,7 @@ export default {
         shortDesc:
           'jedan ili više elemenata za upotrebu, ostavljajući niz onakvim kakav jeste',
         desc:
-          '<code>Slice()</code> metod vraća plitku kopiju porcije niza u novi objekat niza. Možete odrediti ili krajnji element (gde će početak podrazumevano biti nula) ili i početnu i krajnju vrednost, odvojene zarezom. Originalni niz će ostati neizmenjen.',
+          '<code>Slice()</code> metod vraća plitku kopiju porcije niza u novi objekat niza. Možete odrediti ili samo početni element (gde će kraj podrazumevano biti dužina niza) ili i početnu i krajnju vrednost, odvojene zarezom. Originalni niz će ostati neizmenjen.',
         example: `let slicedArr = arr.slice(1);<br>
         console.log(arr);<br>
         console.log(slicedArr);`,
@@ -120,7 +120,9 @@ export default {
       {
         name: 'sort',
         shortDesc: 'sortiram elemente niza',
-        desc: 'Sortira elemente datog niza i vraća niz.',
+        desc: `Sortira elemente datog niza i vraća niz.<br>
+        <br>
+        <strong>Važna napomena:</strong>Ako compareFunction nije obezbeđena, elementi su sortirani konvertovanjem u stringove i poređenjem stringova u Unicode kodnom redosledu. Na primer, "Banana" dolazi pre "cherry". U numeričkom sortiranju, 9 dolazi pre 80, ali zbog toga što su brojevi konvertovani u stringove, "80" dolazi pre "9" u Unicode redosledu. Dokumentacija sadrži više informacija koje ovo pojašnjavaju.`,
         example: `arr.sort();<br>
         console.log(arr);`,
         output: `[1, 5, 8]`
