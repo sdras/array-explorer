@@ -73,7 +73,7 @@ export default {
         shortDesc:
           "un ou plusieurs éléments successifs, sans modifier le tableau d'origine",
         desc:
-          "Renvoie un objet tableau, contenant une copie superficielle (shallow copy) d'une portion du tableau d'origine, la portion étant définie par un indice de début et un indice de fin (exclus). Le tableau original ne sera pas modifié.",
+          "Renvoie un objet tableau, contenant une copie superficielle (shallow copy) d'une portion du tableau d'origine. Il est possible de spécifier juste l'indice de début (et l'indice de fin sera la longueur du tableau) ou les deux indices (début et fin, séparés par une virgule). Le tableau original ne sera pas modifié.",
         example: `let slicedArr = arr.slice(1);<br>
         console.log(arr);<br>
         console.log(slicedArr);`,
@@ -126,7 +126,9 @@ export default {
         name: 'sort',
         shortDesc: "de trier les éléments d'un tableau",
         desc:
-          "Trie les éléments d'un tableau, dans ce même tableau, et renvoie le tableau.",
+          `Trie les éléments d'un tableau, dans ce même tableau, et renvoie le tableau.
+          <br>
+          <strong>Note importante :</strong> Si aucune fonction de comparaison n'est fournie, les éléments sont triés en les convertisant en chaîne de caractères et en les comparant à partir du point de code Unicode. Par exemple, "Banana" vient avant "cherry". Dans un tri numérique, 9 vient avant 80, parceque les nombres sont convertis en chaîne de caractères, "80" vient avant "9" dans l'odre Unicode. La documentation contient plus d'informations à ce sujet.`,
         example: `arr.sort();<br>
         console.log(arr);`,
         output: `[1, 5, 8]`
