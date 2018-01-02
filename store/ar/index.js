@@ -118,7 +118,10 @@ export default {
       {
         name: 'sort',
         shortDesc: 'ترتيب عناصر المصفوفة',
-        desc: 'ترتب عناصر المصفوفة المحددة وترجع مصفوفة مرتبة.',
+
+          desc: `ترتب عناصر المصفوفة المحددة وترجع مصفوفة مرتبة.<br>
+        <br>
+        <strong>ملاحطة مهمة:</strong> إذا لم يتم كتابة دالة الترتيب ، سيتم ترتيب العناصر عن طريق تحويلهم إلى سلاسل ومقارنة على أساس ترتيبهم ضمن الـ Unicode الخاص بهم.على سبيل المثال، "Banana" تأتي قبل "cherry". في الترتيب بالنسبة للأرقام، فإن 9 تأتي قبل 80 ، وذلك لأنه تم تحويل الأرقام إلى سلاسل نصية ، و "80" تأتي قبل "9"  في ترتيب الرموز ضمن الـ Unicode . التوثيق في الكثير من المعلومات للتوضيح.`,
         example: `arr.sort();<br>
         console.log(arr);`,
         output: `[1, 5, 8]`
@@ -234,7 +237,7 @@ export default {
           name: 'reduce',
           shortDesc: 'قيمة بواسطة تصغير المصفوفة ، من البداية للنهاية',
           desc:
-            'Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value.',
+            'تنفيذ دالة على مراكم وكل قيمة في المصفوفة ( من اليسار إلى اليمين ) لتقليصها إلى قيمة واحدة.',
           example: `let reducer = (a, b) => a + b;<br>
           <span>&nbsp;&nbsp;</span>console.log(arr.reduce(reducer));`,
           output: `14`
@@ -243,7 +246,7 @@ export default {
           name: 'reduceRight',
           shortDesc: 'قيمة بواسطة تصغير المصفوفة ، من النهاية إلى البداية',
           desc:
-            'Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.',
+            'تنفيذ دالة على مراكم وكل قيمة في المصفوفة ( من اليمين إلى اليسار ) لتقليصها إلى قيمة واحدة.',
           example: `[arr, [0, 1]].reduceRight((a, b) => {<br>
           <span>&nbsp;&nbsp;</span>return a.concat(b)<br>
           }, [])`,
