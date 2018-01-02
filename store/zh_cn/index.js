@@ -71,7 +71,7 @@ export default {
         shortDesc:
           '一个或多个才能使用，保持原数组不变。',
         desc:
-          '<code>slice()</code>方法返回一个新的数组，是对原数组部分的浅拷贝。可以只传入<code> end </code>结束位置参数（<code> begin </code>开始位置将默认为 0），或者都传入<code> slice(begin, end) </code>。原数组不会被修改。',
+          '<code>slice()</code>方法返回一个新的数组，是对原数组部分的浅拷贝。可以只传入<code> begin </code>开始位置参数（<code> end </code>结束位置将默认为数组的长度），或者都传入<code> slice(begin, end) </code>。原数组不会被修改。',
         example: `let slicedArr = arr.slice(1);<br>
         console.log(arr);<br>
         console.log(slicedArr);`,
