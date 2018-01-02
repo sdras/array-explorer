@@ -239,7 +239,7 @@ export default {
           desc:
             'تنفيذ دالة على مراكم وكل قيمة في المصفوفة ( من اليسار إلى اليمين ) لتقليصها إلى قيمة واحدة.',
           example: `let reducer = (a, b) => a + b;<br>
-          <span>&nbsp;&nbsp;</span>console.log(arr.reduce(reducer));`,
+          console.log(arr.reduce(reducer));`,
           output: `14`
         },
         {

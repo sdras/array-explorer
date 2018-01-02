@@ -237,7 +237,7 @@ export default {
           desc:
             'Прилагайте функция срещу акумулатор и всяка стойност на масива (от ляво на дясно), за да го намалите до единична стойност.',
           example: `let reducer = (a, b) => a + b;<br>
-          <span>&nbsp;&nbsp;</span>console.log(arr.reduce(reducer));`,
+          console.log(arr.reduce(reducer));`,
           output: `14`
         },
         {

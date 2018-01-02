@@ -238,7 +238,7 @@ export default {
           desc:
             'Aplica uma função sobre um acumulador e cada elemento do array (da esquerda para direita) até reduzir a um único valor.',
           example: `let reducer = (a, b) => a + b;<br>
-          <span>&nbsp;&nbsp;</span>console.log(arr.reduce(reducer));`,
+          console.log(arr.reduce(reducer));`,
           output: `14`
         },
         {

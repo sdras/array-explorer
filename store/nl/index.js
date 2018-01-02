@@ -239,7 +239,7 @@ export default {
           desc:
             'Pas een functie toe op een verzameling en elke waarde in de array (van links naar rechts) aan door het te verkleinen in een enkele waarde.',
           example: `let reducer = (a, b) => a + b;<br>
-          <span>&nbsp;&nbsp;</span>console.log(arr.reduce(reducer));`,
+          console.log(arr.reduce(reducer));`,
           output: `14`
         },
         {

@@ -245,7 +245,7 @@ export default {
           desc:
             'Reduziert das Array auf einen einzigen Wert, indem es jeweils zwei Elemente (von links nach rechts) durch eine angegebene Funktion reduziert.',
           example: `let reducer = (a, b) => a + b;<br>
-          <span>&nbsp;&nbsp;</span>console.log(arr.reduce(reducer));`,
+          console.log(arr.reduce(reducer));`,
           output: `14`
         },
         {

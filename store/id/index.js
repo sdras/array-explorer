@@ -240,7 +240,7 @@ export default {
           desc:
             'Mengaplikasikan sebuah fungsi terhadap sebuah akumulator dan masing-masing nilai dari array (dari kiri ke kanan) untuk mereduksinya menjadi sebuah nilai.',
           example: `let reducer = (a, b) => a + b;<br>
-          <span>&nbsp;&nbsp;</span>console.log(arr.reduce(reducer));`,
+          console.log(arr.reduce(reducer));`,
           output: `14`
         },
         {
