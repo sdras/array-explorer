@@ -188,6 +188,14 @@ export default {
         output: `[0, 5]<br>
         <span class="comment">// the 0 is the index,</span><br>
         <span class="comment">// the 5 is the first number</span>`
+      },
+      {
+        name: 'reduce',
+        shortDesc: 'reduce to a single value',
+        desc:
+          'Returns a single value by calling a provided function on every element in this array.',
+        example: `let sum = arr.reduce((sum, x) => sum + x);`,
+        output: '14'
       }
     ],
     find: {
