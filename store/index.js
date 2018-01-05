@@ -12,12 +12,12 @@ import fr from './fr/index'
 import nl from './nl/index'
 import pt from './pt/index'
 import zh_cn from './zh_cn/index'
-import id from './id/index'
 import sr from './sr/index'
 import cz from './cz/index'
 import ru from './ru/index'
 import id from './id/index'
 import it from './it/index'
+import ua from './ua/index'
 
 // import translations of labels
 import translationsAr from '../src/locale/ar/index'
@@ -31,6 +31,7 @@ import translationsPt from '../src/locale/pt/index'
 import translationsZhCn from '../src/locale/zh_cn/index'
 import translationsCz from '../src/locale/cz/index'
 import translationsRu from '../src/locale/ru/index'
+import translationsUa from '../src/locale/ua/index'
 import translationsId from '../src/locale/id/index'
 import translationsSr from '../src/locale/sr/index'
 import translationsIt from '../src/locale/it/index'
@@ -82,7 +83,7 @@ export const store = new Vuex.Store({
     sr,
     cz,
     ru,
-    id,
+    ua,
     it
   },
   state: {
@@ -107,6 +108,7 @@ Vue.i18n.add('pt', translationsPt)
 Vue.i18n.add('zh_cn', translationsZhCn)
 Vue.i18n.add('cz', translationsCz)
 Vue.i18n.add('ru', translationsRu)
+Vue.i18n.add('ua', translationsUa)
 Vue.i18n.add('id', translationsId)
 Vue.i18n.add('sr', translationsSr)
 Vue.i18n.add('it', translationsIt)
