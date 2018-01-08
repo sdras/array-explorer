@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "test": "cypress run",
+    "test:gui": "cypress open"
   },
   "dependencies": {
     "gsap": "^1.20.3",
@@ -50,7 +52,8 @@
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "cypress": "1.4.1"
   },
   "engines": {
     "node": ">= 4.0.0",
@@ -62,3 +65,4 @@
     "not ie <= 8"
   ]
 }
+
