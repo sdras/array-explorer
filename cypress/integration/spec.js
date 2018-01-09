@@ -34,6 +34,7 @@ describe('array-explorer', () => {
   })
 
   // utility functions
+  const selectMethod = choice => cy.get('#firstmethod').select(choice)
   const selectMethodOptions = choice => cy.get('#methodoptions').select(choice)
 
   const confirmInputAndOutput = () => {
@@ -95,6 +96,13 @@ describe('array-explorer', () => {
     cy.contains('h1', 'JavaScript Array Explorer')
   })
 
+  it('works in Russian', () => {
+    cy.get('[data-attr-cy="language"').select('Russian')
+    selectMethod('удалить элементы') // remove elements
+    selectMethodOptions('первый элемент массива') // first element of the array
+    confirmInputAndOutput()
+  })
+
   const methods = {
     'add items or other arrays': [
       'element/s to an array',
@@ -133,7 +141,7 @@ describe('array-explorer', () => {
   Object.keys(methods).forEach(method => {
     context(method, () => {
       beforeEach(() => {
-        cy.get('#firstmethod').select(method)
+        selectMethod(method)
       })
       methods[method].forEach(secondary => {
         it(secondary, () => {
