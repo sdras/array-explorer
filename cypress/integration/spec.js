@@ -1,3 +1,32 @@
+const toDoubleQuots = text => text.replace(/'/g, '"')
+const isMultiLine = text => text.includes('\n')
+const isCommentLine = text => text.trim().startsWith('//')
+const isNonCommentLine = text => !isCommentLine(text)
+const convertSingleTextLine = text => {
+  const quoted = toDoubleQuots(text)
+  try {
+    return JSON.parse(quoted)
+  } catch (err) {
+    console.error('could not parse text')
+    console.error(quoted)
+    return
+  }
+}
+const removeComments = text =>
+  text
+    .split('\n')
+    .filter(isNonCommentLine)
+    .join('\n')
+
+// we need to get JavaScript data from the code text
+// there might be single quotes, comments - we need to clean this up
+// also each output line means there was different console.log call
+const parseText = text =>
+  text
+    .split('\n')
+    .filter(isNonCommentLine)
+    .map(convertSingleTextLine)
+
 describe('array-explorer', () => {
   beforeEach(() => {
     cy.visit('http://localhost:8080')
@@ -5,12 +34,13 @@ describe('array-explorer', () => {
 
   // utility functions
   const selectMethodOptions = choice => cy.get('#methodoptions').select(choice)
-  const toDouble = text => text.replace(/'/g, '"')
+
   const confirmInputAndOutput = () => {
     let output
     cy
       .get('.exampleoutput2')
       .invoke('text')
+      .then(removeComments)
       .then(t => {
         output = t
       })
@@ -21,15 +51,19 @@ describe('array-explorer', () => {
       const input = v.text()
       // evaluate the input code - we are already spying on console.log!
       eval(input)
-      // the value comes from DOM - so it needs to be
-      // converted before we can compare it to the
-      // compute value
-      // TODO remove comments from the output
-      expect(console.log).to.have.been.calledWith(JSON.parse(toDouble(output)))
-      cy
-        .get('.exampleoutput2')
-        .should('have.css', 'opacity', '1')
-        .and('contain', output)
+      const values = parseText(output)
+      // confirm console.log with expected values happened in order
+      values.forEach((value, k) => {
+        expect(console.log.getCall(k)).to.have.been.calledWith(value)
+      })
+      cy.get('.exampleoutput2').should('have.css', 'opacity', '1')
+      if (values.length === 1) {
+        cy.get('.exampleoutput2').should('contain', output)
+      } else {
+        values.forEach(value => {
+          cy.get('.exampleoutput2').should('contain', String(value))
+        })
+      }
     })
   }
 
@@ -52,8 +86,8 @@ describe('array-explorer', () => {
     ],
     // skip "find items" - requires multiple parameters
     'walk over items': [
-      'executing a function I will create for each element',
-      'creating a new array from each element with a function I create',
+      // 'executing a function I will create for each element',
+      // 'creating a new array from each element with a function I create',
       'creating an iterator object',
     ],
     'return a string': [
