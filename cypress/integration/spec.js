@@ -1,3 +1,4 @@
+const trim = text => text.trim()
 const toDoubleQuots = text => text.replace(/'/g, '"')
 const isMultiLine = text => text.includes('\n')
 const isCommentLine = text => text.trim().startsWith('//')
@@ -36,34 +37,46 @@ describe('array-explorer', () => {
   const selectMethodOptions = choice => cy.get('#methodoptions').select(choice)
 
   const confirmInputAndOutput = () => {
-    let output
     cy
       .get('.exampleoutput2')
+      .as('output')
       .invoke('text')
       .then(removeComments)
-      .then(t => {
-        output = t
-      })
+      .as('outputText')
+      .then(parseText)
+      .as('outputValues')
+
     // set up spy on `console.log` before
     // we can call `eval(input code)`
     cy.spy(console, 'log')
-    cy.get('.usage1').then(v => {
-      const input = v.text()
-      // evaluate the input code - we are already spying on console.log!
-      eval(input)
-      const values = parseText(output)
-      // confirm console.log with expected values happened in order
-      values.forEach((value, k) => {
+    cy
+      .get('.usage1')
+      .invoke('text')
+      .then(sourceCode => {
+        // show message in the command log
+        cy.log('evaluating', sourceCode)
+        // evaluate the input code - we are already spying on console.log!
+        eval(sourceCode)
+      })
+
+    // confirm console.log with expected values happened in order
+    cy.get('@outputValues').then(outputValues => {
+      outputValues.forEach((value, k) => {
         expect(console.log.getCall(k)).to.have.been.calledWith(value)
       })
-      cy.get('.exampleoutput2').should('have.css', 'opacity', '1')
-      if (values.length === 1) {
-        cy.get('.exampleoutput2').should('contain', output)
-      } else {
-        values.forEach(value => {
-          cy.get('.exampleoutput2').should('contain', String(value))
+    })
+
+    // make sure the output text actually appears
+    cy.get('@outputText').then(outputText => {
+      cy.get('@output').should('have.css', 'opacity', '1')
+      // the only difficulty is with multiline text where there might
+      // be white space at the start of each line
+      outputText
+        .split('\n')
+        .map(trim)
+        .forEach(line => {
+          cy.get('@output').should('contain', line)
         })
-      }
     })
   }
 
@@ -86,8 +99,8 @@ describe('array-explorer', () => {
     ],
     // skip "find items" - requires multiple parameters
     'walk over items': [
-      // 'executing a function I will create for each element',
-      // 'creating a new array from each element with a function I create',
+      'executing a function I will create for each element',
+      'creating a new array from each element with a function I create',
       'creating an iterator object',
     ],
     'return a string': [
