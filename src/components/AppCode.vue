@@ -116,7 +116,7 @@ export default {
         })
         setTimeout(() => {
           this.typeOut()
-        }, 3000)
+        }, 500)
       }
     }
   }
