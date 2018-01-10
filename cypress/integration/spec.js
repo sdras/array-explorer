@@ -1,3 +1,5 @@
+const lolex = require('lolex')
+
 const trim = text => text.trim()
 const toDoubleQuots = text => text.replace(/'/g, '"')
 const isMultiLine = text => text.includes('\n')
@@ -29,8 +31,15 @@ const parseText = text =>
     .map(convertSingleTextLine)
 
 describe('array-explorer', () => {
+  let fakeClock
   beforeEach(() => {
-    cy.visit('http://localhost:8080')
+    cy.visit('http://localhost:8080', {
+      onBeforeLoad: win => {
+        fakeClock = lolex.install({
+          target: win,
+        })
+      },
+    })
   })
 
   // utility functions
@@ -46,6 +55,9 @@ describe('array-explorer', () => {
       .as('outputText')
       .then(parseText)
       .as('outputValues')
+      .then(() => {
+        fakeClock.tick(10000)
+      })
 
     // set up spy on `console.log` before
     // we can call `eval(input code)`
@@ -69,6 +81,7 @@ describe('array-explorer', () => {
         // don't forget to restore system clock
         // otherwise good things will not happen
         clock.restore()
+        eval(sourceCode)
       })
 
     // confirm console.log with expected values happened in order
