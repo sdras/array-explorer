@@ -1,28 +1,31 @@
-# JavaScript Array Explorer
+# 자바스크립트 배열 탐색기
 
-When I was first learning array methods, I spent a lot of time digging through the docs to find the appropriate one, and I had to search one by one. I made this resource to help people find the correct array method a bit more naturally. You can narrow down what you want to do and explore until you find what's most useful to you.
+처음 배열 메서드을 배웠을 때는 문서를 탐색하는 데 많은 시간을 들여 적절한 문서를 찾아 검색했습니다. 저는 사람들이 좀 더 자연스럽게 정확한 배열 방법을 찾게 하도록 이 자료를 만들었습니다. 여러분에게 가장 유용한 것을 발견할 때까지 탐험할 수 있습니다.
 
-Check out the site here: [https://sdras.github.io/array-explorer/](https://sdras.github.io/array-explorer/)
+아래에서 확인하세요
 
-Or if you prefer codepen: [https://codepen.io/sdras/full/gogVRX/](https://codepen.io/sdras/full/gogVRX/)
+원작자인 sdras의 링크
+- [https://sdras.github.io/array-explorer/](https://sdras.github.io/array-explorer/)
+- [https://codepen.io/sdras/full/gogVRX/](https://codepen.io/sdras/full/gogVRX/)
 
-I realize that there are about a million ways that this resource can be set up, and some of the taxonomy is necessarily opionionated. I tried to focus on what I thought would have helped me learn the best, rather than industry standard delineations (mutator, accessor, iteration, for example). There are a lot of resources that already divide the methods this way, so if that style of learning suits you better, that's great! This resource is not set up that way. Please keep in mind that this is not meant to be as comprehensive or a replacement for full documentation, which is why the MDN docs are linked to in each method.
+>[한글번역 페이지 링크](https://devjang.github.io/array-explorer/)
 
-I based most of the examples and longer descriptions off of the MDN documentation, altering it slightly where I felt the description was not as beginner-friendly as it could be.
+이 자료를 설정하는 데는 약 백만가지 방법이 있으며 일부 분류 체계는 반드시 반드시 선택화되어 있다고 생각합니다. 저는 표준 표기법(예를 들어 mutator, accessor, iteration)보다는 가장 잘 배울 수 있도록 도와주는 것에 초점을 맞추려고 노력했습니다. 이런 방법을 나눠 놓은 자료는 이미 많이 존재합니다. 그래서 학습 스타일이 당신에게 잘 어울리면 좋겠습니다! 이 자료는 그런 식으로 설정되지 않았습니다. 이 문서는 전체 설명서에 대한 포괄적이거나 대체용이 아니기 때문에 각 방법으로 MDN 문서가 링크되어 있다는 점에 유의하세요.
 
-**Enjoy!**
+MDN 문서에서 대부분의 예제를 발췌했으며 설명이 초보자 적합하지 않다고 생각되는 곳은 약간 변경했습니다.
 
-## Other Similar Projects
+**즐거운 시간 되세요!**
 
-I have an Object Explorer as well: [https://sdras.github.io/object-explorer/](https://sdras.github.io/object-explorer/)
+## 그 밖의 비슷한 프로젝트
 
-I've heard people say they want to fork this project for other languages and data types (ruby, etc), please feel free to! If you let me know about it, I'll link it up here.
+객체 탐색기도 있습니다: [https://sdras.github.io/object-explorer/](https://sdras.github.io/object-explorer/)  
+객체 탐색기 번역: [https://devJang.github.io/object-explorer/](https://devJang.github.io/object-explorer)
 
-[Ruby Array Explorer](https://contrepoint.github.io/ruby-array-explorer/). Code [here](https://github.com/contrepoint/ruby-array-explorer)
+[루비 배열 탐색기](https://contrepoint.github.io/ruby-array-explorer/). 코드는 [이곳](https://github.com/contrepoint/ruby-array-explorer)
 
-## Thank you!
+## 감사합니다!
 
-Many thanks to everyone who helped with the translations! @AWolf81, @Gonzalo2310, @welll, @julienmartin, @g-plane, @imbyurhan, @bahe007, @salahaa1, @proYang, @bdimitrovski, @TheElderMindseeker, @glenngijsberts, @galuhsahid, @xgebi
+번역에 많은 도움을 주신 모든 분들께 감사드립니다! @AWolf81, @Gonzalo2310, @welll, @julienmartin, @g-plane, @imbyurhan, @bahe007, @salahaa1, @proYang, @bdimitrovski, @TheElderMindseeker, @glenngijsberts, @galuhsahid, @xgebi
 
 ## Build Setup
 
@@ -45,4 +48,4 @@ npm run build
 # then change the font paths in the css file from `/static` to `../../static`
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+빌드 방법에 대한 자세한 설명을 보려면 [vue-loader에 대한 문서](https://vue-loader.vuejs.org/kr/)와 [가이드](http://vuejs-templates.github.io/webpack/)를 확인하십시오.

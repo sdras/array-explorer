@@ -2,7 +2,7 @@
   <div>
     <h2><slot name="title" /></h2>
     <p class="desc"><slot name="desc" /></p>
-    <p class="link"><em><a :href="`https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/${urlPath}`" target="_blank">see the docs &#8594;</a></em></p>
+    <p class="link"><em><a :href="`https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/${urlPath}`" target="_blank">see the docs &#8594;</a></em></p>
   </div>
 </template>
 
