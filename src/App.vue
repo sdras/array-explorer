@@ -4,12 +4,12 @@
     <LocaleSwitcher/>
     <main>
       <section class="a">
-        <h1>JavaScript Array Explorer</h1>
-        <p class="subtitle"><em>Find the array method you need without digging through the docs</em></p>
+        <h1>자바스크립트 배열 탐색기</h1>
+        <p class="subtitle"><em>문서를 뒤지지 않고 필요한 배열 메서드를 찾습니다.</em></p>
         <app-method-primary />
       </section>
       <section class="b">
-        <h3 class="usage">Usage</h3>
+        <h3 class="usage">사용 방법</h3>
         <app-code />
       </section>
     </main>
