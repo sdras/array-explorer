@@ -119,7 +119,7 @@ export default {
         name: 'sort',
         shortDesc: 'ordenar os itens do array',
         desc:
-          'Orderna os itens do array modificando o array e retorna o próprio array.',
+          'Ordena os itens do array modificando o array e retorna o próprio array.',
         example: `arr.sort();<br>
         console.log(arr);`,
         output: `[1, 5, 8]`
@@ -218,7 +218,7 @@ export default {
           name: 'find',
           shortDesc: 'o primeiro elemento que satisfaz a condição',
           desc:
-            'Retorna o valor econtrado no array, se um elemento no array satisfaz o teste da função fornecida como parâmetro, ou retorna undefined se não encontrado. Similar ao método <code>findIndex()</code>, porém esta função retorna o item ao invés do índice.',
+            'Retorna o valor encontrado no array, se um elemento no array satisfaz o teste da função fornecida como parâmetro, ou retorna undefined se não encontrado. Similar ao método <code>findIndex()</code>, porém esta função retorna o item ao invés do índice.',
           example: `let isTiny = (el) => el < 2;<br>
           console.log(arr.find(isTiny));`,
           output: `1`
@@ -243,7 +243,7 @@ export default {
         },
         {
           name: 'reduceRight',
-          shortDesc: 'um valor através da redução do array, fim ao ínicio',
+          shortDesc: 'um valor através da redução do array, fim ao início',
           desc:
             'Aplica uma função sobre um acumulador e cada elemento do array (da direta para esquerda) até reduzir a um único valor.',
           example: `[arr, [0, 1]].reduceRight((a, b) => {<br>
