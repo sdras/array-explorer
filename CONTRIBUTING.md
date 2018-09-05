@@ -29,7 +29,7 @@ npm run build
 
 ## Submitting changes
 
-Please send a pull request with a clear list of what you've done (read more about [pull requests](http://help.github.com/pull-requests/)).
+Please send a pull request with a clear list of what you've done (read more about [pull requests](https://help.github.com/categories/collaborating-with-issues-and-pull-requests/)).
 
 ## Translations
 
