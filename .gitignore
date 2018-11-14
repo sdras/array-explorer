@@ -15,7 +15,7 @@ yarn-error.log*
 .AppleDouble
 .LSOverride
 
-# Icon must end with two 
+# Icon must end with two
 Icon
 # Thumbnails
 ._*
@@ -82,3 +82,7 @@ jspm_packages
 
 # Yarn Integrity file
 .yarn-integrity
+
+# Cypress test screenshots and videos
+cypress/screenshots
+cypress/videos

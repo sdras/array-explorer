@@ -2,8 +2,8 @@
   <div class="localization-dropdown">
     <a href="https://sdras.github.io/object-explorer/"><em>Object Explorer</em></a>
     <br>
-    Language: 
-    <select v-model="selectedLanguage">
+    Language:
+    <select v-model="selectedLanguage" data-attr-cy="language">
       <option v-for="(val, key) in languages" :value="key">{{val.long}}</option>
     </select>
   </div>

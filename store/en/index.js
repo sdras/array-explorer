@@ -8,7 +8,7 @@ export default {
         desc: 'Adds and/or removes elements from an array.',
         example: `arr.splice(2, 0, 'tacos');<br>
         console.log(arr);`,
-        output: `[5, 1, 'tacos', 8]`
+        output: `[5, 1, 'tacos', 8]`,
       },
       {
         name: 'push',
@@ -17,7 +17,7 @@ export default {
           'Adds one or more elements to the end of an array and returns the new length of the array.',
         example: `arr.push(2);<br>
         console.log(arr);`,
-        output: '[5, 1, 8, 2]'
+        output: '[5, 1, 8, 2]',
       },
       {
         name: 'unshift',
@@ -26,7 +26,7 @@ export default {
           'Adds one or more elements to the front of an array and returns the new length of the array.',
         example: `arr.unshift(2, 7);<br>
         console.log(arr);`,
-        output: '[2, 7, 5, 1, 8]'
+        output: '[2, 7, 5, 1, 8]',
       },
       {
         name: 'concat',
@@ -36,8 +36,8 @@ export default {
         example: `let arr2 = ['a', 'b', 'c'];<br>
         let arr3 = arr.concat(arr2);<br>
         console.log(arr3);`,
-        output: `[5, 1, 8, 'a', 'b', 'c']`
-      }
+        output: `[5, 1, 8, 'a', 'b', 'c']`,
+      },
     ],
     removing: [
       {
@@ -46,7 +46,7 @@ export default {
         desc: 'Adds and/or removes elements from an array.',
         example: `arr.splice(2, 1);<br>
         console.log(arr);`,
-        output: `[5, 1]`
+        output: `[5, 1]`,
       },
       {
         name: 'pop',
@@ -55,7 +55,7 @@ export default {
           'Removes the last element from an array and returns that element.',
         example: `arr.pop();<br>
         console.log(arr);`,
-        output: `[5, 1]`
+        output: `[5, 1]`,
       },
       {
         name: 'shift',
@@ -64,7 +64,7 @@ export default {
           'Removes the first element from an array and returns that element.',
         example: `arr.shift();<br>
         console.log(arr);`,
-        output: `[1, 8]`
+        output: `[1, 8]`,
       },
       {
         name: 'slice',
@@ -76,8 +76,8 @@ export default {
         console.log(arr);<br>
         console.log(slicedArr);`,
         output: `[5, 1, 8]<br>
-        [1, 8]`
-      }
+        [1, 8]`,
+      },
     ],
     string: [
       {
@@ -86,14 +86,14 @@ export default {
         desc: `Joins all elements of an array into a string. You can join it together as is or with something in between, <code>elements.join(' -
           ')</code> gives you <code>foo-bar</code>`,
         example: `console.log(arr.join());`,
-        output: `"5,1,8"`
+        output: `"5,1,8"`,
       },
       {
         name: 'toString',
         shortDesc: 'return a string representing the array.',
         desc: 'Returns a string representing the array and its elements.',
         example: `console.log(arr.toString());`,
-        output: `"5,1,8"`
+        output: `"5,1,8"`,
       },
       {
         name: 'toLocaleString',
@@ -103,9 +103,11 @@ export default {
         example: `let date = [new Date()];<br>
         const arrString = arr.toLocaleString();<br>
         const dateString = date.toLocaleString();<br>
-        console.log(arrString, dateString);`,
-        output: `"5,1,8 12/26/2017, 6:54:49 PM"`
-      }
+        console.log(arrString);<br>
+        console.log(dateString);`,
+        output: `"5,1,8"<br>
+        "12/26/2017, 6:54:49 PM"`,
+      },
     ],
     ordering: [
       {
@@ -115,7 +117,7 @@ export default {
           'Reverses the order of the elements of an array in place — the first becomes the last, and the last becomes the first.',
         example: `arr.reverse();<br>
         console.log(arr);`,
-        output: `[8, 1, 5]`
+        output: `[8, 1, 5]`,
       },
       {
         name: 'sort',
@@ -125,8 +127,8 @@ export default {
         <strong>Important note:</strong> If compareFunction is not supplied, elements are sorted by converting them to strings and comparing strings in Unicode code point order. For example, "Banana" comes before "cherry". In a numeric sort, 9 comes before 80, but because numbers are converted to strings, "80" comes before "9" in Unicode order. The docs have more information to clarify.`,
         example: `arr.sort();<br>
         console.log(arr);`,
-        output: `[1, 5, 8]`
-      }
+        output: `[1, 5, 8]`,
+      },
     ],
     other: [
       {
@@ -134,7 +136,7 @@ export default {
         shortDesc: 'find the length of the array',
         desc: 'Returns the number of elements in that array.',
         example: `console.log(arr.length);`,
-        output: `3`
+        output: `3`,
       },
       {
         name: 'fill',
@@ -143,7 +145,7 @@ export default {
           'Fills all the elements of an array from a start index to an end index with a static value.',
         example: `arr.fill(2);<br>
         console.log(arr);`,
-        output: `[2, 2, 2]`
+        output: `[2, 2, 2]`,
       },
       {
         name: 'copyWithin',
@@ -152,8 +154,8 @@ export default {
           'Copies a sequence of array elements within the array. You can specify either just the ending element (where begin will default to zero) or both the beginning and the end, comma-separated.',
         example: `arr.copyWithin(1);<br>
         console.log(arr);`,
-        output: `[5, 5, 1]`
-      }
+        output: `[5, 5, 1]`,
+      },
     ],
     iterate: [
       {
@@ -166,7 +168,7 @@ export default {
         });`,
         output: `5<br>
         1<br>
-        8`
+        8`,
       },
       {
         name: 'map',
@@ -176,7 +178,7 @@ export default {
           'Creates a new array with the results of calling a provided function on every element in this array.',
         example: `let map = arr.map(x => x + 1);<br>
         console.log(map);`,
-        output: `[6, 2, 9]`
+        output: `[6, 2, 9]`,
       },
       {
         name: 'entries',
@@ -187,8 +189,8 @@ export default {
         console.log(iterator.next().value);`,
         output: `[0, 5]<br>
         <span class="comment">// the 0 is the index,</span><br>
-        <span class="comment">// the 5 is the first number</span>`
-      }
+        <span class="comment">// the 5 is the first number</span>`,
+      },
     ],
     find: {
       single: [
@@ -198,7 +200,7 @@ export default {
           desc:
             'Determines whether an array contains a certain element, returning true or false as appropriate.',
           example: `console.log(arr.includes(1));`,
-          output: `true`
+          output: `true`,
         },
         {
           name: 'indexOf',
@@ -206,7 +208,7 @@ export default {
           desc:
             'Returns the first index at which a given element can be found in the array, or -1 if it is not present.',
           example: `console.log(arr.indexOf(5));`,
-          output: `0`
+          output: `0`,
         },
         {
           name: 'lastIndexOf',
@@ -214,7 +216,7 @@ export default {
           desc:
             'Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found.',
           example: `console.log(arr.lastIndexOf(5));`,
-          output: `0`
+          output: `0`,
         },
         {
           name: 'find',
@@ -223,7 +225,7 @@ export default {
             'Returns the found value in the array, if an element in the array satisfies the provided testing function or undefined if not found. Similar to <code>findIndex()</code>, but it returns the item instead of the index.',
           example: `let isTiny = (el) => el < 2;<br>
           console.log(arr.find(isTiny));`,
-          output: `1`
+          output: `1`,
         },
         {
           name: 'findIndex',
@@ -232,7 +234,7 @@ export default {
             'Returns the index of the first element in the array that satisfies the provided testing function. Otherwise -1 is returned. Similar to <code>find()</code>, but it returns the index instead of the item.',
           example: `let isBig = (el) => el > 6;<br>
           console.log(arr.findIndex(isBig));`,
-          output: `2`
+          output: `2`,
         },
         {
           name: 'reduce',
@@ -241,7 +243,7 @@ export default {
             'Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value.',
           example: `let reducer = (a, b) => a + b;<br>
           console.log(arr.reduce(reducer));`,
-          output: `14`
+          output: `14`,
         },
         {
           name: 'reduceRight',
@@ -251,8 +253,8 @@ export default {
           example: `[arr, [0, 1]].reduceRight((a, b) => {<br>
           <span>&nbsp;&nbsp;</span>return a.concat(b)<br>
           }, [])`,
-          output: `[0, 1, 5, 1, 8]`
-        }
+          output: `[0, 1, 5, 1, 8]`,
+        },
       ],
       many: [
         {
@@ -262,7 +264,7 @@ export default {
             'Creates a new array with all of the elements of this array for which the provided filtering function returns true.',
           example: `let filtered = arr.filter(el => el > 4);<br>
           console.log(filtered)`,
-          output: `[5, 8]`
+          output: `[5, 8]`,
         },
         {
           name: 'every',
@@ -271,7 +273,7 @@ export default {
             'Returns true if every element in this array satisfies the provided testing function.',
           example: `let isSmall = (el) => el < 10;<br>
           console.log(arr.every(isSmall));`,
-          output: `true`
+          output: `true`,
         },
         {
           name: 'some',
@@ -280,9 +282,9 @@ export default {
             'Returns true if at least one element in this array satisfies the provided testing function.',
           example: `let biggerThan4 = (el) => el > 4;<br>
           console.log(arr.some(biggerThan4));`,
-          output: `true`
-        }
-      ]
-    }
-  }
+          output: `true`,
+        },
+      ],
+    },
+  },
 }
