@@ -21,7 +21,7 @@ I've heard people say they want to fork this project for other languages and dat
 - [Ruby Array Explorer](https://contrepoint.github.io/ruby-array-explorer/). Code [here](https://github.com/contrepoint/ruby-array-explorer)
 - [Angular Array Explorer](https://niladri24dutta.github.io/Array-explorer-angular/) . Code [here](https://github.com/Niladri24dutta/Array-explorer-angular)
 - [Python List Explorer](https://akashp1712.github.io/python_explorer/). Code [here](https://github.com/akashp1712/python_explorer)
-
+- [Ramdajs Methods Explorer](https://davesnx.github.io/learn-ramda/) . Code [here](https://github.com/davesnx/learn-ramda)
 
 ## Thank you!
 
