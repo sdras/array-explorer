@@ -2,7 +2,7 @@
 
 When I was first learning array methods, I spent a lot of time digging through the docs to find the appropriate one, and I had to search one by one. I made this resource to help people find the correct array method a bit more naturally. You can narrow down what you want to do and explore until you find what's most useful to you.
 
-Check out the site here: [https://sdras.github.io/array-explorer/](https://sdras.github.io/array-explorer/)
+Check out the site here: [https://sdras.github.io/array-explorer/](https://array-explorer.netlify.com/)
 
 Or if you prefer codepen: [https://codepen.io/sdras/full/gogVRX/](https://codepen.io/sdras/full/gogVRX/)
 
@@ -41,11 +41,6 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
-
-# to build for the docs:
-npm run build
-# then rename `dist` to `docs` and remove the first slash `/static` from `static` in `index.html`
-# then change the font paths in the css file from `/static` to `../../static`
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
