@@ -2,7 +2,7 @@
 
 When I was first learning array methods, I spent a lot of time digging through the docs to find the appropriate one, and I had to search one by one. I made this resource to help people find the correct array method a bit more naturally. You can narrow down what you want to do and explore until you find what's most useful to you.
 
-Check out the site here: [https://sdras.github.io/array-explorer/](https://array-explorer.netlify.com/)
+Check out the site here: [https://array-explorer.netlify.com/](https://array-explorer.netlify.com/)
 
 Or if you prefer codepen: [https://codepen.io/sdras/full/gogVRX/](https://codepen.io/sdras/full/gogVRX/)
 
