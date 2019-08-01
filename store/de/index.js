@@ -4,7 +4,7 @@ export default {
     adding: [
       {
         name: 'splice',
-        shortDesc: 'Elemente in einen Array einfügen',
+        shortDesc: 'Elemente in ein Array einfügen',
         desc: 'Fügt Elemente zu einem Array hinzu oder entfernt welche.',
         example: `arr.splice(2, 0, 'tacos');<br>
         console.log(arr);`,
@@ -14,7 +14,7 @@ export default {
         name: 'push',
         shortDesc: 'Elemente an das Ende eines Arrays anhängen',
         desc:
-          'Hängt ein oder mehrere Elemente an einen Array an und gibt die neue Länge des Arrays zurück.',
+          'Hängt ein oder mehrere Elemente an ein Array an und gibt die neue Länge des Arrays zurück.',
         example: `arr.push(2);<br>
         console.log(arr);`,
         output: '[5, 1, 8, 2]'
@@ -30,9 +30,9 @@ export default {
       },
       {
         name: 'concat',
-        shortDesc: 'diesen Array zu anderen Arrays und/oder Werten hinzufügen',
+        shortDesc: 'dieses Array zu anderen Arrays und/oder Werten hinzufügen',
         desc:
-          'Gibt einen neuen Array bestehend aus diesem Array zusammen mit anderen Array(s) und/oder Werten zurück.',
+          'Gibt einen neues Array bestehend aus diesem Array zusammen mit anderen Array(s) und/oder Werten zurück.',
         example: `let arr2 = ['a', 'b', 'c'];<br>
         let arr3 = arr.concat(arr2);<br>
         console.log(arr3);`,
@@ -42,7 +42,7 @@ export default {
     removing: [
       {
         name: 'splice',
-        shortDesc: 'Elemente aus einem Array entfernen',
+        shortDesc: 'Elemente aus einem Array entfernen oder hinzufügen',
         desc: 'Fügt Elemente einem Array hinzu und/oder entfernt welche.',
         example: `arr.splice(2, 1);<br>
         console.log(arr);`,
@@ -68,9 +68,9 @@ export default {
         name: 'slice',
         // fehlt noch
         shortDesc:
-          'mindestens ein Element, ohne den eigentlichen Array zu verändern, entfernen',
+          'mindestens ein Element, ohne das eigentliche Array zu verändern, entfernen',
         desc:
-          'Die <code>slice()</code>-Methode schreibt eine flache Kopie eines Teils des Arrays in ein neues Array-Objekt. Man kann entweder nur den Index für das letzte Elemente (dann wird der Index für das erste Element auf 0 gesetzt) oder sowohl den Index für das erste und das letzte Element kommagetrennt angeben. Der Original-Array wird nicht verändert.',
+          'Die <code>slice()</code>-Methode schreibt eine flache Kopie eines Teils des Arrays in ein neues Array-Objekt. Man kann entweder nur den Index für das letzte Elemente (dann wird der Index für das erste Element auf 0 gesetzt) oder sowohl den Index für das erste und das letzte Element kommagetrennt angeben. Das Original-Array wird nicht verändert.',
         example: `let slicedArr = arr.slice(1);<br>
         console.log(arr);<br>
         console.log(slicedArr);`,
@@ -89,18 +89,18 @@ export default {
       },
       {
         name: 'toString',
-        shortDesc: 'einen String, der den Array repräsentiert, zurückgegeben.',
+        shortDesc: 'einen String, der das Array repräsentiert, zurückgegeben.',
         desc:
-          'Gibt einen String, der den Array und alle darin enthaltenen Elemente beinhaltet, zurück.',
+          'Gibt einen String, der das Array und alle darin enthaltenen Elemente beinhaltet, zurück.',
         example: `console.log(arr.toString());`,
         output: `"5,1,8"`
       },
       {
         name: 'toLocaleString',
         shortDesc:
-          'einen an die Sprache angepassten String, der den Array repräsentiert, zurückgeben.',
+          'einen an die Sprache angepassten String, der das Array repräsentiert, zurückgeben.',
         desc:
-          'Diese Methode ist ein bisschen komisch. Sie gibt einen an die Sprache angepassten String, der den Array und alle seine Elemente beinhaltet, zurück. Dies ist sehr nützlich für Datumsangaben und Währungen, hat aber einige seltsame Verhaltensweisen, so dass du am besten die genaue Dokumentation durchlesen solltest.',
+          'Diese Methode ist ein bisschen komisch. Sie gibt einen an die Sprache angepassten String, der das Array und alle seine Elemente beinhaltet, zurück. Dies ist sehr nützlich für Datumsangaben und Währungen, hat aber einige seltsame Verhaltensweisen, so dass du am besten die genaue Dokumentation durchlesen solltest.',
         example: `let date = [new Date()];<br>
         const arrString = arr.toLocaleString();<br>
         const dateString = date.toLocaleString();<br>
@@ -113,7 +113,7 @@ export default {
         name: 'reverse',
         shortDesc: 'die Reihenfolge eines Arrays umkehren',
         desc:
-          'Kehrt die Reihenfolge der Elemente in einem Array um, das erste wird zum letzten Element, das letzte zum ersten.',
+          'Kehrt die Reihenfolge der Elemente in einem Array um, das erste wird zum letzten Element, das letzte zum ersten Element.',
         example: `arr.reverse();<br>
         console.log(arr);`,
         output: `[8, 1, 5]`
@@ -149,7 +149,7 @@ export default {
       {
         name: 'copyWithin',
         shortDesc:
-          'einen Folge von Elementen des Arrays innerhalb des Arrays kopieren',
+          'ein Folge von Elementen des Arrays innerhalb des Arrays kopieren',
         desc:
           'Kopiert eine Reihe von Elementen des Arrays innerhalb des Arrays. Du kannst entweder nur das letzte Element (dann wird der Startindex auf 0 gesetzt) oder sowohl das erste als auch das letzte kommagetrennt festlegen.',
         example: `arr.copyWithin(1);<br>
@@ -161,7 +161,7 @@ export default {
       {
         name: 'forEach',
         shortDesc:
-          'eine selbstdefinierte Funktion auf jedes Elemente des Arrays anwenden',
+          'eine selbstdefinierte Funktion auf jedes Element des Arrays anwenden',
         desc:
           'Die <code>forEach()</code>-Methode wendet eine gegebene Funktion auf jedes Element im Array an.',
         example: `arr.forEach((element) => {<br>
@@ -174,9 +174,9 @@ export default {
       {
         name: 'map',
         shortDesc:
-          'einen neuen Array basierend auf einer auf alle Elemente angewendeten Funktion erstellen',
+          'ein neues Array basierend auf einer auf alle Elemente angewendeten Funktion erstellen',
         desc:
-          'Erstellt einen neuen Array, dessen Elemente auf dem gegebenem Array, auf die eine gegebene Funktion angewendet wurde, basieren.',
+          'Erstellt ein neues Array, dessen Elemente auf dem gegebenem Array, auf die eine gegebene Funktion angewendet wurde, basieren.',
         example: `let map = arr.map(x => x + 1);<br>
         console.log(map);`,
         output: `[6, 2, 9]`
@@ -205,9 +205,9 @@ export default {
         },
         {
           name: 'indexOf',
-          shortDesc: 'herausfinden, was der erste Index eines Elements ist',
+          shortDesc: 'den ersten Index eines Elements finden',
           desc:
-            'Gibt den ersten Index, an dem das Element gefunden werden kann, zurück, oder -1, falls es nicht vorkommt.',
+            'Gibt den ersten Index zurück, an dem das Element im Array gefunden werden kann, oder -1, falls es nicht im Array vorkommt.',
           example: `console.log(arr.indexOf(5));`,
           output: `0`
         },
@@ -215,15 +215,15 @@ export default {
           name: 'lastIndexOf',
           shortDesc: 'den letzten Index eines Elements finden',
           desc:
-            'Gibt den letzten (größten) Index zurück, an dem ein Element gefunden werden kann, oder -1, falls es nicht im Array vorkommt.',
+            'Gibt den letzten (größten) Index zurück, an dem das Element im Array gefunden werden kann, oder -1, falls es nicht im Array vorkommt.',
           example: `console.log(arr.lastIndexOf(5));`,
           output: `0`
         },
         {
           name: 'find',
-          shortDesc: 'das erste Element, das eine Bedingung erfüllt, finden',
+          shortDesc: 'das erste Element, welches eine Bedingung erfüllt, finden',
           desc:
-            'Gibt das erste gefundene Element aus dem Array zurück, das die gegebene Bedingung erfüllt, wenn mindestens ein Element die gegebene Bedingung erfüllt, sonst wird undefined zurückgegeben. Ähnlich zu <code>findIndex()</code>, aber <code>find()</code> gibt das Element und nicht den Index zurück.',
+            'Gibt das erste gefundene Element aus dem Array zurück, welches die gegebene Bedingung erfüllt, wenn mindestens ein Element die gegebene Bedingung erfüllt, ansonsten wird undefined zurückgegeben. Ähnlich zu <code>findIndex()</code>, aber <code>find()</code> gibt das Element und nicht den Index zurück.',
           example: `let isTiny = (el) => el < 2;<br>
           console.log(arr.find(isTiny));`,
           output: `1`
@@ -231,9 +231,9 @@ export default {
         {
           name: 'findIndex',
           shortDesc:
-            'den ersten Index eines Elements, das eine Bedingung erfüllt, finden',
+            'den ersten Index eines Elements, welches eine Bedingung erfüllt, finden',
           desc:
-            'Gibt den Index des ersten Elements im Array, das die gegebene Bedingung erfüllt, zurück. Erfüllt kein Element die Bedingung, wird -1 zurückgegeben. Ähnlich zu <code>find()</code>, aber <code>findIndex()</code> gibt den Index statt des Elements zurück.',
+            'Gibt den Index des ersten Elements im Array, welches die gegebene Bedingung erfüllt, zurück. Erfüllt kein Element die Bedingung, wird -1 zurückgegeben. Ähnlich zu <code>find()</code>, aber <code>findIndex()</code> gibt den Index und nicht das Element zurück.',
           example: `let isBig = (el) => el > 6;<br>
           console.log(arr.findIndex(isBig));`,
           output: `2`
@@ -241,7 +241,7 @@ export default {
         {
           name: 'reduce',
           shortDesc:
-            'den Array auf einen einzigen Wert reduzieren, von links nach rechts',
+            'das Array auf einen einzigen Wert reduzieren, von links nach rechts',
           desc:
             'Reduziert das Array auf einen einzigen Wert, indem es jeweils zwei Elemente (von links nach rechts) durch eine angegebene Funktion reduziert.',
           example: `let reducer = (a, b) => a + b;<br>
@@ -251,7 +251,7 @@ export default {
         {
           name: 'reduceRight',
           shortDesc:
-            'den Array auf einen einzigen Wert reduzieren, von rechts nach links',
+            'das Array auf einen einzigen Wert reduzieren, von rechts nach links',
           desc:
             'Wendet eine Funktion gegen einen Akkumulator auf jeden Wert des Arrays (von rechts nach links) an und reduziert es um einen einzelnen Wert.',
           example: `[arr, [0, 1]].reduceRight((a, b) => {<br>
@@ -266,7 +266,7 @@ export default {
           shortDesc:
             'Werte basierend auf einer selbsterstellten Bedingung finden',
           desc:
-            'Erstellt einen neuen Array mit allen Elementen des Strings, die eine gegebene Bedingung erfüllen.',
+            'Erstellt ein neues Array mit allen Elementen des Strings, welche eine gegebene Bedingung erfüllen.',
           example: `let filtered = arr.filter(el => el > 4);<br>
           console.log(filtered)`,
           output: `[5, 8]`
@@ -284,7 +284,7 @@ export default {
         {
           name: 'some',
           shortDesc:
-            'herausfinden, ob mindestens ein Element im Array eine Bedingung erfüllt',
+            'herausfinden, ob mindestens ein Element des Arrays eine Bedingung erfüllt',
           desc:
             'Gibt true zurück, wenn zumindest ein Element des Arrays eine gegebene Bedingung erfüllt.',
           example: `let biggerThan4 = (el) => el > 4;<br>
