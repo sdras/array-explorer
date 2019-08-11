@@ -84,7 +84,7 @@ export default {
         name: 'join',
         shortDesc: 'join all elements of the array into a string',
         desc: `Joins all elements of an array into a string. You can join it together as is or with something in between, <code>elements.join(' -
-          ')</code> gives you <code>foo-bar</code>`,
+          ')</code> gives you <code>foo - bar</code>`,
         example: `console.log(arr.join());`,
         output: `"5,1,8"`
       },
