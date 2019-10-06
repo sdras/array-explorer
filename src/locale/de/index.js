@@ -1,5 +1,5 @@
 export default {
-  firstMethod: 'Ich habe einen Array und würde gerne', //'I have an array, I would like to',
+  firstMethod: 'Ich habe ein Array und würde gerne', //'I have an array, I would like to',
   findMethod: 'Ich möchte', // "I'm trying to find"
   methodOptions: 'Ich muss',
   methodTypes: {
@@ -17,7 +17,7 @@ export default {
     'Elemente finden',
     'Elemente durchlaufen',
     'einen String zurückgeben',
-    'einen Array sortieren',
+    'ein Array sortieren',
     'etwas anderes machen'
   ]
   // other text can be added here
