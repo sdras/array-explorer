@@ -157,7 +157,7 @@ export default {
         desc:
           'Методът forEach() изпълнява една предоставена функция веднъж за всеки елемент на масива.',
         example: `arr.forEach((element) => {<br>
-        <span>&nbsp;&nbsp;</span>console.log(element)<br> 
+        <span>&nbsp;&nbsp;</span>console.log(element)<br>
         });`,
         output: `5<br>
         1<br>
@@ -204,12 +204,38 @@ export default {
           output: `0`
         },
         {
+          name: 'indexOf',
+          shortDesc: 'първият индекс на определена позиция след определен индекс',
+          desc:
+            `Функцията <code>indexOf</code> отнема втори параметър <code>fromIndex</code>, който може да се използва за предоставяне на индекса за стартиране на търсенето. <br>
+            Връща първия индекс, при който даден елемент може да бъде намерен в масива след <code>fromIndex</code>, или -1, ако не присъства. <br>
+            Забележка: връща -1, ако даденият елемент присъства само преди <code>fromIndex</code>`,
+          example: `console.log(arr.indexOf(5, 0));<br>
+          arr = [5, 1, 8, 5, 4, 5];<br>
+          console.log(arr.indexOf(5, 2));`,
+          output: `0<br>
+          3`
+        },
+        {
           name: 'lastIndexOf',
           shortDesc: 'последния индекс на конкретен елемент',
           desc:
             'Връща последния (най-голям) индекс на елемент в масива, равен на зададената стойност, или -1, ако не е намерен.',
           example: `console.log(arr.lastIndexOf(5));`,
           output: `0`
+        },
+        {
+          name: 'lastIndexOf',
+          shortDesc: 'последният индекс на конкретен елемент преди определен индекс',
+          desc:
+            `Функцията <code>lastIndexOf</code> отнема втори параметър <code>fromIndex</code>, който може да се използва за предоставяне на индекса, за да започне търсенето назад. <br>
+            Връща последния индекс, при който даден елемент може да бъде намерен в масива преди <code>fromIndex</code>, или -1, ако не присъства. <br>
+            Забележка: връща -1, ако даденият елемент присъства само след <code> отIndex </code>`,
+          example: `console.log(arr.lastIndexOf(8, 2));<br>
+          arr = [8, 1, 8];<br>
+          console.log(arr.lastIndexOf(8, 1));`,
+          output: `2<br>
+          0</span>`
         },
         {
           name: 'find',

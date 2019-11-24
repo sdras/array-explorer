@@ -208,12 +208,38 @@ export default {
           output: `0`
         },
         {
+          name: 'indexOf',
+          shortDesc: 'الفهرس الأول لعنصر معين بعد فهرس معين',
+          desc:
+            `تأخذ الدالة <code>indexOf</code> معلمة <code>fromIndex</code> ثانية يمكن استخدامها لتوفير الفهرس لبدء البحث في.<br>
+            تُرجع أول فهرس يمكن العثور على عنصر محدد به في الصفيف بعد <code>fromIndex</code> ، أو -1 إذا لم يكن موجودًا.<br>
+            ملاحظة: يتم إرجاع -1 إذا كان العنصر المحدد موجودًا قبل <code>fromIndex</code> فقط<br>`,
+          example: `console.log(arr.indexOf(5, 0));<br>
+          arr = [5, 1, 8, 5, 4, 5];<br>
+          console.log(arr.indexOf(5, 2));`,
+          output: `0<br>
+          3`
+        },
+        {
           name: 'lastIndexOf',
           shortDesc: 'العنوان الأخير لعنصر معين',
           desc:
             'تعيد آخر ( أكبر ) عنوان لعنصر معين ضمن مصفوفة مساوي للقيمة المحددة , أو -1 إذا كان غير موجود.',
           example: `console.log(arr.lastIndexOf(5));`,
           output: `0`
+        },
+        {
+          name: 'lastIndexOf',
+          shortDesc: 'الفهرس الأخير لعنصر معين قبل فهرس معين',
+          desc:
+            `تأخذ الدالة <code>lastIndexOf</code> معلمة <code>fromIndex</code> ثانية يمكن استخدامها لتوفير الفهرس لبدء البحث للخلف.
+            تُرجع آخر فهرس يمكن العثور على عنصر محدد به في الصفيف قبل <code>fromIndex</code>، أو -1 إذا لم يكن موجودًا.
+            ملاحظة: يتم إرجاع -1 إذا كان العنصر المحدد موجودًا بعد <code>fromIndex</code> فقط`,
+          example: `console.log(arr.lastIndexOf(8, 2));<br>
+          arr = [8, 1, 8];<br>
+          console.log(arr.lastIndexOf(8, 1));`,
+          output: `2<br>
+          0</span>`
         },
         {
           name: 'find',

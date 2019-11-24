@@ -209,12 +209,38 @@ export default {
           output: `0`
         },
         {
+          name: 'indexOf',
+          shortDesc: 'the first index of a particular item after a particular index',
+          desc:
+            `The <code>indexOf</code> function takes a second <code>fromIndex</code> parameter that can be used to provide the index to start the search at.<br>
+            Returns the first index at which a given element can be found in the array after <code>fromIndex</code>, or -1 if it is not present.<br>
+            Note: returns -1 if the given element is present before <code>fromIndex</code> only`,
+          example: `console.log(arr.indexOf(5, 0));<br>
+          arr = [5, 1, 8, 5, 4, 5];<br>
+          console.log(arr.indexOf(5, 2));`,
+          output: `0<br>
+          3`
+        },
+        {
           name: 'lastIndexOf',
           shortDesc: 'the last index of a particular item',
           desc:
             'Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found.',
           example: `console.log(arr.lastIndexOf(5));`,
           output: `0`
+        },
+        {
+          name: 'lastIndexOf',
+          shortDesc: 'the last index of a particular item before a particular index',
+          desc:
+            `The <code>lastIndexOf</code> function takes a second <code>fromIndex</code> parameter that can be used to provide the index to start the search backwards from.<br>
+            Returns the last index at which a given element can be found in the array before <code>fromIndex</code>, or -1 if it is not present.<br>
+            Note: returns -1 if the given element is present after <code>fromIndex</code> only`,
+          example: `console.log(arr.lastIndexOf(8, 2));<br>
+          arr = [8, 1, 8];<br>
+          console.log(arr.lastIndexOf(8, 1));`,
+          output: `2<br>
+          0</span>`
         },
         {
           name: 'find',

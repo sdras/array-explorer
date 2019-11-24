@@ -215,12 +215,38 @@ export default {
           output: `0`
         },
         {
+          name: 'indexOf',
+          shortDesc: 'le premier index d\'un élément particulier après un index particulier',
+          desc:
+            `La fonction <code> indexOf </ code> utilise un second paramètre <code> fromIndex </ code> qui peut être utilisé pour fournir l'index dans lequel démarrer la recherche. <br>
+            Retourne le premier index auquel un élément donné peut être trouvé dans le tableau après <code> fromIndex </ code>, ou -1 s'il n'est pas présent. <br>
+            Remarque: renvoie -1 si l'élément donné est présent avant <code> fromIndex </ code> uniquement`,
+          example: `console.log(arr.indexOf(5, 0));<br>
+          arr = [5, 1, 8, 5, 4, 5];<br>
+          console.log(arr.indexOf(5, 2));`,
+          output: `0<br>
+          3`
+        },
+        {
           name: 'lastIndexOf',
           shortDesc: "le dernier indice d'un élément en particulier",
           desc:
             "Permet de renvoyer le dernier indice pour lequel une valeur donnée est présente dans un tableau. Si la valeur recherchée n'est pas présente, le résultat sera -1.",
           example: `console.log(arr.lastIndexOf(5));`,
           output: `0`
+        },
+        {
+          name: 'lastIndexOf',
+          shortDesc: 'le dernier index d\'un élément particulier avant un index particulier',
+          desc:
+            `La fonction <code> lastIndexOf </ code> utilise un second paramètre <code> fromIndex </ code> qui peut être utilisé pour fournir l'index à partir duquel démarrer la recherche en arrière. <br>.
+            Renvoie le dernier index auquel un élément donné peut être trouvé dans le tableau avant <code> fromIndex </ code>, ou -1 s'il n'est pas présent. <br>
+            Remarque: renvoie -1 si l'élément donné est présent après <code> fromIndex </ code> uniquement`,
+          example: `console.log(arr.lastIndexOf(8, 2));<br>
+          arr = [8, 1, 8];<br>
+          console.log(arr.lastIndexOf(8, 1));`,
+          output: `2<br>
+          0</span>`
         },
         {
           name: 'find',

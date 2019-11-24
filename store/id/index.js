@@ -209,12 +209,38 @@ export default {
           output: `0`
         },
         {
+          name: 'indexOf',
+          shortDesc: 'indeks pertama dari item tertentu setelah indeks tertentu',
+          desc:
+            `Fungsi <code>indexOf</code> mengambil parameter <code>fromIndex</code> kedua yang dapat digunakan untuk menyediakan indeks untuk memulai pencarian di. <br>
+            Mengembalikan indeks pertama di mana elemen yang diberikan dapat ditemukan dalam array setelah <code>fromIndex</code>, atau -1 jika tidak ada. <br>
+            Catatan: mengembalikan -1 jika elemen yang diberikan ada sebelum <code>fromIndex</code> saja`,
+          example: `console.log(arr.indexOf(5, 0));<br>
+          arr = [5, 1, 8, 5, 4, 5];<br>
+          console.log(arr.indexOf(5, 2));`,
+          output: `0<br>
+          3`
+        },
+        {
           name: 'lastIndexOf',
           shortDesc: 'indeks terakhir dari sebuah item tertentu',
           desc:
             'Mengembalikan indeks terakhir (terbesar) dari sebuah elemen di dalam array yang sama dengan suatu nilai yang telah ditentukan. Ia akan mengembalikan -1 apabila tidak ada elemen dengan nilai tersebut yang ditemukan.',
           example: `console.log(arr.lastIndexOf(5));`,
           output: `0`
+        },
+        {
+          name: 'lastIndexOf',
+          shortDesc: 'indeks terakhir dari item tertentu sebelum indeks tertentu',
+          desc:
+            `Fungsi <code>lastIndexOf</code> mengambil parameter <code>fromIndex</code> kedua yang dapat digunakan untuk menyediakan indeks untuk memulai pencarian mundur dari. <br>
+            Mengembalikan indeks terakhir di mana elemen tertentu dapat ditemukan dalam array sebelum <code>fromIndex</code>, atau -1 jika tidak ada. <br>
+            Catatan: mengembalikan -1 jika elemen yang diberikan hanya hadir setelah <code>fromIndex</code>`,
+          example: `console.log(arr.lastIndexOf(8, 2));<br>
+          arr = [8, 1, 8];<br>
+          console.log(arr.lastIndexOf(8, 1));`,
+          output: `2<br>
+          0</span>`
         },
         {
           name: 'find',
