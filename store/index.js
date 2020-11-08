@@ -9,6 +9,7 @@ import es from './es/index'
 import en from './en/index'
 import de from './de/index'
 import fr from './fr/index'
+import fi from './fi/index'
 import nl from './nl/index'
 import pt from './pt/index'
 import zh_cn from './zh_cn/index'
@@ -29,6 +30,7 @@ import translationsEn from '../src/locale/en/index'
 import translationsEs from '../src/locale/es/index'
 import translationsDe from '../src/locale/de/index'
 import translationsFr from '../src/locale/fr/index'
+import translationsFi from '../src/locale/fi/index'
 import translationsNl from '../src/locale/nl/index'
 import translationsPt from '../src/locale/pt/index'
 import translationsZhCn from '../src/locale/zh_cn/index'
@@ -82,6 +84,7 @@ export const store = new Vuex.Store({
     en,
     de,
     fr,
+    fi,
     nl,
     pt,
     zh_cn,
@@ -113,6 +116,7 @@ Vue.i18n.add('en', translationsEn)
 Vue.i18n.add('es', translationsEs)
 Vue.i18n.add('de', translationsDe)
 Vue.i18n.add('fr', translationsFr)
+Vue.i18n.add('fi', translationsFi)
 Vue.i18n.add('nl', translationsNl)
 Vue.i18n.add('pt', translationsPt)
 Vue.i18n.add('zh_cn', translationsZhCn)
