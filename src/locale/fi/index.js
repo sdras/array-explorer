@@ -1,7 +1,7 @@
 export default {
   firstMethod: 'Minulla on taulukko, haluan',
   findMethod: 'Yritän löytää',
-  methodOptions: 'haluan',
+  methodOptions: 'Haluan',
   methodTypes: {
     add: 'lisätä',
     remove: 'poistaa',
@@ -15,7 +15,7 @@ export default {
     'lisätä alkioita tai muita taulukoita',
     'poistaa alkioita',
     'löytää alkioita',
-    'iteroida alkioita',
+    'käydä alkioita läpi',
     'palauttaa merkkijonon',
     'järjestää taulukon',
     'tehdä jotain muuta',

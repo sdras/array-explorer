@@ -6,13 +6,13 @@ export default {
         name: 'splice',
         shortDesc: 'alkion tai alkioita taulukkoon',
         desc: 'Lisää ja/tai poistaa alkioita taulukosta.',
-        example: `arr.splice(2, 0, 'tacos');<br>
+        example: `arr.splice(2, 0, 'tacoja');<br>
         console.log(arr);`,
-        output: `[5, 1, 'tacos', 8]`,
+        output: `[5, 1, 'tacoja', 8]`,
       },
       {
         name: 'push',
-        shortDesc: 'alkiota taulukon loppuun',
+        shortDesc: 'alkioita taulukon loppuun',
         desc:
           'Lisää yhden tai useamman alkion taulukon loppuun ja palauttaa taulukon uuden pituuden.',
         example: `arr.push(2);<br>
@@ -32,7 +32,7 @@ export default {
         name: 'concat',
         shortDesc: 'tämän taulukon toiseen taulukkoon',
         desc:
-          'Palauttaa uuden taulukon, joka on yhdistää tämän ja toisen taulukon alkiot.',
+          'Palauttaa uuden taulukon, johon on yhdistetty tämän ja toisen taulukon alkiot ja/tai muita arvoja.',
         example: `let arr2 = ['a', 'b', 'c'];<br>
         let arr3 = arr.concat(arr2);<br>
         console.log(arr3);`,
