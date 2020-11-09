@@ -19,6 +19,13 @@ export default {
     'return a string',
     'order an array',
     'something else'
-  ]
+  ],
+  docsLink: 'See the docs',
+  usage: 'Usage',
+  output: 'Output',
+  title: 'JavaScript Array Explorer',
+  subtitle: 'Find the array method you need without digging through the docs',
+  chooseLanguage: 'Language',
+  linkToObjectExplorer: 'Link to Object Explorer',
   // other text can be added here
 }

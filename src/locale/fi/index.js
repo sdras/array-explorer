@@ -20,5 +20,12 @@ export default {
     'järjestää taulukon',
     'tehdä jotain muuta',
   ],
+  docsLink: 'Koko dokumentaatio',
+  usage: 'Koodi',
+  output: 'Tuloste',
+  title: 'JavaScriptin Taulukoiden pikaopas',
+  subtitle: 'Löydä tarvitsemasi taulukkometodi ilman turhauttavaa dokumentaation selaamista',
+  chooseLanguage: 'Valitse kieli',
+  linkToObjectExplorer: 'Linkki Olioiden pikaoppaaseen',
   // other text can be added here
 };

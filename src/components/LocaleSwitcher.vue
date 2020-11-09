@@ -1,9 +1,9 @@
 <template>
   <div class="localization-dropdown">
     <a href="https://objectexplorer.netlify.com/">
-      <em>Object Explorer</em>
+      <em>{{$t('linkToObjectExplorer', 'Object Explorer')}}</em>
     </a>
-    <br />Language:
+    <br />{{$t('chooseLanguage', 'Language')}}:
     <select v-model="selectedLanguage">
       <option v-for="(val, key) in languages" :key="key" :value="key">{{val.long}}</option>
     </select>
