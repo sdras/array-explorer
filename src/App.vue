@@ -4,12 +4,12 @@
     <LocaleSwitcher/>
     <main>
       <section class="a">
-        <h1>JavaScript Array Explorer</h1>
-        <p class="subtitle"><em>Find the array method you need without digging through the docs</em></p>
+        <h1>{{$t('title', 'JavaScript Array Explorer')}}</h1>
+        <p class="subtitle"><em>{{$t('subtitle', 'Find the array method you need without digging through the docs')}}</em></p>
         <app-method-primary />
       </section>
       <section class="b">
-        <h3 class="usage">Usage</h3>
+        <h3 class="usage">{{$t('usage', 'Usage')}}</h3>
         <app-code />
       </section>
     </main>

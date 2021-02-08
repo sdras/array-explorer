@@ -6,13 +6,13 @@ export default {
         name: 'splice',
         shortDesc: 'alkion tai alkioita taulukkoon',
         desc: 'Lisää ja/tai poistaa alkioita taulukosta.',
-        example: `arr.splice(2, 0, 'tacos');<br>
+        example: `arr.splice(2, 0, 'tacoja');<br>
         console.log(arr);`,
-        output: `[5, 1, 'tacos', 8]`,
+        output: `[5, 1, 'tacoja', 8]`,
       },
       {
         name: 'push',
-        shortDesc: 'alkiota taulukon loppuun',
+        shortDesc: 'alkioita taulukon loppuun',
         desc:
           'Lisää yhden tai useamman alkion taulukon loppuun ja palauttaa taulukon uuden pituuden.',
         example: `arr.push(2);<br>
@@ -32,7 +32,7 @@ export default {
         name: 'concat',
         shortDesc: 'tämän taulukon toiseen taulukkoon',
         desc:
-          'Palauttaa uuden taulukon, joka on yhdistää tämän ja toisen taulukon alkiot.',
+          'Palauttaa uuden taulukon, johon on yhdistetty tämän ja toisen taulukon alkiot ja/tai muita arvoja.',
         example: `let arr2 = ['a', 'b', 'c'];<br>
         let arr3 = arr.concat(arr2);<br>
         console.log(arr3);`,
@@ -42,8 +42,8 @@ export default {
     removing: [
       {
         name: 'splice',
-        shortDesc: 'alkion/alkioita taulukosta',
-        desc: 'Lisää ja/tai poistaa alkioita taulukosta',
+        shortDesc: 'alkioita taulukosta',
+        desc: 'Lisää ja/tai poistaa alkioita taulukosta.',
         example: `arr.splice(2, 1);<br>
         console.log(arr);`,
         output: `[5, 1]`,
@@ -70,8 +70,8 @@ export default {
         name: 'slice',
         shortDesc:
           'yhden tai useamman alkion tietystä kohdasta, koskematta alkuperäiseen taulukkoon',
-        desc: `<code>slice()</code>-metodi palauttaa typistetyn kopion alkuperäisestä taulukosta: kopioidusta taulukosta on poistettu tietyt elementit. Metodille voidaan antaa parametrinä joko vain kopioidun osataulukon alkuindeksi
-          (joilloin osataulukon loppuideksi oletetaan alkuperäisen taulukon viimeinen alkio) tai pilkulla erotettuna osataulukon alkuindeksin ja loppuindeksin.
+        desc: `<code>slice()</code>-metodi palauttaa typistetyn kopion alkuperäisestä taulukosta: kopioidusta taulukosta on poistettu tietyt elementit. Metodille voi antaa parametrina joko vain kopioidun osataulukon alkuindeksin
+          (jolloin osataulukon loppuindeksin oletetaan olevan alkuperäisen taulukon viimeinen alkio) tai pilkuin eroteltuna osataulukon alkuindeksin ja loppuindeksin.
           Alkuperäinen taulukko säilyy ennallaan.`,
         example: `let slicedArr = arr.slice(1);<br>
         console.log(arr);<br>
@@ -84,16 +84,16 @@ export default {
       {
         name: 'join',
         shortDesc: 'yhdistää kaikki alkiot yhdeksi merkkijonoksi',
-        desc: `Yhdistää kaikki taulukon alkiot merkkijonoksi. Ilman parametriä metodi yhdistää alkiot sellaisenaan, mutta antamalla parametriksi esimerkiksi <code>elements.join(' -
+        desc: `Yhdistää kaikki taulukon alkiot merkkijonoksi. Ilman parametria metodi yhdistää alkiot sellaisenaan, mutta antamalla parametriksi esimerkiksi <code>elements.join(' -
           ')</code> saat lopputulokseksi <code>5 - 1 - 8</code>`,
         example: `console.log(arr.join());`,
         output: `'5,1,8'`,
       },
       {
         name: 'toString',
-        shortDesc: 'palauttaa merkkijonon joka sisältää taulukon kaikki alkiot',
+        shortDesc: 'palauttaa merkkijonon, joka sisältää taulukon kaikki alkiot',
         desc:
-          'Palauttaa merkkijonon joka sisältää taulukon ja kaikki sen alkiot.',
+          'Palauttaa merkkijonon, joka sisältää taulukon kaikki alkiot.',
         example: `console.log(arr.toString());`,
         output: `'5,1,8'`,
       },
@@ -101,8 +101,8 @@ export default {
         name: 'toLocaleString',
         shortDesc:
           'palauttaa lokalisoidun merkkijonon, joka sisältää taulukon kaikki alkiot.',
-        desc: `Tämä on hieman omituinen funktio. Palauttaa lokalisoidun merkkijonon, johon on yhdistetty taulukon jokainen alkio lokalisoituna.
-        Tämä on erittäin hyödyllinen päivämääräolioiden tai valuutan käsittelyssä. Tällä funktiolla on omituisia natiiveja abstraktioita, joten on parasta katsoa dokumentaatiota tätä käyttäessä.`,
+        desc: `Tämä on hieman omituinen metodi. Palauttaa lokalisoidun merkkijonon, johon on yhdistetty taulukon jokainen alkio lokalisoituna.
+        Tämä on erittäin hyödyllinen päivämäärien tai valuuttojen käsittelyssä. Tällä metodilla on kuitenkin omituisia natiiveja abstraktioita, joten on parasta katsoa dokumentaatiota tätä käyttäessä.`,
         example: `let date = [new Date()];<br>
         const arrString = arr.toLocaleString();<br>
         const dateString = date.toLocaleString();<br>
@@ -113,9 +113,9 @@ export default {
     ordering: [
       {
         name: 'reverse',
-        shortDesc: 'muuttaa taulukon järjestyksen lopusta alkuun',
+        shortDesc: 'muuttaa taulukon järjestyksen käänteiseksi',
         desc:
-          'Muuttaa taulukon järjestyksen lopusta alkuun - ensimmäisestä alkiosta tulee viimeinen, ja viimeisestä alkiosta ensimmäinen.',
+          'Muuttaa taulukon järjestyksen käänteiseksi: ensimmäisestä alkiosta tulee viimeinen ja viimeisestä alkiosta ensimmäinen.',
         example: `arr.reverse();<br>
         console.log(arr);`,
         output: `[8, 1, 5]`,
@@ -123,12 +123,12 @@ export default {
       {
         name: 'sort',
         shortDesc: 'järjestää taulukon alkiot',
-        desc: `Järjestää taulukon alkiot ja palauttaa uudelleenjärjestyn taulukon. Sorts the elements of an array in place and returns the array.<br>
+        desc: `Järjestää taulukon alkiot ja palauttaa uudelleenjärjestyn taulukon.<br>
         <br>
         <strong>Tärkeä huomio:</strong> Jos tälle metodille ei anneta parametrina funktiota, jonka perusteella järjestäminen tapahtuu (<code>compareFunction</code>),
         alkiot järjestetään seuraavalla tavalla: muutetaan alkiot merkkijonoiksi ja verrataan niitä Unicode-merkkeinä toisiinsa.
-        Esimerkiksi, 'banaani' järjestetään ennen 'kirsikka':a. Mutta numeroiden kanssa, vaikka 9 pitäisi järjestää ennen 80, kun numerot muutetaan merkkijonoiksi,
-        '80' laitetaan ennen '9'. MDN-dokumentaatiossa tarkentavia lisätietoja.`,
+        Esimerkiksi "banaani" järjestetään ennen sanaa "kirsikka". Numeroita järjestäessä luvun 9 pitäisi tulla ennen lukua 80, mutta merkkijonoiksi muutettuna 
+        "80" tulee ennen merkkijonoa "9". MDN-dokumentaatiossa on tarkentavia lisätietoja.`,
         example: `arr.sort();<br>
         console.log(arr);`,
         output: `[1, 5, 8]`,
@@ -139,7 +139,7 @@ export default {
         name: 'length',
         shortDesc: 'tietää taulukon pituuden',
         desc:
-          'Palauttaa taulukon pituuden, eli sen kuinka monta alkiota taulukossa on.',
+          'Palauttaa taulukon pituuden, eli sen, kuinka monta alkiota taulukossa on.',
         example: `console.log(arr.length);`,
         output: `3`,
       },
@@ -148,7 +148,7 @@ export default {
         shortDesc:
           'täyttää taulukon kaikki alkiot samalla staattisella arvolla',
         desc:
-          'Täyttää kaikki taulukon määritellyt alkiot samalla staattisella arvolla. Parametrina annetaan täytettävien alkioiden aloitusindeksi, ja vapaavalintaisesti pilkulla erotettuna loppuideksi.',
+          'Täyttää kaikki taulukon määritellyt alkiot samalla staattisella arvolla. Parametreina annetaan staattinen arvo ja vapaavalintaisesti täytettävien alkioiden alkuindeksi ja/tai loppuindeksi.',
         example: `arr.fill(2);<br>
         console.log(arr);`,
         output: `[2, 2, 2]`,
@@ -157,7 +157,7 @@ export default {
         name: 'copyWithin',
         shortDesc: 'kopioida taulukon osan samaan taulukkoon',
         desc:
-          'Kopioi taulukon osan samaan taulukkoon, muuttamatta taulukon pituutta. Voit antaa parametrinä kohdealkion indeksin, ja sen lisäksi kopioinnin alkuideksin ja loppuideksin.',
+          'Kopioi taulukon osan samaan taulukkoon, muuttamatta taulukon pituutta. Voit antaa parametrina vain loppualkion indeksin (jolloin alkuindeksi on 0) tai alkuindeksin ja loppuindeksin pilkulla eroteltuna.',
         example: `arr.copyWithin(1);<br>
         console.log(arr);`,
         output: `[5, 5, 1]`,
@@ -166,9 +166,9 @@ export default {
     iterate: [
       {
         name: 'forEach',
-        shortDesc: 'kirjoittamani funktion jokaisella alkiolle',
+        shortDesc: 'käsitellä jokaisen alkion kirjoittamallani funktiolla',
         desc:
-          '<code>forEach()</code>-metodi suorittaa annetun funktion taulukon jokaiselle alkiolle, ja muokkaa taulukkoa.',
+          '<code>forEach()</code>-metodi suorittaa annetun funktion taulukon jokaiselle alkiolle ja muokkaa taulukkoa.',
         example: `arr.forEach((element) => {<br>
         <span>&nbsp;&nbsp;</span>console.log(element)<br>
         });`,
@@ -179,7 +179,7 @@ export default {
       {
         name: 'map',
         shortDesc:
-          'uuden taulukon vanhoista alkioista, joita on käsitelty funktiolla',
+          'luoda uuden taulukon vanhoista alkioista, joita on käsitelty funktiolla',
         desc:
           'Luo uuden taulukon, jonka alkiot ovat vanhan taulukon alkioiden ja parametrina annetun funktion tulos.',
         example: `let map = arr.map(x => x + 1);<br>
@@ -188,14 +188,14 @@ export default {
       },
       {
         name: 'entries',
-        shortDesc: 'iteraatio-oliolla',
+        shortDesc: 'luoda iteraatio-olion',
         desc: `Palauttaa iteraatio-olion, joka sisältää avain/arvo-parit taulukon jokaisesta alkiosta.
-          Iteraatio-olioille on paljon käyttötapauksia, kuten samankaltaisille esimerkiksi <code>values</code> and <code>keys</code>-metodeille.`,
+          Iteraatio-olioille on paljon käyttötapauksia, ja entries-metodin kaltaisia metodeja ovat myös <code>values</code> ja <code>keys</code>.`,
         example: `let iterator = arr.entries();<br>
         console.log(iterator.next().value);`,
         output: `[0, 5]<br>
-        <span class='comment'>// the 0 is the index,</span><br>
-        <span class='comment'>// the 5 is the first number</span>`,
+        <span class='comment'>// 0 on indeksi,</span><br>
+        <span class='comment'>// 5 on ensimmäinen numero</span>`,
       },
     ],
     find: {
@@ -204,23 +204,23 @@ export default {
           name: 'includes',
           shortDesc: 'sisältääkö taulukko tietyn alkion',
           desc:
-            'Selvittää sisältääkö taulukko tietyn alkion, palauttaa boolean-arvon.',
+            'Selvittää, sisältääkö taulukko tietyn alkion. Palauttaa boolean-arvon.',
           example: `console.log(arr.includes(1));`,
           output: `true`,
         },
         {
           name: 'indexOf',
-          shortDesc: 'alkion ensimmäisen esiintymän indeksin',
+          shortDesc: 'missä indeksissä alkio esiintyy ensimmäisen kerran',
           desc:
-            'Palauttaa sen indeksin, jossa sijaitsee parametrina annettu alkio. Palauttaa -1, jos parametrina annettua alkiota ei löydy.',
+            'Palauttaa indeksin, jossa parametrina annettu alkio sijaitsee. Palauttaa -1, jos alkiota ei löydy.',
           example: `console.log(arr.indexOf(5));`,
           output: `0`,
         },
         {
           name: 'lastIndexOf',
-          shortDesc: 'alkion viimeisen esiintymän indeksin',
+          shortDesc: 'missä indeksissä alkio esiintyy viimeisen kerran',
           desc:
-            'Palauttaa viimeisen (tai suurimman) indeksin, josta etsitty alkio löytyy. Palauttaa -1 jos alkiota ei löydy taulukosta.',
+            'Palauttaa viimeisen (eli suurimman) indeksin, josta etsitty alkio löytyy. Palauttaa -1, jos alkiota ei löydy.',
           example: `console.log(arr.lastIndexOf(5));`,
           output: `0`,
         },
@@ -229,17 +229,17 @@ export default {
           shortDesc: 'ensimmäisen alkion, joka toteuttaa ehdon',
           desc: `Palauttaa alkion, joka toteuttaa annetun funktion ehdon. Palauttaa <code>undefined</code>, jos tällaista alkiota ei löydy.
             Samanlainen kuin <code>findIndex()</code>-metodi, mutta palauttaa alkion, eikä alkion indeksiä.`,
-          example: `let isTiny = (el) => el < 2;<br>
-          console.log(arr.find(isTiny));`,
+          example: `let onPieni = (el) => el < 2;<br>
+          console.log(arr.find(onPieni));`,
           output: `1`,
         },
         {
           name: 'findIndex',
-          shortDesc: 'ensimmäisen alkion indeksin, joka toteuttaa ehdon',
+          shortDesc: 'missä indeksissä esiintyy ensimmäinen alkio, joka toteuttaa ehdon',
           desc: `Palauttaa alkion, joka toteuttaa annetun funktion ehdon. Palauttaa -1, jos tällaista alkiota ei löydy.
-            Samanlainen kuin <code>find()</code>-metodi, mutta palauttaa alkion indeksi, ei alkiota..`,
-          example: `let isBig = (el) => el > 6;<br>
-          console.log(arr.findIndex(isBig));`,
+            Samanlainen kuin <code>find()</code>-metodi, mutta palauttaa alkion indeksi, ei alkiota.`,
+          example: `let onIso = (el) => el > 6;<br>
+          console.log(arr.findIndex(onIso));`,
           output: `2`,
         },
         {
@@ -247,7 +247,7 @@ export default {
           shortDesc:
             'mihin arvoon taulukon arvot kertyvät kertymäfunktiolla, alusta loppuun',
           desc:
-            'Tällä metodille annetaan parametrinä kertymäfunktio, jolle puolestaan annetaan parametrinä taulukon jokainen alkio kerrallaan (vasemmalta oikealle). Metodi palauttaa yhden arvon, johon kertymäfunktio on supennut.',
+            'Tälle metodille annetaan parametrina kertymäfunktio, jolle puolestaan annetaan parametrina taulukon alkiot yksi kerrallaan (vasemmalta oikealle). Metodi palauttaa kertymäfunktion lopputuloksen.',
           example: `let reducer = (a, b) => a + b;<br>
           console.log(arr.reduce(reducer));`,
           output: `14`,
@@ -255,9 +255,9 @@ export default {
         {
           name: 'reduceRight',
           shortDesc:
-            'mihin arvoon taulukon arvot kertyvät kertymäfunktiolla, loppusta alkuun',
+            'mihin arvoon taulukon arvot kertyvät kertymäfunktiolla, lopusta alkuun',
           desc:
-            'Tällä metodille annetaan parametrinä kertymäfunktio, jolle puolestaan annetaan parametrinä taulukon jokainen alkio kerrallaan (oikealta vasemmalle). Metodi palauttaa yhden arvon, johon kertymäfunktio on supennut.',
+            'Tälle metodille annetaan parametrina kertymäfunktio, jolle puolestaan annetaan parametrina taulukon alkiot yksi kerrallaan (oikealta vasemmalle). Metodi palauttaa kertymäfunktion lopputuloksen.',
           example: `[arr, [0, 1]].reduceRight((a, b) => {<br>
           <span>&nbsp;&nbsp;</span>return a.concat(b)<br>
           }, [])`,
@@ -267,9 +267,9 @@ export default {
       many: [
         {
           name: 'filter',
-          shortDesc: 'ne alkiot jotka toteuttavat annetun ehdon',
+          shortDesc: 'kaikki alkiot, jotka toteuttavat annetun ehdon',
           desc:
-            'Luo uuden taulukon niistä alkioista, jotka toteuttavat annetun ehtofunktion.',
+            'Luo uuden taulukon alkioista, jotka toteuttavat annetun ehtofunktion.',
           example: `let filtered = arr.filter(el => el > 4);<br>
           console.log(filtered)`,
           output: `[5, 8]`,
@@ -278,18 +278,18 @@ export default {
           name: 'every',
           shortDesc: 'toteuttavatko kaikki alkiot annetun ehdon',
           desc:
-            'Palauttaa <code>true</code> jos kaikki taulukon alkiot toteuttavat annetun ehtofunktion.',
-          example: `let isSmall = (el) => el < 10;<br>
-          console.log(arr.every(isSmall));`,
+            'Palauttaa <code>true</code>, jos kaikki taulukon alkiot toteuttavat annetun ehtofunktion.',
+          example: `let onPieni = (el) => el < 10;<br>
+          console.log(arr.every(onPieni));`,
           output: `true`,
         },
         {
           name: 'some',
           shortDesc: 'toteuttaako yksikään alkio annettua ehtoa',
           desc:
-            'Palauttaa <code>true</code> jos ainakin yksi alkio toteuttaa annetun ehtofunktion.',
-          example: `let biggerThan4 = (el) => el > 4;<br>
-          console.log(arr.some(biggerThan4));`,
+            'Palauttaa <code>true</code>, jos ainakin yksi alkio toteuttaa annetun ehtofunktion.',
+          example: `let isompiKuin4 = (el) => el > 4;<br>
+          console.log(arr.some(isompiKuin4));`,
           output: `true`,
         },
       ],

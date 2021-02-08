@@ -11,7 +11,7 @@
       </p>
     </div>
     <div v-if="selectedUsage" class="usage2">
-      <h3 style="margin-top: 50px">Output</h3>
+      <h3 style="margin-top: 50px">{{$t('output', 'Output')}}</h3>
       <div class="usage-code">
         <p>
           <span

@@ -29,7 +29,7 @@ I've heard people say they want to fork this project for other languages and dat
 
 ## Thank you!
 
-Many thanks to everyone who helped with the translations! @AWolf81, @Gonzalo2310, @welll, @julienmartin, @g-plane, @imbyurhan, @bahe007, @salahaa1, @proYang, @bdimitrovski, @TheElderMindseeker, @glenngijsberts, @galuhsahid, @xgebi
+Many thanks to everyone who helped with the translations! @AWolf81, @Gonzalo2310, @welll, @julienmartin, @g-plane, @imbyurhan, @bahe007, @salahaa1, @proYang, @bdimitrovski, @TheElderMindseeker, @glenngijsberts, @galuhsahid, @xgebi, @sjarva, @minna-xD
 
 ## Build Setup
 
