@@ -210,6 +210,19 @@ export default {
           output: `0`
         },
         {
+          name: 'indexOf',
+          shortDesc: 'el primer índice de un elemento particular después de un índice particular',
+          desc:
+            `La función <code>indexOf</code> toma un segundo parámetro <code>fromIndex</code> que se puede usar para proporcionar el índice para iniciar la búsqueda en. <br>
+            Devuelve el primer índice en el que se puede encontrar un elemento determinado en la matriz después de <code>fromIndex</code>, o -1 si no está presente. <br>
+            Nota: devuelve -1 si el elemento dado está presente antes de <code>fromIndex</code> solamente`,
+          example: `console.log(arr.indexOf(5, 0));<br>
+          arr = [5, 1, 8, 5, 4, 5];<br>
+          console.log(arr.indexOf(5, 2));`,
+          output: `0<br>
+          3`
+        },
+        {
           name: 'lastIndexOf',
           shortDesc:
             'el ultimo índice en el que se puede encontrar un elemento',
@@ -217,6 +230,19 @@ export default {
             'Devuelve el último índice (máximo) de un elemento dentro del array igual al valor especificado, o -1 si no se encuentra ninguno.',
           example: `console.log(arr.indexOf(5));`,
           output: `0`
+        },
+        {
+          name: 'lastIndexOf',
+          shortDesc: 'El último índice de un elemento particular antes de un índice particular',
+          desc:
+            `La función <code>lastIndexOf</code> toma un segundo parámetro <code>fromIndex</code> que se puede utilizar para proporcionar el índice desde el que comenzar la búsqueda hacia atrás. <br>
+            Devuelve el último índice en el que se puede encontrar un elemento determinado en la matriz antes de <code>fromIndex</code>, o -1 si no está presente. <br>
+            Nota: devuelve -1 si el elemento dado está presente después de <code>fromIndex</code> solamente`,
+          example: `console.log(arr.lastIndexOf(8, 2));<br>
+          arr = [8, 1, 8];<br>
+          console.log(arr.lastIndexOf(8, 1));`,
+          output: `2<br>
+          0</span>`
         },
         {
           name: 'find',

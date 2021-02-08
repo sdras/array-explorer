@@ -209,12 +209,38 @@ export default {
           output: `0`
         },
         {
+          name: 'indexOf',
+          shortDesc: 'první index konkrétní položky za konkrétním indexem',
+          desc:
+            `Funkce <code>indexOf</code> vezme druhý parametr <code>fromIndex</code>, který lze použít k poskytnutí indexu pro zahájení vyhledávání. <br>
+            Vrátí první index, ve kterém lze daný prvek nalézt v poli po <code>fromIndex</code>, nebo -1, pokud není přítomen. <br>
+            Poznámka: vrací -1, pokud je daný prvek přítomen před <code>fromIndex</code>`,
+          example: `console.log(arr.indexOf(5, 0));<br>
+          arr = [5, 1, 8, 5, 4, 5];<br>
+          console.log(arr.indexOf(5, 2));`,
+          output: `0<br>
+          3`
+        },
+        {
           name: 'lastIndexOf',
           shortDesc: 'poslední výskyt daného prvku',
           desc:
             'Vrátí poslední výskyt daného prvku nebo -1 pokud prvek nenalezne.',
           example: `console.log(arr.lastIndexOf(5));`,
           output: `0`
+        },
+        {
+          name: 'lastIndexOf',
+          shortDesc: 'poslední index konkrétní položky před konkrétním indexem',
+          desc:
+            `Funkce <code>lastIndexOf</code> vezme druhý parametr <code>fromIndex</code>, který lze použít k poskytnutí indexu pro zahájení vyhledávání zpět. <br> <br>
+            Vrátí poslední index, ve kterém lze daný prvek nalézt v poli před <code>fromIndex</code>, nebo -1, pokud není přítomen. <br>
+            Poznámka: vrací -1, pokud je daný prvek přítomen pouze za <code>fromIndex</code>`,
+          example: `console.log(arr.lastIndexOf(8, 2));<br>
+          arr = [8, 1, 8];<br>
+          console.log(arr.lastIndexOf(8, 1));`,
+          output: `2<br>
+          0</span>`
         },
         {
           name: 'find',
