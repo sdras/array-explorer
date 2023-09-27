@@ -97,9 +97,9 @@ export default {
       },
       {
         name: 'toLocaleString',
-        shortDesc: 'return a localized string representing the array.',
+        shortDesc: 'یک رشته محلی شد را به نمایندگی از آرایه برمی گرداند',
         desc:
-          'This one is a bit wacko. Returns a localized string representing the array and its elements. This is very useful for dates and currency and has some strange native abstractions, so best to consult the docs when using it',
+        'این یکی کمی گیج کننده است. یک رشته محلی را که آرایه و المان آن را نشان می دهد برمی گرداند. این برای تاریخ و ارز بسیار مفید است و دارای رفتار های عجیبی است، بنابراین بهتر است هنگام استفاده از آن نگاهی هم به داکیومنتش کنید.',
         example: `let date = [new Date()];<br>
         const arrString = arr.toLocaleString();<br>
         const dateString = date.toLocaleString();<br>
@@ -110,19 +110,19 @@ export default {
     ordering: [
       {
         name: 'reverse',
-        shortDesc: 'reverse the order of the array',
+        shortDesc: 'بلعکس کردن ترتیب ارایه',
         desc:
-          'Reverses the order of the elements of an array in place — the first becomes the last, and the last becomes the first.',
+          'ترتیب ایتم های یک آرایه را بلعکس میکند. به طوری که ایتم اول اخر و ایتم اخر اول قرار میگیرد',
         example: `arr.reverse();<br>
         console.log(arr);`,
         output: `[8, 1, 5]`
       },
       {
         name: 'sort',
-        shortDesc: 'sort the items of the array',
-        desc: `Sorts the elements of an array in place and returns the array.<br>
+        shortDesc: 'آیتم های آرایه را مرتب میکند',
+        desc: `آیتم های آرایه را مرتب میکند و ارایه مرتب شده را بر میگرداند<br>
         <br>
-        <strong>Important note:</strong> If compareFunction is not supplied, elements are sorted by converting them to strings and comparing strings in Unicode code point order. For example, "Banana" comes before "cherry". In a numeric sort, 9 comes before 80, but because numbers are converted to strings, "80" comes before "9" in Unicode order. The docs have more information to clarify.`,
+        <strong>نکته مهم:</strong> .اگر تابع برای مرتب کردن تعریف نشده باشد, المان ها با تفیرشان به رشته و مقایسه شان با کد یونیکد هر المان انجام میگیرد. برای اطلاعات بیشتر به داکیومنت مراجعه کنید`,
         example: `arr.sort();<br>
         console.log(arr);`,
         output: `[1, 5, 8]`
@@ -131,25 +131,25 @@ export default {
     other: [
       {
         name: 'length',
-        shortDesc: 'find the length of the array',
-        desc: 'Returns the number of elements in that array.',
+        shortDesc: 'پیدا کردن طول آرایه',
+        desc: 'تعداد المان های آرایه را برمی گرداند',
         example: `console.log(arr.length);`,
         output: `3`
       },
       {
         name: 'fill',
-        shortDesc: 'fill all the elements of the array with a static value',
+        shortDesc: 'تمام المان های آرایه را با یک مقدار ثابت پر میکند',
         desc:
-          'Fills all the elements of an array from a start index to an end index with a static value.',
+          'تمام المان های یم آرایه را از شروع یک ایندکس تا پایان اندکسی دیگر با یک مقدار خاص  پر میشود.',
         example: `arr.fill(2);<br>
         console.log(arr);`,
         output: `[2, 2, 2]`
       },
       {
         name: 'copyWithin',
-        shortDesc: 'copy a sequence of array elements within the array.',
+        shortDesc: 'دنباله ای از المان ها آرایه را در آرایه کپی می کند.',
         desc:
-          'Copies a sequence of array elements within the array. You can specify either just the ending element (where begin will default to zero) or both the beginning and the end, comma-separated.',
+          'دنباله ای از المان آرایه را در آرایه کپی می کند. شما می توانید فقط یا المان پایانی را مشخص کنید (که در آن ابتدا به طور پیش فرض صفر خواهد بود) و یا هر دو ابتدا و پایان را که با کاما از هم جدا شده اند.',
         example: `arr.copyWithin(1);<br>
         console.log(arr);`,
         output: `[5, 5, 1]`
@@ -158,9 +158,9 @@ export default {
     iterate: [
       {
         name: 'forEach',
-        shortDesc: 'executing a function I will create for each element',
+        shortDesc: 'اجرای یک تابع روی تک تک المان های یک رشته',
         desc:
-          'The forEach() method executes a provided function once for each array element.',
+          'این متد، یک تابع را روی تک تک المان های یمک آرایه به ترتیب اجرا می کند',
         example: `arr.forEach((element) => {<br>
         <span>&nbsp;&nbsp;</span>console.log(element)<br>
         });`,
@@ -171,18 +171,18 @@ export default {
       {
         name: 'map',
         shortDesc:
-          'creating a new array from each element with a function I create',
+          'با استفاده از تابعی که مشخص کردم، از هر المان یک ارایه جدید میسازد',
         desc:
-          'Creates a new array with the results of calling a provided function on every element in this array.',
+          'ساخت یک ارایه جدید با استفاده از تابع مشخص شده برای هر المان از آرایه ی  اصلی',
         example: `let map = arr.map(x => x + 1);<br>
         console.log(map);`,
         output: `[6, 2, 9]`
       },
       {
         name: 'entries',
-        shortDesc: 'creating an iterator object',
+        shortDesc: 'ساخت یک شی اشاره گر',
         desc:
-          'Returns a new Array Iterator object that contains the key/value pairs for each index in the array. There are a lot of uses for iterators, as well as other methods used with it in conjuction, like <code>values</code> and <code>keys</code>',
+          'یک شی آرایه شامل یک شی به ازای هر المان، به صورتی که کلید و مقدار برای هر المان آرایه است. موارد استفاده ی شی اشارگر زیاد است., همچنین متد های که با آن در اینجکشن استفاده میشود, مانند <code>values</code> و <code>keys</code>',
         example: `let iterator = arr.entries();<br>
         console.log(iterator.next().value);`,
         output: `[0, 5]<br>
@@ -194,60 +194,60 @@ export default {
       single: [
         {
           name: 'includes',
-          shortDesc: 'out if a certain element exists',
+          shortDesc: 'بازگرداند درست اگر یک المان در آرایه موجود باشد',
           desc:
-            'Determines whether an array contains a certain element, returning true or false as appropriate.',
+            'مشخض میکند که ایا یک آرایه داری یک المان است یا نه و درست یا نادرست را بر اساس ان باز میگرداند',
           example: `console.log(arr.includes(1));`,
           output: `true`
         },
         {
           name: 'indexOf',
-          shortDesc: 'the first index of a particular item',
+          shortDesc: 'اولین اندکس ایتم مورد نظر',
           desc:
-            'Returns the first index at which a given element can be found in the array, or -1 if it is not present.',
+            'اولین اندکسی که ایتم مورد نظز در آن پیدا شود را باز میگراند، اگر موجحود نباشد -1 را برمیگرداند',
           example: `console.log(arr.indexOf(5));`,
           output: `0`
         },
         {
           name: 'lastIndexOf',
-          shortDesc: 'the last index of a particular item',
+          shortDesc: 'اخرین اندکس ایتم مورد نظر',
           desc:
-            'Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found.',
+          'اخرین اندکسی که ایتم مورد نظز در آن پیدا شود را باز میگراند، اگر موجحود نباشد -1 را برمیگرداند',
           example: `console.log(arr.lastIndexOf(5));`,
           output: `0`
         },
         {
           name: 'find',
-          shortDesc: 'the first element that satisfies a condition',
+          shortDesc: 'اولین ایتمی که شرایط مورد نظر را دارد',
           desc:
-            'Returns the found value in the array, if an element in the array satisfies the provided testing function or undefined if not found. Similar to <code>findIndex()</code>, but it returns the item instead of the index.',
+            'مقدار پیدا شده در آرایه را بر میگرداند, به شرطی که مقدار مورد نظر دارای شروط لازم باشد. مانند <code>findIndex()</code>, ولی به جای ایندکس خود ایتم را بر میگرداند',
           example: `let isTiny = (el) => el < 2;<br>
           console.log(arr.find(isTiny));`,
           output: `1`
         },
         {
           name: 'findIndex',
-          shortDesc: 'the first index of an item that satisfies a condition',
+          shortDesc: 'ایندکس اولین ایتمی که با شرایط تطابق دارد',
           desc:
-            'Returns the index of the first element in the array that satisfies the provided testing function. Otherwise -1 is returned. Similar to <code>find()</code>, but it returns the index instead of the item.',
+            'ایندکس اولین ایتمی در ارایه که داری شروط مورد نظر است را بر میگرداند. در غیر اینصورت مقدار -1 برگردانده می شود.همانند <code>find()</code>, ولی ایندکس را به جای خود ایتم برمیگرداند',
           example: `let isBig = (el) => el > 6;<br>
           console.log(arr.findIndex(isBig));`,
           output: `2`
         },
         {
           name: 'reduce',
-          shortDesc: 'a value by reducing the Array, start to finish',
+          shortDesc: 'مقداری از تمام المان های ارایه، از شروع به پایان',
           desc:
-            'Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value.',
+            'تابعی را در برابر یک انباشتگر و هر مقدار آرایه (از چپ به راست) اعمال کنید تا آن را به یک مقدار کاهش دهید.',
           example: `let reducer = (a, b) => a + b;<br>
           console.log(arr.reduce(reducer));`,
           output: `14`
         },
         {
           name: 'reduceRight',
-          shortDesc: 'a value by reducing the Array, finish to start',
+          shortDesc: 'مقداری از تمام المان های ارایه، از پایان به شروع',
           desc:
-            'Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.',
+            'تابعی را در برابر یک انباشتگر و هر مقدار آرایه (از راست به چپ) اعمال کنید تا آن را به یک مقدار کاهش دهید.',
           example: `[arr, [0, 1]].reduceRight((a, b) => {<br>
           <span>&nbsp;&nbsp;</span>return a.concat(b)<br>
           }, [])`,
@@ -257,27 +257,27 @@ export default {
       many: [
         {
           name: 'filter',
-          shortDesc: 'values based on a condition I create',
+          shortDesc: 'مقدار ها بر اساس شروطی که من تعین میکنم',
           desc:
-            'Creates a new array with all of the elements of this array for which the provided filtering function returns true.',
+            'یک ارایه جدید میسازد با تمام المان هایی که در شرط تعین شده قابل قبول اند',
           example: `let filtered = arr.filter(el => el > 4);<br>
           console.log(filtered)`,
           output: `[5, 8]`
         },
         {
           name: 'every',
-          shortDesc: 'whether or not every item satisfies a condition',
+          shortDesc: 'که ایا تمام ایتم ها با شروط مورد نظر تطبق دارند یا نه',
           desc:
-            'Returns true if every element in this array satisfies the provided testing function.',
+            'درست برمیگدارند اگر تک تک ایتم های آرایه شرط مورد نظر را داشته باشند.',
           example: `let isSmall = (el) => el < 10;<br>
           console.log(arr.every(isSmall));`,
           output: `true`
         },
         {
           name: 'some',
-          shortDesc: 'whether or not at least one item satisfies a condition',
+          shortDesc: 'ایا یک ایتم شرایط مورد نظر دارد یا نه',
           desc:
-            'Returns true if at least one element in this array satisfies the provided testing function.',
+            'درست را بر میگراند اگر حداقل یک ایتم با شرایط مورد نظر پیدا شود',
           example: `let biggerThan4 = (el) => el > 4;<br>
           console.log(arr.some(biggerThan4));`,
           output: `true`
